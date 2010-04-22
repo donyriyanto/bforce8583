@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	MultiX Network Applications Development Toolkit.
+	Copyright (C) 2007, Moshe Shitrit, Mitug Distributed Systems Ltd., All Rights Reserved.
+
+
+	This file is part of MultiX.
+	
+	MultiX is free software; you can redistribute it and/or modify it under the terms of the 
+	GNU General Public License as published by the Free Software Foundation; 
+	either version 2 of the License, or (at your option) any later version. 
+	
+	MultiX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+	See the GNU General Public License for more details.
+	You should have received a copy of the GNU General Public License along with this program;
+	if not, write to the 
+	Free Software Foundation, Inc., 
+	59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+	Author contact information: 
+	msr@mitug.co.il
+-->
+
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://mitug.co.il/MultiXTpm" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://mitug.co.il/MultiXTpm" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:types>
+		<s:schema elementFormDefault="qualified" targetNamespace="http://mitug.co.il/MultiXTpm">
+			<s:element name="GetConfig">
+				<s:complexType />
+			</s:element>
+			<s:element name="GetConfigResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GetConfigResult" type="tns:ConfigData" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ConfigData">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="LastUpdate" type="s:dateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="UsersPermissionsFile" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ProcessClasses" type="tns:ArrayOfProcessClass" />
+					<s:element minOccurs="0" maxOccurs="1" name="Links" type="tns:ArrayOfLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="Groups" type="tns:ArrayOfGroup" />
+					<s:element minOccurs="0" maxOccurs="1" name="Messages" type="tns:ArrayOfMessage" />
+					<s:element minOccurs="0" maxOccurs="1" name="UsersPermissions" type="tns:ArrayOfUserPermission" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfUserPermission">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="UserPermission" nillable="true" type="tns:UserPermission" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserPermission">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="IsGroup"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="GetWSDL"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="GetConfig"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="UpdateConfig"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="GetSystemStatus"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="RestartProcess"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="RestartGroup"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="StartProcess"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="StartGroup"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="ShutdownProcess"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="ShutdownGroup"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="SuspendGroup"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="SuspendProcess"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="ResumeGroup"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="ResumeProcess"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="RestartAll"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="StartAll"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="ShutdownAll"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="SuspendAll"/>
+					<s:element minOccurs="1" maxOccurs="1"  type="s:boolean" name="ResumeAll"/>
+					</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfProcessClass">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="ProcessClass" nillable="true" type="tns:ProcessClass" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ProcessClass">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="PasswordToSend" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExpectedPassword" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExecCmd" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ClassName" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="AdditionalConfigTextFile" type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="DebugLevel" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="DefaultSendTimeout" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExecParams" type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="MaxQueueSize" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="MaxSessions" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="MaxRecoveryQueueSize" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="AutoStart" type="s:boolean" />
+					<s:element minOccurs="1" maxOccurs="1" name="MinInstances" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="MaxInstances" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="StartProcessDelay" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="InactivityTimer" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="Params" type="tns:ArrayOfParam" />
+					<s:element minOccurs="0" maxOccurs="1" name="LinkIDs" type="tns:ArrayOfInt" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfParam">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Param" nillable="true" type="tns:Param" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Param">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="ParamName" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ParamValue" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="XmlParamValue">
+						<s:complexType mixed="true">
+							<s:sequence>
+								<s:any maxOccurs="unbounded" />
+							</s:sequence>
+							<s:anyAttribute />
+						</s:complexType>
+					</s:element>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfInt">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="ID" type="s:int" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfLink">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Link" nillable="true" type="tns:Link" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Link">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="LinkType" type="tns:MultiXLinkType" />
+					<s:element minOccurs="1" maxOccurs="1" name="OpenMode" type="tns:MultiXOpenMode" />
+					<s:element minOccurs="1" maxOccurs="1" name="Raw" type="s:boolean" />
+					<s:element minOccurs="0" maxOccurs="1" name="LocalAddress" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="LocalPort" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="RemoteAddress" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="RemotePort" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SSLParams" type="tns:SSLParams" />
+					<s:element minOccurs="0" maxOccurs="1" name="Params" type="tns:ArrayOfParam" />
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="MultiXLinkType">
+				<s:restriction base="s:string">
+					<s:enumeration value="MultiXLinkTypeFirst" />
+					<s:enumeration value="MultiXLinkTypeTcp" />
+					<s:enumeration value="MultiXLinkTypeLast" />
+				</s:restriction>
+			</s:simpleType>
+			<s:simpleType name="MultiXOpenMode">
+				<s:restriction base="s:string">
+					<s:enumeration value="MultiXOpenModeFirst" />
+					<s:enumeration value="MultiXOpenModeServer" />
+					<s:enumeration value="MultiXOpenModeClient" />
+					<s:enumeration value="MultiXOpenModeAccept" />
+					<s:enumeration value="MultiXOpenModeLast" />
+				</s:restriction>
+			</s:simpleType>
+			<s:complexType name="SSLParams">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="API" type="tns:SSL_API" />
+					<s:element minOccurs="1" maxOccurs="1" name="ClientAuthenticationRequired" type="s:boolean" />
+					<s:element minOccurs="1" maxOccurs="1" name="ServerAuthenticationRequired" type="s:boolean" />
+					<s:element minOccurs="1" maxOccurs="1" name="ServerNameVerificationRequired" type="s:boolean" />
+					<s:element minOccurs="0" maxOccurs="1" name="TrustStoreFile" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TrustStoreDirectory" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="CertificateFile" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="PrivateKeyFile" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="PrivateKeyPassword" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="PrivateKeyPasswordFile" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="RSAPrivateKeyFile" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="DHFile" type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="SSL_API">
+				<s:restriction base="s:string">
+					<s:enumeration value="NoSSLAPI" />
+					<s:enumeration value="OpenSSL" />
+				</s:restriction>
+			</s:simpleType>
+			<s:complexType name="ArrayOfGroup">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="tns:Group" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Group">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ProcessClassIDs" type="tns:ArrayOfInt" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfMessage">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="tns:Message" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Message">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="Stateful" type="s:boolean" />
+					<s:element minOccurs="1" maxOccurs="1" name="DbProtected" type="s:boolean" />
+					<s:element minOccurs="1" maxOccurs="1" name="Timeout" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="Priority" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="WSURL" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="WSSoapAction" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="WSDllFile" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="WSDllFunction" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ForwardFlags" type="tns:ArrayOfGroupForwardFlags" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfGroupForwardFlags">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Flags" nillable="true" type="tns:GroupForwardFlags" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GroupForwardFlags">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="GroupID" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="ResponseRequired" type="s:boolean" />
+					<s:element minOccurs="1" maxOccurs="1" name="IgnoreResponse" type="s:boolean" />
+					<s:element minOccurs="1" maxOccurs="1" name="ForwardToAll" type="s:boolean" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="UpdateConfig">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="Config" type="tns:ConfigData" />
+						<s:element minOccurs="1" maxOccurs="1" name="SaveToDisk" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="UpdateConfigResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="UpdateConfigResult" type="s:boolean" />
+						<s:element minOccurs="0" maxOccurs="1" name="Config" type="tns:ConfigData" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetSystemStatus">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="LastConfigTime" type="s:dateTime" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetSystemStatusResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GetSystemStatusResult" type="tns:SystemStatus" />
+						<s:element minOccurs="0" maxOccurs="1" name="Config" type="tns:ConfigData" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="SystemStatus">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="TpmMultiXVersion" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TpmVersion" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TpmHostName" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TpmHostIP" type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="SessionsCount" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="GroupsStatus" type="tns:ArrayOfGroupStatus" />
+					<s:element minOccurs="0" maxOccurs="1" name="ProcessesStatus" type="tns:ArrayOfProcessStatus" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfGroupStatus">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="GroupStatus" nillable="true" type="tns:GroupStatus" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GroupStatus">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="SessionsCount" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="OutQueueSize" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="QueuedItemsSize" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="MaxProcessQueueEntries" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="ProcessIDs" type="tns:ArrayOfInt" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfProcessStatus">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="ProcessStatus" nillable="true" type="tns:ProcessStatus" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ProcessStatus">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="MultiXVersion" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="AppVersion" type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="ProcessClassID" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="IsReady" type="s:boolean" />
+					<s:element minOccurs="1" maxOccurs="1" name="ControlStatus" type="tns:ProcessControlStatus" />
+					<s:element minOccurs="1" maxOccurs="1" name="SessionsCount" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="OutQueueSize" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="LastMsgTime" type="s:dateTime" />
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="ProcessControlStatus">
+				<s:restriction base="s:string">
+					<s:enumeration value="Normal" />
+					<s:enumeration value="Shutdown" />
+					<s:enumeration value="Suspend" />
+					<s:enumeration value="Restart" />
+				</s:restriction>
+			</s:simpleType>
+			<s:element name="RestartProcess">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="ProcessID" type="tns:ArrayOfInt1" />
+						<s:element minOccurs="1" maxOccurs="1" name="bForce" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfInt1">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="RestartProcessResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="RestartProcessResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="RestartGroup">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GroupID" type="tns:ArrayOfInt1" />
+						<s:element minOccurs="1" maxOccurs="1" name="bForce" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="RestartGroupResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="RestartGroupResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="StartProcess">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="ProcessID" type="tns:ArrayOfInt1" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="StartProcessResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="StartProcessResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="StartGroup">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GroupID" type="tns:ArrayOfInt1" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="StartGroupResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="StartGroupResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ShutdownProcess">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="ProcessID" type="tns:ArrayOfInt1" />
+						<s:element minOccurs="1" maxOccurs="1" name="bForce" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ShutdownProcessResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="ShutdownProcessResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ShutdownGroup">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GroupID" type="tns:ArrayOfInt1" />
+						<s:element minOccurs="1" maxOccurs="1" name="bForce" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ShutdownGroupResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="ShutdownGroupResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SuspendGroup">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GroupID" type="tns:ArrayOfInt1" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SuspendGroupResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="SuspendGroupResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SuspendProcess">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="ProcessID" type="tns:ArrayOfInt1" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SuspendProcessResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="SuspendProcessResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ResumeGroup">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GroupID" type="tns:ArrayOfInt1" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ResumeGroupResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="ResumeGroupResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ResumeProcess">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="ProcessID" type="tns:ArrayOfInt1" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ResumeProcessResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="ResumeProcessResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="RestartAll">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="bForce" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="RestartAllResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="RestartAllResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="StartAll">
+				<s:complexType />
+			</s:element>
+			<s:element name="StartAllResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="StartAllResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ShutdownAll">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="bForce" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ShutdownAllResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="ShutdownAllResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SuspendAll">
+				<s:complexType />
+			</s:element>
+			<s:element name="SuspendAllResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="SuspendAllResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ResumeAll">
+				<s:complexType />
+			</s:element>
+			<s:element name="ResumeAllResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="ResumeAllResult" type="s:boolean" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+		</s:schema>
+	</wsdl:types>
+	<wsdl:message name="GetConfigSoapIn">
+		<wsdl:part name="parameters" element="tns:GetConfig" />
+	</wsdl:message>
+	<wsdl:message name="GetConfigSoapOut">
+		<wsdl:part name="parameters" element="tns:GetConfigResponse" />
+	</wsdl:message>
+	<wsdl:message name="UpdateConfigSoapIn">
+		<wsdl:part name="parameters" element="tns:UpdateConfig" />
+	</wsdl:message>
+	<wsdl:message name="UpdateConfigSoapOut">
+		<wsdl:part name="parameters" element="tns:UpdateConfigResponse" />
+	</wsdl:message>
+	<wsdl:message name="GetSystemStatusSoapIn">
+		<wsdl:part name="parameters" element="tns:GetSystemStatus" />
+	</wsdl:message>
+	<wsdl:message name="GetSystemStatusSoapOut">
+		<wsdl:part name="parameters" element="tns:GetSystemStatusResponse" />
+	</wsdl:message>
+	<wsdl:message name="RestartProcessSoapIn">
+		<wsdl:part name="parameters" element="tns:RestartProcess" />
+	</wsdl:message>
+	<wsdl:message name="RestartProcessSoapOut">
+		<wsdl:part name="parameters" element="tns:RestartProcessResponse" />
+	</wsdl:message>
+	<wsdl:message name="RestartGroupSoapIn">
+		<wsdl:part name="parameters" element="tns:RestartGroup" />
+	</wsdl:message>
+	<wsdl:message name="RestartGroupSoapOut">
+		<wsdl:part name="parameters" element="tns:RestartGroupResponse" />
+	</wsdl:message>
+	<wsdl:message name="StartProcessSoapIn">
+		<wsdl:part name="parameters" element="tns:StartProcess" />
+	</wsdl:message>
+	<wsdl:message name="StartProcessSoapOut">
+		<wsdl:part name="parameters" element="tns:StartProcessResponse" />
+	</wsdl:message>
+	<wsdl:message name="StartGroupSoapIn">
+		<wsdl:part name="parameters" element="tns:StartGroup" />
+	</wsdl:message>
+	<wsdl:message name="StartGroupSoapOut">
+		<wsdl:part name="parameters" element="tns:StartGroupResponse" />
+	</wsdl:message>
+	<wsdl:message name="ShutdownProcessSoapIn">
+		<wsdl:part name="parameters" element="tns:ShutdownProcess" />
+	</wsdl:message>
+	<wsdl:message name="ShutdownProcessSoapOut">
+		<wsdl:part name="parameters" element="tns:ShutdownProcessResponse" />
+	</wsdl:message>
+	<wsdl:message name="ShutdownGroupSoapIn">
+		<wsdl:part name="parameters" element="tns:ShutdownGroup" />
+	</wsdl:message>
+	<wsdl:message name="ShutdownGroupSoapOut">
+		<wsdl:part name="parameters" element="tns:ShutdownGroupResponse" />
+	</wsdl:message>
+	<wsdl:message name="SuspendGroupSoapIn">
+		<wsdl:part name="parameters" element="tns:SuspendGroup" />
+	</wsdl:message>
+	<wsdl:message name="SuspendGroupSoapOut">
+		<wsdl:part name="parameters" element="tns:SuspendGroupResponse" />
+	</wsdl:message>
+	<wsdl:message name="SuspendProcessSoapIn">
+		<wsdl:part name="parameters" element="tns:SuspendProcess" />
+	</wsdl:message>
+	<wsdl:message name="SuspendProcessSoapOut">
+		<wsdl:part name="parameters" element="tns:SuspendProcessResponse" />
+	</wsdl:message>
+	<wsdl:message name="ResumeGroupSoapIn">
+		<wsdl:part name="parameters" element="tns:ResumeGroup" />
+	</wsdl:message>
+	<wsdl:message name="ResumeGroupSoapOut">
+		<wsdl:part name="parameters" element="tns:ResumeGroupResponse" />
+	</wsdl:message>
+	<wsdl:message name="ResumeProcessSoapIn">
+		<wsdl:part name="parameters" element="tns:ResumeProcess" />
+	</wsdl:message>
+	<wsdl:message name="ResumeProcessSoapOut">
+		<wsdl:part name="parameters" element="tns:ResumeProcessResponse" />
+	</wsdl:message>
+	<wsdl:message name="RestartAllSoapIn">
+		<wsdl:part name="parameters" element="tns:RestartAll" />
+	</wsdl:message>
+	<wsdl:message name="RestartAllSoapOut">
+		<wsdl:part name="parameters" element="tns:RestartAllResponse" />
+	</wsdl:message>
+	<wsdl:message name="StartAllSoapIn">
+		<wsdl:part name="parameters" element="tns:StartAll" />
+	</wsdl:message>
+	<wsdl:message name="StartAllSoapOut">
+		<wsdl:part name="parameters" element="tns:StartAllResponse" />
+	</wsdl:message>
+	<wsdl:message name="ShutdownAllSoapIn">
+		<wsdl:part name="parameters" element="tns:ShutdownAll" />
+	</wsdl:message>
+	<wsdl:message name="ShutdownAllSoapOut">
+		<wsdl:part name="parameters" element="tns:ShutdownAllResponse" />
+	</wsdl:message>
+	<wsdl:message name="SuspendAllSoapIn">
+		<wsdl:part name="parameters" element="tns:SuspendAll" />
+	</wsdl:message>
+	<wsdl:message name="SuspendAllSoapOut">
+		<wsdl:part name="parameters" element="tns:SuspendAllResponse" />
+	</wsdl:message>
+	<wsdl:message name="ResumeAllSoapIn">
+		<wsdl:part name="parameters" element="tns:ResumeAll" />
+	</wsdl:message>
+	<wsdl:message name="ResumeAllSoapOut">
+		<wsdl:part name="parameters" element="tns:ResumeAllResponse" />
+	</wsdl:message>
+	<wsdl:portType name="MultiXTpmSoap">
+		<wsdl:operation name="GetConfig">
+			<wsdl:input message="tns:GetConfigSoapIn" />
+			<wsdl:output message="tns:GetConfigSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="UpdateConfig">
+			<wsdl:input message="tns:UpdateConfigSoapIn" />
+			<wsdl:output message="tns:UpdateConfigSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="GetSystemStatus">
+			<wsdl:input message="tns:GetSystemStatusSoapIn" />
+			<wsdl:output message="tns:GetSystemStatusSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="RestartProcess">
+			<wsdl:input message="tns:RestartProcessSoapIn" />
+			<wsdl:output message="tns:RestartProcessSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="RestartGroup">
+			<wsdl:input message="tns:RestartGroupSoapIn" />
+			<wsdl:output message="tns:RestartGroupSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="StartProcess">
+			<wsdl:input message="tns:StartProcessSoapIn" />
+			<wsdl:output message="tns:StartProcessSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="StartGroup">
+			<wsdl:input message="tns:StartGroupSoapIn" />
+			<wsdl:output message="tns:StartGroupSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ShutdownProcess">
+			<wsdl:input message="tns:ShutdownProcessSoapIn" />
+			<wsdl:output message="tns:ShutdownProcessSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ShutdownGroup">
+			<wsdl:input message="tns:ShutdownGroupSoapIn" />
+			<wsdl:output message="tns:ShutdownGroupSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="SuspendGroup">
+			<wsdl:input message="tns:SuspendGroupSoapIn" />
+			<wsdl:output message="tns:SuspendGroupSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="SuspendProcess">
+			<wsdl:input message="tns:SuspendProcessSoapIn" />
+			<wsdl:output message="tns:SuspendProcessSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ResumeGroup">
+			<wsdl:input message="tns:ResumeGroupSoapIn" />
+			<wsdl:output message="tns:ResumeGroupSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ResumeProcess">
+			<wsdl:input message="tns:ResumeProcessSoapIn" />
+			<wsdl:output message="tns:ResumeProcessSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="RestartAll">
+			<wsdl:input message="tns:RestartAllSoapIn" />
+			<wsdl:output message="tns:RestartAllSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="StartAll">
+			<wsdl:input message="tns:StartAllSoapIn" />
+			<wsdl:output message="tns:StartAllSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ShutdownAll">
+			<wsdl:input message="tns:ShutdownAllSoapIn" />
+			<wsdl:output message="tns:ShutdownAllSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="SuspendAll">
+			<wsdl:input message="tns:SuspendAllSoapIn" />
+			<wsdl:output message="tns:SuspendAllSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ResumeAll">
+			<wsdl:input message="tns:ResumeAllSoapIn" />
+			<wsdl:output message="tns:ResumeAllSoapOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MultiXTpmSoap" type="tns:MultiXTpmSoap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="GetConfig">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/GetConfig" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateConfig">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/UpdateConfig" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSystemStatus">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/GetSystemStatus" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RestartProcess">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/RestartProcess" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RestartGroup">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/RestartGroup" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="StartProcess">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/StartProcess" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="StartGroup">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/StartGroup" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ShutdownProcess">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/ShutdownProcess" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ShutdownGroup">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/ShutdownGroup" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SuspendGroup">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/SuspendGroup" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SuspendProcess">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/SuspendProcess" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ResumeGroup">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/ResumeGroup" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ResumeProcess">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/ResumeProcess" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RestartAll">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/RestartAll" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="StartAll">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/StartAll" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ShutdownAll">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/ShutdownAll" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SuspendAll">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/SuspendAll" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ResumeAll">
+			<soap:operation soapAction="http://mitug.co.il/MultiXTpm/ResumeAll" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="MultiXTpmSoap12" type="tns:MultiXTpmSoap">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="GetConfig">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/GetConfig" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateConfig">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/UpdateConfig" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSystemStatus">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/GetSystemStatus" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RestartProcess">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/RestartProcess" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RestartGroup">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/RestartGroup" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="StartProcess">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/StartProcess" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="StartGroup">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/StartGroup" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ShutdownProcess">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/ShutdownProcess" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ShutdownGroup">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/ShutdownGroup" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SuspendGroup">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/SuspendGroup" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SuspendProcess">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/SuspendProcess" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ResumeGroup">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/ResumeGroup" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ResumeProcess">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/ResumeProcess" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RestartAll">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/RestartAll" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="StartAll">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/StartAll" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ShutdownAll">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/ShutdownAll" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SuspendAll">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/SuspendAll" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ResumeAll">
+			<soap12:operation soapAction="http://mitug.co.il/MultiXTpm/ResumeAll" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="MultiXTpm">
+		<wsdl:port name="MultiXTpmSoap" binding="tns:MultiXTpmSoap">
+			<soap:address location="http://localhost/MultiXTpm" />
+		</wsdl:port>
+		<wsdl:port name="MultiXTpmSoap12" binding="tns:MultiXTpmSoap12">
+			<soap12:address location="http://localhost/MultiXTpm" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
