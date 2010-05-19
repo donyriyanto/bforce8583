@@ -1,0 +1,634 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#604774bf58a54c97c98bed2412246f94"><param name="Name" value="Accept"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#a5e00887f9914624e926054e9cdde42f"><param name="Name" value="AcceptNew"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#e418734a3f9e3094fb1cbcddb85a94cd"><param name="Name" value="AdditionalConfigText"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#667ef58ab5bae2123c4ba9d20aa14226"><param name="Name" value="AddLink"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#5db2ce9055a44b0d9aafa89ab92b24d5"><param name="Name" value="AddProcess"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAlertableObject.html#f1cf0fd4da8d80fc2af001407b84d5ff"><param name="Name" value="AlertableID"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAlertableObject.html#f1cf0fd4da8d80fc2af001407b84d5ff"><param name="Name" value="CMultiXAlertableObject"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAlertableObject.html#f1cf0fd4da8d80fc2af001407b84d5ff"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#6d691761e088b749cbbfbfff26b9a775"><param name="Name" value="AllocateBuffer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#f5c8e3e2b32b4aa6d010f718fc659191"><param name="Name" value="AllocateNewProcess"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#c00358113a2a8120610f31ba0c903cfc"><param name="Name" value="AppData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#c792659aa03f5de42a8fa7e5c73f02aa"><param name="Name" value="AppDataSize"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#7086802ec19f7814777972640ddabaad"><param name="Name" value="AppendBuffer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#3238519ac41d55d4cf40c75f9c674d0e"><param name="Name" value="AppendData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#e69c4160ab57c26578fbd22a110e5419"><param name="Name" value="AppendString"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#8cd5d594397fd5e4c643a6636eb58212"><param name="Name" value="AppVersion"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#23985062084377c055bc43c342e5b051"><param name="Name" value="bRaw"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#5ca401049b0ad2b8b7388d6854d4c6a5"><param name="Name" value="Cancel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#54effc1f28f644abf79f07f850f03791"><param name="Name" value="CanDelete"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#40d4faf3363d6c11728edfee55e82714"><param name="Name" value="CheckStatus"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#9db5467d2c3a7ca9e95e8b16d9618b00"><param name="Name" value="Clone"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#eca2aa18ff57c2a3a56068ebe5bc4dc9"><param name="Name" value="Close"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#f2027103be88064beb452d4378243265"><param name="Name" value="CloseAllLinks"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAlertableObject.html"><param name="Name" value="CMultiXAlertableObject"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAlertableObject.html#f1cf0fd4da8d80fc2af001407b84d5ff"><param name="Name" value="AlertableID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAlertableObject.html#2b46d26dd5055580c5444357f9719eb0"><param name="Name" value="OnTimer"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html"><param name="Name" value="CMultiXApp"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#e418734a3f9e3094fb1cbcddb85a94cd"><param name="Name" value="AdditionalConfigText"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#667ef58ab5bae2123c4ba9d20aa14226"><param name="Name" value="AddLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#5db2ce9055a44b0d9aafa89ab92b24d5"><param name="Name" value="AddProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#6d691761e088b749cbbfbfff26b9a775"><param name="Name" value="AllocateBuffer"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#f5c8e3e2b32b4aa6d010f718fc659191"><param name="Name" value="AllocateNewProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#4ce1afa30025300a87d794cceafd4ee0"><param name="Name" value="CMultiXApp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#2d9af48ec94be68e3e553eef14f102ee"><param name="Name" value="ConnectProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#62c27db089c1fbbfdb24c3ced10fc663"><param name="Name" value="ControlledByTpm"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#8d2b480c16eeba88286b3c5a27aff1e1"><param name="Name" value="CreateLogger"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#633905d99a064393b8c039c9e3ac6e12"><param name="Name" value="CreateNewSession"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#b7dddf94f780fda4df6594ea8e052dc7"><param name="Name" value="DebugLevel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#b7f3126b458fa9c2e3ccf431bb7aadc0"><param name="Name" value="DebugPrint"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#a0ded92bbbf01f0563192d419c4ef1f6"><param name="Name" value="DefaultSendTimeout"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#8e392f9eab7246519faa8d62c4ef2330"><param name="Name" value="FindProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#8697287332e2626e27f8de06fdc8bb8a"><param name="Name" value="FindSession"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#4738865d4d6ab63d067fc40e222b2c9f"><param name="Name" value="GetFirstLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#75d4eaeaf36929661febc57cf65dedaf"><param name="Name" value="GetFirstProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#105d8cb4fd2bd70c545d6870aaea9f1d"><param name="Name" value="GetIntParam"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#05d1ce2ffe80dac2ffd96a1a73148bb4"><param name="Name" value="GetStringParam"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#e853675756747f3d33cb584fc0ee4cb8"><param name="Name" value="HostIP"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#d8986ed4042cc99d57530ac85b8ff121"><param name="Name" value="HostName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#73d4879e07797c827f3157cd3fe74610"><param name="Name" value="MultiXLogger"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#0844c20d0e22996754bbbdf3c6858215"><param name="Name" value="MultiXVersion"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#31ea94cb818be23150e6d6feb9d222f5"><param name="Name" value="OnApplicationEvent"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#93ad10f34e3674ae4e5e94b2d9fb0842"><param name="Name" value="OnConnectProcessFailed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#918ed59f67c13eab3fa5227a4c9f7a2e"><param name="Name" value="OnIdle"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#472e4ec5f5fbea75ce384373d7e6a4d2"><param name="Name" value="OnMultiXException"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#abc98d428887d7220f6b5c0b6f54fc3c"><param name="Name" value="OnPrepareForShutdown"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#978cef0aafb02ea75bbbaa3ef3e12dc4"><param name="Name" value="OnProcessRestart"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#d9f49306ba5028992395a0bf2d2c3da0"><param name="Name" value="OnProcessResume"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#1d3030885e936a325351841289167568"><param name="Name" value="OnProcessSuspend"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#7939be78e1da87a019b1fd577f4fe5d7"><param name="Name" value="OnShutdown"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#4a13e98c99682ab4b635fab011a54450"><param name="Name" value="OnStartup"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#0eba6986ef123618b18f7e9f73e6bdfc"><param name="Name" value="OnTpmConfigCompleted"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#b347b7c32de6cb80294f5510cf837aba"><param name="Name" value="OnTpmConfiguredLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#5623fbeb65fc8ba1f3f72f20b5b8b5ae"><param name="Name" value="PID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#322abef88691e0e7692085933df2923b"><param name="Name" value="ProcessClass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#a25d9ca5ec342f8bee61757534f70d3e"><param name="Name" value="ProcessID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#18a009dc4185f332aeae8872e551f3d1"><param name="Name" value="QueueEvent"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#3324e28eabef7dc20c62efb475389ef9"><param name="Name" value="RemoveLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#15eef39319d130c3d8de0e1c07c3c46d"><param name="Name" value="ResetProcID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#a26924e830ad1eefbd7412d01bb26895"><param name="Name" value="SetGarbageCollectorParams"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#75f667a212f37865860c61aedc55d6a0"><param name="Name" value="SetMultiXTimer"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#f3d742bb8b0df7cce0072777143d37dc"><param name="Name" value="Shutdown"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#ef56f617f2d6d4e1e5c59af5c555dd85"><param name="Name" value="Start"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#15975fcda7430b54977d045277473ff4"><param name="Name" value="TpmIPAddress"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#f5486004101a9c1cd64c130f51e53868"><param name="Name" value="TpmIPPort"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#6c8a297d891ecf1e97546fe8398a751d"><param name="Name" value="TpmProcID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#36a86a7f8b6c8273093489d87828de4f"><param name="Name" value="WaitEnd"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppEvent.html"><param name="Name" value="CMultiXAppEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppEvent.html#1c653ee5c6eaa194074c7f3b3be7a507"><param name="Name" value="CMultiXAppEvent"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppEvent.html#4947595fda355992ff49a540198335bb"><param name="Name" value="EventCode"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html"><param name="Name" value="CMultiXAppMsg"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#c00358113a2a8120610f31ba0c903cfc"><param name="Name" value="AppData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#c792659aa03f5de42a8fa7e5c73f02aa"><param name="Name" value="AppDataSize"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#baef5db5050749c49bc4cac7a65935e0"><param name="Name" value="CMultiXAppMsg"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#03a9cd545531f424ade5b962df3866c7"><param name="Name" value="Error"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba608320eddfd53201e4bb559d56881a8529"><param name="Name" value="FlagNotifyAll"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba60750d4e6ad8aa8a30f02672ac9b4a56a7"><param name="Name" value="FlagNotifyError"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba601d4fd93f7fe3be71a7936d31ee44cb95"><param name="Name" value="FlagNotifySuccess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba60495ab51238abbef657f59020d69e8ac6"><param name="Name" value="FlagResponseRequired"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#fa3c25eb68581e78693d969c54269ebb"><param name="Name" value="Flags"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#a6fe02faebb5d7268bc9b192010e7a58"><param name="Name" value="IsResponse"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#d93e902576c0554018630b0186d07ddd"><param name="Name" value="Keep"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#debce2ab197927cc215de8e825a361ec"><param name="Name" value="MsgCode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#4008521e04a88a87b7eabec40213fd61"><param name="Name" value="NotifyAny"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#0f04485d506f4168bcd5d5140af5f68b"><param name="Name" value="NotifyError"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#12c92380c17411a37cf582d502af66f9"><param name="Name" value="NotifySuccess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#e67e6e60e6519fe3bb5d5e15669fcbdb"><param name="Name" value="Owner"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#98bd1a4fe64a96621fceaee6882b5b9e"><param name="Name" value="Reply"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#e4c103fa5b24314fea0a7acb7ce06856"><param name="Name" value="ReplySent"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#ea827ba7ca1137a08931f5c1ae1eec69"><param name="Name" value="ResponseRequired"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#092d002e320636444f03fff09a106b38"><param name="Name" value="RoutedFrom"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#fe60a10fa8d3ac0b4081f60cddca5556"><param name="Name" value="SavedContext"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#09bca07787da570540ea7216801f17c5"><param name="Name" value="SavedContextExt"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba60"><param name="Name" value="SendFlags"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#41fc9cb208525d4d6e568d05b1a177f5"><param name="Name" value="Timeout"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#a11fd888adfb37201fa08ec5a7d7f805"><param name="Name" value="WSDllFile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#285524545c6ee6fa4c7cf5d331b5b7b1"><param name="Name" value="WSDllFunction"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#b848cd2823a0aedb861f43ddfa559ec3"><param name="Name" value="WSSoapAction"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#eedf36ef74d1b6bd4829a598c921e8b6"><param name="Name" value="WSURL"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html"><param name="Name" value="CMultiXBuffer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#7086802ec19f7814777972640ddabaad"><param name="Name" value="AppendBuffer"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#3238519ac41d55d4cf40c75f9c674d0e"><param name="Name" value="AppendData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#e69c4160ab57c26578fbd22a110e5419"><param name="Name" value="AppendString"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#9db5467d2c3a7ca9e95e8b16d9618b00"><param name="Name" value="Clone"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#df55cacfe73e0a5e65994cfa380d90d3"><param name="Name" value="CreateNew"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#4aab0d6dbde2346da7a25133603b9b59"><param name="Name" value="DataPtr"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#049fec9609d27ea69fe3a73de5af843a"><param name="Name" value="Empty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#199141460d3016588271071c99157629"><param name="Name" value="Expand"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#675716ede9fb91c43aeba3cfddeb3e7a"><param name="Name" value="GetDataNoLock"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#b512e2c0365e95f4cab4eaef48b6f1e9"><param name="Name" value="Length"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#d874aff45f8694d42de7df2b3f51e69e"><param name="Name" value="LockData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#84baa279098f711f3381c92519aba773"><param name="Name" value="Mid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#b3fa767fc792c89ea410260cd3ee8259"><param name="Name" value="operator<<="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#05edd78373da9136f92d45a07519e0c3"><param name="Name" value="operator=="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#13464171f4a77ce9582b6d6c351bd218"><param name="Name" value="operator>>="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#6e77e668a0302498f99b798bcd0c27dc"><param name="Name" value="ReleaseData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#dcdbfa5c6971c2abe82c8fd43c03c9da"><param name="Name" value="ReturnBuffer"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#563c3a63fd0d2ebc54f079ff7c746a89"><param name="Name" value="Size"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#62dd44915baef87214cb3ebaa9e3728d"><param name="Name" value="Unlock"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#d39c6a22731b131b6da56b5292294961"><param name="Name" value="UpdateLengthNoLock"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXEvent.html"><param name="Name" value="CMultiXEvent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXException.html"><param name="Name" value="CMultiXException"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXException.html#31d5e898b03fc1d9cfed8c579f222001"><param name="Name" value="m_File"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXException.html#1f866cda555eb0f93a0a9f5dcb44b0b1"><param name="Name" value="m_Line"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXException.html#8322564467267839a3534f6e403a74c6"><param name="Name" value="m_Text"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structCMultiXLink_1_1IPInfo.html"><param name="Name" value="CMultiXLink::IPInfo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structCMultiXLink_1_1IPInfo.html#190604da19f45af719535abfcdafa9eb"><param name="Name" value="LocalAddr"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structCMultiXLink_1_1IPInfo.html#2bc9bfdb66fdfbfd1b9a241e7559428a"><param name="Name" value="LocalPort"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structCMultiXLink_1_1IPInfo.html#df8703df90b1c222adf46ff094923406"><param name="Name" value="RemoteAddr"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structCMultiXLink_1_1IPInfo.html#bdeed5761133154e7f7b15c87b38ac32"><param name="Name" value="RemotePort"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html"><param name="Name" value="CMultiXLink"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#a5e00887f9914624e926054e9cdde42f"><param name="Name" value="AcceptNew"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#eca2aa18ff57c2a3a56068ebe5bc4dc9"><param name="Name" value="Close"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#b4aa33487c24ec1b26be521d9275d964"><param name="Name" value="CMultiXLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#200c9b748c8d19540ff0cda47142fc53"><param name="Name" value="ConfigParams"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#139452280fd2a72cc14389ce0b197b8c"><param name="Name" value="Connect"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#ea3e0cef8dcef6e2b87ae5eb7f102690"><param name="Name" value="DebugPrint"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#100b0a42fb82d59175299c1d13823b7b"><param name="Name" value="GetIntParam"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#6b5fe56315dbfac4d123ad73307fbcc2"><param name="Name" value="GetStringParam"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#001a03cda74ed86815b8c744a534eb43"><param name="Name" value="IP"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#33d868b6374a63d6466695ad4207d05b"><param name="Name" value="IsRaw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e8e41e5b36866475b46a2ef4cdc1f7221"><param name="Name" value="LinkClosed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e4b1aee1e27417e191b12e43bb78dca64"><param name="Name" value="LinkClosing"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e82468316e58d6a38286fca1cc327dd9a"><param name="Name" value="LinkConnected"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e0f53d6b40a2ee78645d8379965be06b5"><param name="Name" value="LinkDisconnected"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e07c20ffc6e03e2c53bb32f5cde769597"><param name="Name" value="LinkOpened"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e"><param name="Name" value="LinkState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#210f545f2de320e1df122a1a42cca554"><param name="Name" value="LinkType"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#c36af37599befc0e0960c027034435ab"><param name="Name" value="Listen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#3ffa10aa1a9e43e7ae959442d9d578a0"><param name="Name" value="LocalName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#7d8e6fe46dd8b621fdde2cea0c6e6e05"><param name="Name" value="LocalPort"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#961f039524fa436b2fb6b9128f7915a4"><param name="Name" value="m_IPInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#c205eafbbe1bf133aead403d3aa62198"><param name="Name" value="OnConnectFailed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#4fb21f680d52300b84710d4df007448a"><param name="Name" value="OnDataReceived"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#6a1b200bfebb48e1c6e27c4a0b6a25dd"><param name="Name" value="OnLinkClosed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#cf4197d5ddd1667d868693be44882328"><param name="Name" value="OnLinkConnected"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#21435f7d0f71c99b40461950d8ea3ee9"><param name="Name" value="OnLinkDisconnected"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#76eca40c72c633f84377df069ae24bf2"><param name="Name" value="OnListenFailed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#afc3308b753a19ddf63408530ce4fef7"><param name="Name" value="OnOpenCompleted"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#340429478c48cd195bd5aac0a89ae17e"><param name="Name" value="OnOpenFailed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#a9e8c8e14941932698da560c6b1d4d6f"><param name="Name" value="OnSendDataCompleted"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#1d32575b8b40ced2c615a9f1a22e0180"><param name="Name" value="OnSendDataFailed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#82f69d421146b2b719280220db50d230"><param name="Name" value="OpenMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#723adc81b14a0954a79c7409a4ccab98"><param name="Name" value="Owner"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#9e134e2f711da098c8d9c58f6ae5f7df"><param name="Name" value="RemoteName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#4cd6242bb8fd9f3503bb24d04b7469ba"><param name="Name" value="RemotePort"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#b0a709e09297c5f52002b36305cf1cec"><param name="Name" value="Send"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#82b7b59a0698f1b5534560ef125c541e"><param name="Name" value="State"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html"><param name="Name" value="CMultiXProcess"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#604774bf58a54c97c98bed2412246f94"><param name="Name" value="Accept"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#8cd5d594397fd5e4c643a6636eb58212"><param name="Name" value="AppVersion"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#f2027103be88064beb452d4378243265"><param name="Name" value="CloseAllLinks"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#2f15b9aadc9ffb042290d4a1ae06ab6c"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#163fc629204836e6afdda8e88c3b4ce5"><param name="Name" value="Connected"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#d65cb72de69ea9b8d7c7a6c8cdb008e4"><param name="Name" value="DebugPrint"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#cc2558b9645ec00465170efc9b50ebb2"><param name="Name" value="EnableReceiver"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#3f2467e794c80b5e758e289420762379"><param name="Name" value="ExpectedPassword"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#41e44fbf9c791001f3a98507cc1b1889"><param name="Name" value="HostIP"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#03ba1b9bf403618446460aa82f28c068"><param name="Name" value="ID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#f840adf4f99a897739d9d97eef8e6fd4"><param name="Name" value="InQueueSize"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#89c5d89c48a369bbf423e2c0a08ec852"><param name="Name" value="LastMsgRecvMilliClock"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#cb206cce1c925b46ba29f9be13004dd1"><param name="Name" value="Login"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#84d23df05063f00f66b72321a4bc358f"><param name="Name" value="MultiXVersion"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#cd6f7dbfdbf9e825c145a61cf42f9d70"><param name="Name" value="NonResponding"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#48ee51b2084bea470f1f2f4bfbab9068"><param name="Name" value="OnAccepted"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#388d7fec75af5e8fd85cb5f60abe71c6"><param name="Name" value="OnConnected"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#3a4263332c736cc61774a2bef63f0fc4"><param name="Name" value="OnDataReplyReceived"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#0a7b8cabdb5b4a7452f16da03e15d305"><param name="Name" value="OnDisconnected"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#8150301d8e4da2b6f498b869252fb185"><param name="Name" value="OnLoginReq"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#e39a8915072fae25b9a87a92bd450e4c"><param name="Name" value="OnNewMsg"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#fe07fc735349292e75abd75947ad06f8"><param name="Name" value="OnRejected"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#e9cd96b8071ce30846496029ddafb567"><param name="Name" value="OnSenderDisabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#9b80e6c2b3f3ab0f0244616f72e62132"><param name="Name" value="OnSenderEnabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#ad0885c7e1e5cbf18378a5ae3cc2b578"><param name="Name" value="OnSendMsgCompleted"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#5bc1d9d621bd1190db861dbf396b364b"><param name="Name" value="OnSendMsgFailed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#2f2f3a524ddb9b50fdef7e508e4cce7c"><param name="Name" value="OnSendMsgTimedout"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#147517b66c939e6574cb8cc109d49ea7"><param name="Name" value="OutQueueSize"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#4c45a0cc38571b8823ddd08dd0e89528"><param name="Name" value="Owner"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#c8cff2ec36730508b52d5fabac5ee653"><param name="Name" value="PasswordToSend"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#b87bcaa864cf94ac874efda436457fab"><param name="Name" value="PID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#416faf680c314833993c2531c620f269"><param name="Name" value="ProcessClass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#6ebd92b4237c403cedde46165ab325c0"><param name="Name" value="ProcessID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#f7bcd0543454c100394148bf585b9026"><param name="Name" value="Ready"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#3c5dd635efcf2e05ccaaec8761e55168"><param name="Name" value="ReceiverEnabled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#26eecdb343a3138cdb7414ed78a27848"><param name="Name" value="Reject"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#d980e601df5b48fa041ff050c86e0df1"><param name="Name" value="Send"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#a8430da8edfa0035a949f6fd4ad91c79"><param name="Name" value="SenderEnabled"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html"><param name="Name" value="CMultiXSession"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#f1cf0fd4da8d80fc2af001407b84d5ff"><param name="Name" value="AlertableID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#54effc1f28f644abf79f07f850f03791"><param name="Name" value="CanDelete"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#40d4faf3363d6c11728edfee55e82714"><param name="Name" value="CheckStatus"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#942d0243c3858236cecd4876074187c4"><param name="Name" value="CMultiXSession"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#1e0a546b241a0bbd3b613ef3ba4928c5"><param name="Name" value="DebugPrint"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#159c1466cde7c196eaa0b48ee5f76b4c"><param name="Name" value="ID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#2af467a4007e29a861e9cc2433babdad"><param name="Name" value="IdleTimer"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#efc06670e51adb4ee4b6d0ebccc8186f"><param name="Name" value="Kill"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#e2c457c97519870fdfcd577a51c417a6"><param name="Name" value="Leave"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#b40340bdd28f46209c2bea2feb9bfe66"><param name="Name" value="LeftSession"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#8a33fc8d288ef2db4bf2f7e18b8ff80e"><param name="Name" value="OnCleanup"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#8a86b36ec8cdaad37f8cb10413bdb948"><param name="Name" value="OnDataReplyReceived"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#84d19deb5a599ef37c68040fa9c32f3f"><param name="Name" value="OnMemberJoined"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#1d4420337c1b0d7e7a6c7c37f366da07"><param name="Name" value="OnMemberLeft"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#a726511de5d3d9c43c8d1c2eb2796d3f"><param name="Name" value="OnNewMsg"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#92051b6ad6baeef29d67d7a456e77821"><param name="Name" value="OnSendMsgCompleted"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#32f8b5d8905531c6c92d13b7fa93ec8b"><param name="Name" value="OnSendMsgFailed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#b9c0f4cefa2c5800bdf125bd626f49fc"><param name="Name" value="OnSendMsgTimedout"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#31f8d30fc3d2027714764a7dbbae3bdc"><param name="Name" value="OnSessionKilled"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#15be6b7a27b0c5daa887ca43cba18899"><param name="Name" value="OnTimer"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#ccb3a6ade08b657ae7c73f83742f68d4"><param name="Name" value="Owner"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#ac50a979c52faeab519c1dd81e7d2cc9"><param name="Name" value="ProcessQueueSize"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#ebdfba528833f2673a74824d506d8bf4"><param name="Name" value="Send"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#7371cf1780218d9cb0c94c95aaa75e87"><param name="Name" value="SetTimer"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html"><param name="Name" value="CMultiXSessionID"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#3a45f79ea7f999ef54f25b16083d480e"><param name="Name" value="CMultiXSessionID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#ee7dc5e065dbe0d9767c2a9fdb96cc24"><param name="Name" value="operator const IDBasicType &"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#f56f2c2f7198587f0adf1ece96357fa2"><param name="Name" value="operator IDBasicType &"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#1aa7acae7726993b7c66bc2c88355538"><param name="Name" value="operator!="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#5815d46298a9a66cf7aa148106505a31"><param name="Name" value="operator<"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#769406dda14e74e306d83fa381eb5a2a"><param name="Name" value="operator=="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#37852b819543bd7e7f22d80bc6e28e05"><param name="Name" value="operator>"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#67eb728486c28ee29d1a357e89d38588"><param name="Name" value="Value"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html"><param name="Name" value="CMultiXTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#5ca401049b0ad2b8b7388d6854d4c6a5"><param name="Name" value="Cancel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#eb6f533038364837052c72cdea7ba2b4"><param name="Name" value="CMultiXTimer"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#ae0c7d08d3ce1ae0f914b690d3873a3f"><param name="Name" value="Data"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#698d3f809db30ec4187cbf25f3b583e2"><param name="Name" value="GetAlertableObject"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#c772c137c8439d78f2606bd7e58ab688"><param name="Name" value="Timeout"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#6ed7b68c496f2934b5fdf1873dbaddd8"><param name="Name" value="TimerCode"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html"><param name="Name" value="CMultiXTpmConfiguredLink"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#23985062084377c055bc43c342e5b051"><param name="Name" value="bRaw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#ba55b81a402f9db045cdb528b5108dc2"><param name="Name" value="Description"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#21f068d298ac192a843ebc1dc490d336"><param name="Name" value="LinkID"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#400d2afb31e106a090d19f6096c07f77"><param name="Name" value="LinkType"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#81a43b2df56c9c87578beed502ab59ad"><param name="Name" value="LocalAddress"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#d079b2ee655f0d700f1e5b129c95e688"><param name="Name" value="LocalPort"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#58db8d9cde9ebaf7040c68c7485c9368"><param name="Name" value="OpenMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#dc92abf4fed5fb92876c7ee577307856"><param name="Name" value="RemoteAddress"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#6629ded568278f070394c0c7cd5714a7"><param name="Name" value="RemotePort"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#200c9b748c8d19540ff0cda47142fc53"><param name="Name" value="ConfigParams"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#139452280fd2a72cc14389ce0b197b8c"><param name="Name" value="Connect"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#163fc629204836e6afdda8e88c3b4ce5"><param name="Name" value="Connected"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#2d9af48ec94be68e3e553eef14f102ee"><param name="Name" value="ConnectProcess"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#62c27db089c1fbbfdb24c3ced10fc663"><param name="Name" value="ControlledByTpm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#8d2b480c16eeba88286b3c5a27aff1e1"><param name="Name" value="CreateLogger"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#df55cacfe73e0a5e65994cfa380d90d3"><param name="Name" value="CreateNew"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#633905d99a064393b8c039c9e3ac6e12"><param name="Name" value="CreateNewSession"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#ae0c7d08d3ce1ae0f914b690d3873a3f"><param name="Name" value="Data"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#4aab0d6dbde2346da7a25133603b9b59"><param name="Name" value="DataPtr"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#b7dddf94f780fda4df6594ea8e052dc7"><param name="Name" value="DebugLevel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#b7f3126b458fa9c2e3ccf431bb7aadc0"><param name="Name" value="DebugPrint"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#b7f3126b458fa9c2e3ccf431bb7aadc0"><param name="Name" value="CMultiXApp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#ea3e0cef8dcef6e2b87ae5eb7f102690"><param name="Name" value="CMultiXLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#d65cb72de69ea9b8d7c7a6c8cdb008e4"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#1e0a546b241a0bbd3b613ef3ba4928c5"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#a0ded92bbbf01f0563192d419c4ef1f6"><param name="Name" value="DefaultSendTimeout"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#ba55b81a402f9db045cdb528b5108dc2"><param name="Name" value="Description"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#049fec9609d27ea69fe3a73de5af843a"><param name="Name" value="Empty"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#cc2558b9645ec00465170efc9b50ebb2"><param name="Name" value="EnableReceiver"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#03a9cd545531f424ade5b962df3866c7"><param name="Name" value="Error"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXEvent.html#4947595fda355992ff49a540198335bb"><param name="Name" value="EventCode"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXEvent.html#4947595fda355992ff49a540198335bb"><param name="Name" value="CMultiXAppEvent"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXEvent.html#4947595fda355992ff49a540198335bb"><param name="Name" value="CMultiXEvent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#199141460d3016588271071c99157629"><param name="Name" value="Expand"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#3f2467e794c80b5e758e289420762379"><param name="Name" value="ExpectedPassword"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#8e392f9eab7246519faa8d62c4ef2330"><param name="Name" value="FindProcess"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#8697287332e2626e27f8de06fdc8bb8a"><param name="Name" value="FindSession"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba608320eddfd53201e4bb559d56881a8529"><param name="Name" value="FlagNotifyAll"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba60750d4e6ad8aa8a30f02672ac9b4a56a7"><param name="Name" value="FlagNotifyError"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba601d4fd93f7fe3be71a7936d31ee44cb95"><param name="Name" value="FlagNotifySuccess"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba60495ab51238abbef657f59020d69e8ac6"><param name="Name" value="FlagResponseRequired"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#fa3c25eb68581e78693d969c54269ebb"><param name="Name" value="Flags"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#698d3f809db30ec4187cbf25f3b583e2"><param name="Name" value="GetAlertableObject"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#675716ede9fb91c43aeba3cfddeb3e7a"><param name="Name" value="GetDataNoLock"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#4738865d4d6ab63d067fc40e222b2c9f"><param name="Name" value="GetFirstLink"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#75d4eaeaf36929661febc57cf65dedaf"><param name="Name" value="GetFirstProcess"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#105d8cb4fd2bd70c545d6870aaea9f1d"><param name="Name" value="GetIntParam"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#105d8cb4fd2bd70c545d6870aaea9f1d"><param name="Name" value="CMultiXApp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#100b0a42fb82d59175299c1d13823b7b"><param name="Name" value="CMultiXLink"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#05d1ce2ffe80dac2ffd96a1a73148bb4"><param name="Name" value="GetStringParam"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#05d1ce2ffe80dac2ffd96a1a73148bb4"><param name="Name" value="CMultiXApp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#6b5fe56315dbfac4d123ad73307fbcc2"><param name="Name" value="CMultiXLink"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#e853675756747f3d33cb584fc0ee4cb8"><param name="Name" value="HostIP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#e853675756747f3d33cb584fc0ee4cb8"><param name="Name" value="CMultiXApp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#41e44fbf9c791001f3a98507cc1b1889"><param name="Name" value="CMultiXProcess"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#d8986ed4042cc99d57530ac85b8ff121"><param name="Name" value="HostName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#03ba1b9bf403618446460aa82f28c068"><param name="Name" value="ID"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#03ba1b9bf403618446460aa82f28c068"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#159c1466cde7c196eaa0b48ee5f76b4c"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#2af467a4007e29a861e9cc2433babdad"><param name="Name" value="IdleTimer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#f840adf4f99a897739d9d97eef8e6fd4"><param name="Name" value="InQueueSize"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#001a03cda74ed86815b8c744a534eb43"><param name="Name" value="IP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#33d868b6374a63d6466695ad4207d05b"><param name="Name" value="IsRaw"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#a6fe02faebb5d7268bc9b192010e7a58"><param name="Name" value="IsResponse"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#d93e902576c0554018630b0186d07ddd"><param name="Name" value="Keep"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#efc06670e51adb4ee4b6d0ebccc8186f"><param name="Name" value="Kill"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#89c5d89c48a369bbf423e2c0a08ec852"><param name="Name" value="LastMsgRecvMilliClock"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#e2c457c97519870fdfcd577a51c417a6"><param name="Name" value="Leave"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#b40340bdd28f46209c2bea2feb9bfe66"><param name="Name" value="LeftSession"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#b512e2c0365e95f4cab4eaef48b6f1e9"><param name="Name" value="Length"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e8e41e5b36866475b46a2ef4cdc1f7221"><param name="Name" value="LinkClosed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e4b1aee1e27417e191b12e43bb78dca64"><param name="Name" value="LinkClosing"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e82468316e58d6a38286fca1cc327dd9a"><param name="Name" value="LinkConnected"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e0f53d6b40a2ee78645d8379965be06b5"><param name="Name" value="LinkDisconnected"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#21f068d298ac192a843ebc1dc490d336"><param name="Name" value="LinkID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e07c20ffc6e03e2c53bb32f5cde769597"><param name="Name" value="LinkOpened"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#460f7758a56671cdf790a85b024eb42e"><param name="Name" value="LinkState"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#210f545f2de320e1df122a1a42cca554"><param name="Name" value="LinkType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#210f545f2de320e1df122a1a42cca554"><param name="Name" value="CMultiXLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#400d2afb31e106a090d19f6096c07f77"><param name="Name" value="CMultiXTpmConfiguredLink"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#c36af37599befc0e0960c027034435ab"><param name="Name" value="Listen"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structCMultiXLink_1_1IPInfo.html#190604da19f45af719535abfcdafa9eb"><param name="Name" value="LocalAddr"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#81a43b2df56c9c87578beed502ab59ad"><param name="Name" value="LocalAddress"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#3ffa10aa1a9e43e7ae959442d9d578a0"><param name="Name" value="LocalName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#7d8e6fe46dd8b621fdde2cea0c6e6e05"><param name="Name" value="LocalPort"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#7d8e6fe46dd8b621fdde2cea0c6e6e05"><param name="Name" value="CMultiXLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structCMultiXLink_1_1IPInfo.html#2bc9bfdb66fdfbfd1b9a241e7559428a"><param name="Name" value="CMultiXLink::IPInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#d079b2ee655f0d700f1e5b129c95e688"><param name="Name" value="CMultiXTpmConfiguredLink"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#d874aff45f8694d42de7df2b3f51e69e"><param name="Name" value="LockData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#cb206cce1c925b46ba29f9be13004dd1"><param name="Name" value="Login"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXException.html#31d5e898b03fc1d9cfed8c579f222001"><param name="Name" value="m_File"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#961f039524fa436b2fb6b9128f7915a4"><param name="Name" value="m_IPInfo"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXException.html#1f866cda555eb0f93a0a9f5dcb44b0b1"><param name="Name" value="m_Line"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXException.html#8322564467267839a3534f6e403a74c6"><param name="Name" value="m_Text"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#84baa279098f711f3381c92519aba773"><param name="Name" value="Mid"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#debce2ab197927cc215de8e825a361ec"><param name="Name" value="MsgCode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXApp_8h.html"><param name="Name" value="MultiXApp.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#30c94e524f732f432995fcbc71c84158"><param name="Name" value="MultiXErrorEnum"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html"><param name="Name" value="MultiXLib.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#30c94e524f732f432995fcbc71c84158"><param name="Name" value="MultiXErrorEnum"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#8b581dbe2884205b881775b6139334a8"><param name="Name" value="MultiXLinkType"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#815258d98151908f17469121a94d7c41"><param name="Name" value="MultiXLinkTypeEnum"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#815258d98151908f17469121a94d7c416c2e7a2ba25fb76c27afd8b6d96cdb62"><param name="Name" value="MultiXLinkTypeTcp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#07431324ef2a9b93ed4e2927f448f3b9"><param name="Name" value="MultiXOpenMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#01a6e8e7e83c58e6eda22e1dfce98c2174732bb3833f57b8245c42de82659ed1"><param name="Name" value="MultiXOpenModeAccept"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#01a6e8e7e83c58e6eda22e1dfce98c218c9ec522392e5295c9268c0e7285c7a7"><param name="Name" value="MultiXOpenModeClient"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#01a6e8e7e83c58e6eda22e1dfce98c21"><param name="Name" value="MultiXOpenModeEnum"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#01a6e8e7e83c58e6eda22e1dfce98c21810982e7ce11443f7b8621b31d78f649"><param name="Name" value="MultiXOpenModeServer"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html"><param name="Name" value="MultiXLink dynamic parameters to support SSL"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g7db40afc84954d0a113b00153fff4c8f"><param name="Name" value="MultiXLinkSSLAPIToUse"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g8aeeb342b68bb3f4f4c0137bf10089ff"><param name="Name" value="MultiXLinkSSLCertificateFile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g43823c74c0d32ec663d9bb150b229ced"><param name="Name" value="MultiXLinkSSLClientAuthenticationRequired"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g5fe1fcc6dd164ac07a565c4b78569716"><param name="Name" value="MultiXLinkSSLDHFile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g5479da3fdee536da460ee5c9ca3cfd3f"><param name="Name" value="MultiXLinkSSLPrivateKeyFile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g509e540346ab15cd9a46f45647200ea6"><param name="Name" value="MultiXLinkSSLPrivateKeyPassword"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g91d2895567a016d610374b38b604c398"><param name="Name" value="MultiXLinkSSLRSAPrivateKeyFile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g3f64701999f92ae916cd57b52e30fb9c"><param name="Name" value="MultiXLinkSSLServerAuthenticationRequired"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g0db58208134aead58ddc900e2ad9d17c"><param name="Name" value="MultiXLinkSSLSSLServerNameVerificationRequired"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#gfadf24fc92d0d7d4c08b3d084586deee"><param name="Name" value="MultiXLinkSSLTrustStoreDirectory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g6c13981b2875dd68f0ec9d7e520d6630"><param name="Name" value="MultiXLinkSSLTrustStoreFile"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g7db40afc84954d0a113b00153fff4c8f"><param name="Name" value="MultiXLinkSSLAPIToUse"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g8aeeb342b68bb3f4f4c0137bf10089ff"><param name="Name" value="MultiXLinkSSLCertificateFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g43823c74c0d32ec663d9bb150b229ced"><param name="Name" value="MultiXLinkSSLClientAuthenticationRequired"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g5fe1fcc6dd164ac07a565c4b78569716"><param name="Name" value="MultiXLinkSSLDHFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g5479da3fdee536da460ee5c9ca3cfd3f"><param name="Name" value="MultiXLinkSSLPrivateKeyFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g509e540346ab15cd9a46f45647200ea6"><param name="Name" value="MultiXLinkSSLPrivateKeyPassword"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g91d2895567a016d610374b38b604c398"><param name="Name" value="MultiXLinkSSLRSAPrivateKeyFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g3f64701999f92ae916cd57b52e30fb9c"><param name="Name" value="MultiXLinkSSLServerAuthenticationRequired"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g0db58208134aead58ddc900e2ad9d17c"><param name="Name" value="MultiXLinkSSLSSLServerNameVerificationRequired"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#gfadf24fc92d0d7d4c08b3d084586deee"><param name="Name" value="MultiXLinkSSLTrustStoreDirectory"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXSSLParams.html#g6c13981b2875dd68f0ec9d7e520d6630"><param name="Name" value="MultiXLinkSSLTrustStoreFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#8b581dbe2884205b881775b6139334a8"><param name="Name" value="MultiXLinkType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#815258d98151908f17469121a94d7c41"><param name="Name" value="MultiXLinkTypeEnum"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#815258d98151908f17469121a94d7c416c2e7a2ba25fb76c27afd8b6d96cdb62"><param name="Name" value="MultiXLinkTypeTcp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#73d4879e07797c827f3157cd3fe74610"><param name="Name" value="MultiXLogger"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#07431324ef2a9b93ed4e2927f448f3b9"><param name="Name" value="MultiXOpenMode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#01a6e8e7e83c58e6eda22e1dfce98c2174732bb3833f57b8245c42de82659ed1"><param name="Name" value="MultiXOpenModeAccept"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#01a6e8e7e83c58e6eda22e1dfce98c218c9ec522392e5295c9268c0e7285c7a7"><param name="Name" value="MultiXOpenModeClient"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#01a6e8e7e83c58e6eda22e1dfce98c21"><param name="Name" value="MultiXOpenModeEnum"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXLib_8h.html#01a6e8e7e83c58e6eda22e1dfce98c21810982e7ce11443f7b8621b31d78f649"><param name="Name" value="MultiXOpenModeServer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXTpmStart.html"><param name="Name" value="MultiXTpm Startup Command Line Arguments"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXTpmStart.html#g010a4f673eab026c39eb30b547ed6a71"><param name="Name" value="MultiXTpmIPString"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXTpmStart.html#gd8cbc8908704b2b6aaea2f40b389a1a2"><param name="Name" value="MultiXTpmPortString"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXTpmStart.html#g33084e74734a347f087d749990a88612"><param name="Name" value="MultiXTpmProcessClass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXTpmStart.html#g2860f88cbef5956700fe773714f468e3"><param name="Name" value="MultiXTpmProcIDString"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXTpmStart.html#g010a4f673eab026c39eb30b547ed6a71"><param name="Name" value="MultiXTpmIPString"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXTpmStart.html#gd8cbc8908704b2b6aaea2f40b389a1a2"><param name="Name" value="MultiXTpmPortString"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXTpmStart.html#g33084e74734a347f087d749990a88612"><param name="Name" value="MultiXTpmProcessClass"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__MultiXTpmStart.html#g2860f88cbef5956700fe773714f468e3"><param name="Name" value="MultiXTpmProcIDString"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#0844c20d0e22996754bbbdf3c6858215"><param name="Name" value="MultiXVersion"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#0844c20d0e22996754bbbdf3c6858215"><param name="Name" value="CMultiXApp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#84d23df05063f00f66b72321a4bc358f"><param name="Name" value="CMultiXProcess"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#cd6f7dbfdbf9e825c145a61cf42f9d70"><param name="Name" value="NonResponding"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#4008521e04a88a87b7eabec40213fd61"><param name="Name" value="NotifyAny"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#0f04485d506f4168bcd5d5140af5f68b"><param name="Name" value="NotifyError"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#12c92380c17411a37cf582d502af66f9"><param name="Name" value="NotifySuccess"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#48ee51b2084bea470f1f2f4bfbab9068"><param name="Name" value="OnAccepted"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#31ea94cb818be23150e6d6feb9d222f5"><param name="Name" value="OnApplicationEvent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#8a33fc8d288ef2db4bf2f7e18b8ff80e"><param name="Name" value="OnCleanup"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#388d7fec75af5e8fd85cb5f60abe71c6"><param name="Name" value="OnConnected"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#c205eafbbe1bf133aead403d3aa62198"><param name="Name" value="OnConnectFailed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#93ad10f34e3674ae4e5e94b2d9fb0842"><param name="Name" value="OnConnectProcessFailed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#4fb21f680d52300b84710d4df007448a"><param name="Name" value="OnDataReceived"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#3a4263332c736cc61774a2bef63f0fc4"><param name="Name" value="OnDataReplyReceived"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#3a4263332c736cc61774a2bef63f0fc4"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#8a86b36ec8cdaad37f8cb10413bdb948"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#0a7b8cabdb5b4a7452f16da03e15d305"><param name="Name" value="OnDisconnected"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#918ed59f67c13eab3fa5227a4c9f7a2e"><param name="Name" value="OnIdle"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#6a1b200bfebb48e1c6e27c4a0b6a25dd"><param name="Name" value="OnLinkClosed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#cf4197d5ddd1667d868693be44882328"><param name="Name" value="OnLinkConnected"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#21435f7d0f71c99b40461950d8ea3ee9"><param name="Name" value="OnLinkDisconnected"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#76eca40c72c633f84377df069ae24bf2"><param name="Name" value="OnListenFailed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#8150301d8e4da2b6f498b869252fb185"><param name="Name" value="OnLoginReq"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#84d19deb5a599ef37c68040fa9c32f3f"><param name="Name" value="OnMemberJoined"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#1d4420337c1b0d7e7a6c7c37f366da07"><param name="Name" value="OnMemberLeft"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#472e4ec5f5fbea75ce384373d7e6a4d2"><param name="Name" value="OnMultiXException"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#e39a8915072fae25b9a87a92bd450e4c"><param name="Name" value="OnNewMsg"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#e39a8915072fae25b9a87a92bd450e4c"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#a726511de5d3d9c43c8d1c2eb2796d3f"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#afc3308b753a19ddf63408530ce4fef7"><param name="Name" value="OnOpenCompleted"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#340429478c48cd195bd5aac0a89ae17e"><param name="Name" value="OnOpenFailed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#abc98d428887d7220f6b5c0b6f54fc3c"><param name="Name" value="OnPrepareForShutdown"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#978cef0aafb02ea75bbbaa3ef3e12dc4"><param name="Name" value="OnProcessRestart"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#d9f49306ba5028992395a0bf2d2c3da0"><param name="Name" value="OnProcessResume"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#1d3030885e936a325351841289167568"><param name="Name" value="OnProcessSuspend"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#fe07fc735349292e75abd75947ad06f8"><param name="Name" value="OnRejected"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#a9e8c8e14941932698da560c6b1d4d6f"><param name="Name" value="OnSendDataCompleted"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#1d32575b8b40ced2c615a9f1a22e0180"><param name="Name" value="OnSendDataFailed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#e9cd96b8071ce30846496029ddafb567"><param name="Name" value="OnSenderDisabled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#9b80e6c2b3f3ab0f0244616f72e62132"><param name="Name" value="OnSenderEnabled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#ad0885c7e1e5cbf18378a5ae3cc2b578"><param name="Name" value="OnSendMsgCompleted"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#ad0885c7e1e5cbf18378a5ae3cc2b578"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#92051b6ad6baeef29d67d7a456e77821"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#5bc1d9d621bd1190db861dbf396b364b"><param name="Name" value="OnSendMsgFailed"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#5bc1d9d621bd1190db861dbf396b364b"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#32f8b5d8905531c6c92d13b7fa93ec8b"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#2f2f3a524ddb9b50fdef7e508e4cce7c"><param name="Name" value="OnSendMsgTimedout"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#2f2f3a524ddb9b50fdef7e508e4cce7c"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#b9c0f4cefa2c5800bdf125bd626f49fc"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#31f8d30fc3d2027714764a7dbbae3bdc"><param name="Name" value="OnSessionKilled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#7939be78e1da87a019b1fd577f4fe5d7"><param name="Name" value="OnShutdown"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#4a13e98c99682ab4b635fab011a54450"><param name="Name" value="OnStartup"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAlertableObject.html#2b46d26dd5055580c5444357f9719eb0"><param name="Name" value="OnTimer"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAlertableObject.html#2b46d26dd5055580c5444357f9719eb0"><param name="Name" value="CMultiXAlertableObject"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#15be6b7a27b0c5daa887ca43cba18899"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#0eba6986ef123618b18f7e9f73e6bdfc"><param name="Name" value="OnTpmConfigCompleted"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#b347b7c32de6cb80294f5510cf837aba"><param name="Name" value="OnTpmConfiguredLink"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#82f69d421146b2b719280220db50d230"><param name="Name" value="OpenMode"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#82f69d421146b2b719280220db50d230"><param name="Name" value="CMultiXLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#58db8d9cde9ebaf7040c68c7485c9368"><param name="Name" value="CMultiXTpmConfiguredLink"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#ee7dc5e065dbe0d9767c2a9fdb96cc24"><param name="Name" value="operator const IDBasicType &"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#f56f2c2f7198587f0adf1ece96357fa2"><param name="Name" value="operator IDBasicType &"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#1aa7acae7726993b7c66bc2c88355538"><param name="Name" value="operator!="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#b3fa767fc792c89ea410260cd3ee8259"><param name="Name" value="operator<<="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#5815d46298a9a66cf7aa148106505a31"><param name="Name" value="operator<"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#05edd78373da9136f92d45a07519e0c3"><param name="Name" value="operator=="></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#05edd78373da9136f92d45a07519e0c3"><param name="Name" value="CMultiXBuffer"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#769406dda14e74e306d83fa381eb5a2a"><param name="Name" value="CMultiXSessionID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#13464171f4a77ce9582b6d6c351bd218"><param name="Name" value="operator>>="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#37852b819543bd7e7f22d80bc6e28e05"><param name="Name" value="operator>"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#147517b66c939e6574cb8cc109d49ea7"><param name="Name" value="OutQueueSize"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#e67e6e60e6519fe3bb5d5e15669fcbdb"><param name="Name" value="Owner"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#e67e6e60e6519fe3bb5d5e15669fcbdb"><param name="Name" value="CMultiXAppMsg"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#723adc81b14a0954a79c7409a4ccab98"><param name="Name" value="CMultiXLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#4c45a0cc38571b8823ddd08dd0e89528"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#ccb3a6ade08b657ae7c73f83742f68d4"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#c8cff2ec36730508b52d5fabac5ee653"><param name="Name" value="PasswordToSend"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#5623fbeb65fc8ba1f3f72f20b5b8b5ae"><param name="Name" value="PID"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#5623fbeb65fc8ba1f3f72f20b5b8b5ae"><param name="Name" value="CMultiXApp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#b87bcaa864cf94ac874efda436457fab"><param name="Name" value="CMultiXProcess"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#322abef88691e0e7692085933df2923b"><param name="Name" value="ProcessClass"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#322abef88691e0e7692085933df2923b"><param name="Name" value="CMultiXApp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#416faf680c314833993c2531c620f269"><param name="Name" value="CMultiXProcess"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#a25d9ca5ec342f8bee61757534f70d3e"><param name="Name" value="ProcessID"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#a25d9ca5ec342f8bee61757534f70d3e"><param name="Name" value="CMultiXApp"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#6ebd92b4237c403cedde46165ab325c0"><param name="Name" value="CMultiXProcess"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#ac50a979c52faeab519c1dd81e7d2cc9"><param name="Name" value="ProcessQueueSize"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#18a009dc4185f332aeae8872e551f3d1"><param name="Name" value="QueueEvent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#f7bcd0543454c100394148bf585b9026"><param name="Name" value="Ready"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#3c5dd635efcf2e05ccaaec8761e55168"><param name="Name" value="ReceiverEnabled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#26eecdb343a3138cdb7414ed78a27848"><param name="Name" value="Reject"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#6e77e668a0302498f99b798bcd0c27dc"><param name="Name" value="ReleaseData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structCMultiXLink_1_1IPInfo.html#df8703df90b1c222adf46ff094923406"><param name="Name" value="RemoteAddr"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#dc92abf4fed5fb92876c7ee577307856"><param name="Name" value="RemoteAddress"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#9e134e2f711da098c8d9c58f6ae5f7df"><param name="Name" value="RemoteName"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#4cd6242bb8fd9f3503bb24d04b7469ba"><param name="Name" value="RemotePort"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#4cd6242bb8fd9f3503bb24d04b7469ba"><param name="Name" value="CMultiXLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structCMultiXLink_1_1IPInfo.html#bdeed5761133154e7f7b15c87b38ac32"><param name="Name" value="CMultiXLink::IPInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTpmConfiguredLink.html#6629ded568278f070394c0c7cd5714a7"><param name="Name" value="CMultiXTpmConfiguredLink"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#3324e28eabef7dc20c62efb475389ef9"><param name="Name" value="RemoveLink"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#98bd1a4fe64a96621fceaee6882b5b9e"><param name="Name" value="Reply"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#e4c103fa5b24314fea0a7acb7ce06856"><param name="Name" value="ReplySent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#15eef39319d130c3d8de0e1c07c3c46d"><param name="Name" value="ResetProcID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#ea827ba7ca1137a08931f5c1ae1eec69"><param name="Name" value="ResponseRequired"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#dcdbfa5c6971c2abe82c8fd43c03c9da"><param name="Name" value="ReturnBuffer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#092d002e320636444f03fff09a106b38"><param name="Name" value="RoutedFrom"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#fe60a10fa8d3ac0b4081f60cddca5556"><param name="Name" value="SavedContext"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#09bca07787da570540ea7216801f17c5"><param name="Name" value="SavedContextExt"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#b0a709e09297c5f52002b36305cf1cec"><param name="Name" value="Send"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#b0a709e09297c5f52002b36305cf1cec"><param name="Name" value="CMultiXLink"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#d980e601df5b48fa041ff050c86e0df1"><param name="Name" value="CMultiXProcess"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#ebdfba528833f2673a74824d506d8bf4"><param name="Name" value="CMultiXSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXProcess.html#a8430da8edfa0035a949f6fd4ad91c79"><param name="Name" value="SenderEnabled"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#f4ab6ffbac822cc440169a027b98ba60"><param name="Name" value="SendFlags"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#a26924e830ad1eefbd7412d01bb26895"><param name="Name" value="SetGarbageCollectorParams"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#75f667a212f37865860c61aedc55d6a0"><param name="Name" value="SetMultiXTimer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSession.html#7371cf1780218d9cb0c94c95aaa75e87"><param name="Name" value="SetTimer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#f3d742bb8b0df7cce0072777143d37dc"><param name="Name" value="Shutdown"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#563c3a63fd0d2ebc54f079ff7c746a89"><param name="Name" value="Size"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#ef56f617f2d6d4e1e5c59af5c555dd85"><param name="Name" value="Start"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXLink.html#82b7b59a0698f1b5534560ef125c541e"><param name="Name" value="State"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#41fc9cb208525d4d6e568d05b1a177f5"><param name="Name" value="Timeout"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#41fc9cb208525d4d6e568d05b1a177f5"><param name="Name" value="CMultiXAppMsg"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#c772c137c8439d78f2606bd7e58ab688"><param name="Name" value="CMultiXTimer"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXTimer.html#6ed7b68c496f2934b5fdf1873dbaddd8"><param name="Name" value="TimerCode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#15975fcda7430b54977d045277473ff4"><param name="Name" value="TpmIPAddress"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#f5486004101a9c1cd64c130f51e53868"><param name="Name" value="TpmIPPort"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#6c8a297d891ecf1e97546fe8398a751d"><param name="Name" value="TpmProcID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="MultiXApp_8h.html#cbb28ba54f252de8f675c4c1f974c6b1"><param name="Name" value="TTpmConfigParams"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#62dd44915baef87214cb3ebaa9e3728d"><param name="Name" value="Unlock"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXBuffer.html#d39c6a22731b131b6da56b5292294961"><param name="Name" value="UpdateLengthNoLock"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXSessionID.html#67eb728486c28ee29d1a357e89d38588"><param name="Name" value="Value"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXApp.html#36a86a7f8b6c8273093489d87828de4f"><param name="Name" value="WaitEnd"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#a11fd888adfb37201fa08ec5a7d7f805"><param name="Name" value="WSDllFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#285524545c6ee6fa4c7cf5d331b5b7b1"><param name="Name" value="WSDllFunction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#b848cd2823a0aedb861f43ddfa559ec3"><param name="Name" value="WSSoapAction"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classCMultiXAppMsg.html#eedf36ef74d1b6bd4829a598c921e8b6"><param name="Name" value="WSURL"></OBJECT>
+</UL>

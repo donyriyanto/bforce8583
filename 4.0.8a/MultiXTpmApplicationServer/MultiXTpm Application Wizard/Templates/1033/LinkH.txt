@@ -1,0 +1,101 @@
+/*!	\file	*/
+// [!output PROJECT_NAME_NB]Link.h: interface for the C[!output PROJECT_NAME_NB]Link class.
+//
+//////////////////////////////////////////////////////////////////////
+/*
+
+MultiX Network Applications Development Toolkit.
+Copyright (C) 2007, Moshe Shitrit, Mitug Distributed Systems Ltd., All Rights Reserved.
+
+This file is part of MultiX.
+
+MultiX is free software; you can redistribute it and/or modify it under the terms of the 
+GNU General Public License as published by the Free Software Foundation; 
+either version 2 of the License, or (at your option) any later version. 
+
+MultiX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program;
+if not, write to the 
+Free Software Foundation, Inc., 
+59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+--------------------------------------------------------------------------------
+Author contact information: 
+msr@mitug.co.il
+--------------------------------------------------------------------------------
+
+*/
+
+#if !defined([!output PROJECT_NAME_NB]_Link_H_Included)
+#define [!output PROJECT_NAME_NB]_Link_H_Included
+
+#pragma once
+
+#include	"[!output PROJECT_NAME_NB]App.h"
+[!if	TCPProtocolSupport]
+#include	"[!output PROJECT_NAME_NB]TCPProtocol.h"
+[!endif]
+[!if	ClientSessionSupport]
+#include	"[!output PROJECT_NAME_NB]ClientSession.h"
+[!endif]
+/*!
+	This is the base class for links that handle communications between two applications that use some private protocol.
+	It encapsulates all the logic for sending, receiving and validating messages exchanged between the applications. 
+[!if	TCPProtocolSupport]
+	It uses C[!output PROJECT_NAME_NB]TCPProtocol for formating and validating the buffers.
+[!endif]
+*/
+class C[!output PROJECT_NAME_NB]Link : public CMultiXLink
+{
+public:
+	/*!
+	posible value to describe the current state of a link
+	*/
+	enum	[!output PROJECT_NAME_NB]LinkStates
+	{
+		WaitConnection,
+		WaitDataTransfer,
+		WaitTpmResponse,
+		Idle
+	};
+
+public:
+	virtual	void OnLinkConnected();
+	virtual	void OnDataReceived(CMultiXBuffer &Buf);
+
+
+	bool SendDataMsg(CMultiXBuffer &BufferToSend);
+[!if	TCPProtocolSupport]
+	virtual	void OnNewMessage(C[!output PROJECT_NAME_NB]Msg &Msg);
+	virtual	void	OnInvalidMsg();
+[!endif]
+
+[!if	ClientSessionSupport]
+	void OnSessionReply(CMultiXBuffer	&Buf,CMultiXAppMsg	&OriginalMsg);
+	void	OnSessionSendCompleted(CMultiXAppMsg	&OriginalMsg);
+	void	OnSessionSendFailed(CMultiXAppMsg	&OriginalMsg,int	Error);
+	C[!output PROJECT_NAME_NB]ClientSession * GetSession(bool bCreateNew=false);
+	CMultiXSessionID	m_SessionID;	//!<	Session id of the C[!output PROJECT_NAME_NB]ClientSession instance associated with this link 
+[!endif]
+
+
+	virtual	bool OnOpenFailed(int IoError);
+	C[!output PROJECT_NAME_NB]App	*Owner(){return	(C[!output PROJECT_NAME_NB]App	*)CMultiXLink::Owner();}
+	virtual	bool OnSendDataFailed(CMultiXBuffer &Buf);
+	virtual	void OnSendDataCompleted(CMultiXBuffer &Buf);
+	virtual	bool OnLinkClosed();
+	inline	CMultiXLinkID & GetID()	{	return	CMultiXLink::ID();}
+
+	C[!output PROJECT_NAME_NB]Link(TTpmConfigParams	&Params,MultiXOpenMode	OpenMode);
+	virtual ~C[!output PROJECT_NAME_NB]Link();
+protected:
+
+[!if	TCPProtocolSupport]
+	C[!output PROJECT_NAME_NB]Protocol	*m_pProtocol;	//!<	Handle all protocol details
+[!endif]
+
+	[!output PROJECT_NAME_NB]LinkStates	m_State;	//!<	current state of the link
+};
+
+#endif // !defined([!output PROJECT_NAME_NB]_Link_H_Included)

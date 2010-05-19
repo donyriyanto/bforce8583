@@ -1,0 +1,335 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html">
+	<meta name="keywords" content="Application Server, SOAP, XML, Message Oriented Middleware, MOM, Distributed Processing, Application Level Router, POS, 
+Point of Sale, Message Queue, Development, Developers, Projects, Downloads, OSTG, VA Software, SF.net, SourceForge, Web Services, ISO 8583, Transaction Processing Monitor, Open Source">
+	<title>MultiXTpm ISO 8583 XML Bridge</title>
+	<style>
+a
+{
+ font-weight: bold; 
+}
+</style>
+</head>
+<body alink="blue" bgcolor="lightyellow" lang="EN-US" link="blue" vlink="purple">
+	<font face="Arial,Helvetica">
+		<div style="text-align: center;">
+			<table border="0" cellpadding="8" cellspacing="2" >
+				<tr>
+					<td align="center">
+						<a href="/">Home</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<h1 style="font-size: 30pt; color: orangered">
+							MultiXTpm ISO 8583 XML Bridge</h1>
+						<h1 style="font-size: 30pt; color: orangered">
+							Open Source/Free Software</h1>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<strong>MultiXTpm ISO 8583 XML Bridge</strong> is an application built on top <a href="MultiXTpm Application Server.htm">MultiXTpm Application Server</a>.
+						Its purpose is to provide the means by which <a href="http://www.iso.org/iso/en/StandardsQueryFormHandler.StandardsQueryFormHandler?languageCode=en&isoNumber=8583">
+							ISO 8583</a> based clients like POS terminals
+						and ATMs can access back end servers that do not support the <a href="http://www.iso.org/iso/en/StandardsQueryFormHandler.StandardsQueryFormHandler?languageCode=en&isoNumber=8583">
+							ISO 8583</a> protocol. <strong>MultiXTpm ISO 8583 XML Bridge</strong> enables systems implementers to build a financial system
+						using today’s <strong>SOAP/XML Web
+							Services</strong> technology while continuing to support existing <a href="http://www.iso.org/iso/en/StandardsQueryFormHandler.StandardsQueryFormHandler?languageCode=en&isoNumber=8583">
+								ISO 8583</a> based terminals and other clients. <strong>MultiXTpm ISO 8583 XML Bridge</strong>
+						does it
+						by converting each <a href="http://www.iso.org/iso/en/StandardsQueryFormHandler.StandardsQueryFormHandler?languageCode=en&isoNumber=8583">
+							ISO 8583</a> message it receives from clients to a <strong>SOAP/XML Web Service</strong>
+						message and forwarding it to the appropriate server for processing. When a response
+						is received from the server, it is converted back to <a href="http://www.iso.org/iso/en/StandardsQueryFormHandler.StandardsQueryFormHandler?languageCode=en&isoNumber=8583">
+							ISO 8583</a> response message and
+						returned back to the original sender.<br />
+						<strong>MultiXTpm ISO 8583 XML Bridge</strong> provides the following features:<br />
+						<ol>
+							<li><strong>ISO 8583</strong> Message Parser:<ul>
+								<li><strong>ISO 8583-1-1987</strong> Messages parsing and creation. </li>
+								<li><strong>ISO 8583-2-1993</strong> Messages parsing and creation.</li>
+							</ul>
+							</li>
+							<li>Support for TCP/IP channel with 2 bytes header indicating the actual message size.
+								Other channels and framing protocols (such as X28) can easily be implemented.</li>
+							<li>Support for listenning on multiple TCP/IP ports.</li>
+							<li>Support for multiple connections to remote <strong>SOAP/XML Web Service</strong> servers.</li>
+							<li>Can handle any practical number of input <strong>ISO 8583</strong> connections from clients.</li>
+							<li>Support for <a href="http://wp.netscape.com/eng/ssl3/">Secured Socket Layer (SSL)</a>
+								based client connections if required.</li>
+							<li>Maintains
+						sessions with the clients and forwarding the requests to the <strong>
+								Web Service Methods</strong> in the
+						context of the same session.</li>
+							<li>Message forwarding to the <strong>Web Service Methods</strong> is done based on
+								the TCP/IP Port, where all incomming connections to a specific port are always forwarded
+						to the same <strong>Web Service</strong> on the same server. </li>
+							<li>The <strong>Web Service Client</strong> side in the bridge uses a very simple
+						schema to forward requests to the server.</li>
+							<li>The <strong>Web Service Client</strong> in the bridge uses <a href="http://www.cs.fsu.edu/~engelen/soap.html">
+								gSoap</a> to forward requests to the <strong>Web Service Methods</strong>, this
+								means that the <strong>Web Service</strong> Server can be implemented
+						using almost any platform and development environment.</li>
+							<li>The <strong>Web Service Client</strong> side of the bridge can communicate with
+								the <strong>Web Service</strong> Server using <strong>HTTP</strong> or <strong>HTTPS</strong>.
+							</li>
+							<li>The <strong>Web Service Client</strong> side of the bridge can be configured to
+								authnticate itself to the <strong>Web Service</strong> Server.
+							</li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Architecture</h2>
+						<strong>MultiXTpm ISO 8583 XML Bridge</strong> runtime environment comprises of
+						3 processes at the minimum:
+						<ul>
+							<li><a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">MultiXTpm</a> – Application Server, Router, load balancer.</li>
+							<li><strong>ISO 8583 FE</strong> – Listener and communications handler, receives requests from <strong>ISO 8583</strong> based clients.</li>
+							<li><strong>Web Service Client</strong> – Receives the <strong>ISO 8583</strong> messages
+								from <strong>ISO 8583 FE</strong> and forwards them as <strong>Web Service</strong>
+								method calls to the server. </li>
+													</ul>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							ISO 8583 FE</h2>
+						This process acts as a Listener/Transport handler. It is responsible for the actual
+						communication with <strong>ISO 8583</strong> based client like POS terminals or
+						ATMs or Remote Acquirer Gateways. This process always
+						acts as Listener, it never initiates calls. When a new connection is established,
+						it creates a new session object, it waits for incoming <strong>ISO 8583</strong> messages and when
+						a full message is received, it is forwarded to <strong>MultiXTpm</strong> process (in the context
+						of the session created earlier). The way it forwards the request to <strong>
+							MultiXTpm</strong> depends
+						on how the communications link (used to receive the request) was configured:<br />
+						<ul>
+							<li>
+						If a <strong>Forwarding Message Code</strong> was configured for the Link, it
+								will use that <strong>Forwarding essage Code</strong> when forwarding the request. In practice this means that all requests
+						that arrive on this communication link will always be forwarded to the same <strong>Web Service</strong> server and to the same Service/Function on the remote server.</li>
+							<li>If no <strong>Forwarding Message Code</strong> is configured for the link, a default 
+								<strong>Forwarding Message Code</strong> of 8583 will be used, and the behavior will be as
+								specified before. </li>
+						</ul>
+						<p>
+						</p>
+						<p>
+							<strong>MultiXTpm</strong>, when receiving the request, forwards it to the appropriate
+							<strong>Web Service Client</strong> process for the actual processing of the request.
+						When a response comes from the <strong>Web Service Client</strong> process, it is forwarded back
+						to the originator of the request.</p>
+						<p>
+							This process always keeps the connection opened, waiting for the next
+						request, or a disconnect from the client or an idle timer expires in which case the
+						connection is aborted.</p>
+						<p>
+							This process is multithreaded and all communication activities
+						are performed in NOWAIT manner, it does not block on any call, so it can theoretically
+						process unlimited number of connections simultaneously. This process can have more
+						than one instance where each instance can manage a different range of ports. All
+						instances can run on a single machine or can be divided between multiple machines.</p>
+						<p>
+						An important issue that should be noted is that each communication link that is
+						configured for this process has the option to support or not support <a href="http://wp.netscape.com/eng/ssl3/">
+								Secured Socket Layer (SSL)</a>. This means that
+						when this Bridge is located at a remote site and there is a need to secure the communication
+						link when using <strong>
+								ISO 8583</strong> messages, it can be done by configuring the link to support
+							<a href="http://wp.netscape.com/eng/ssl3/">Secured Socket Layer (SSL)</a>. This of course requires that the clients as well will support <a href="http://wp.netscape.com/eng/ssl3/">
+								Secured Socket Layer (SSL)</a>.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Web Service Client</h2>
+						This process is responsible to all communications with <strong>Remote Web Service</strong>
+						Servers.
+						When it starts, it receives from <strong>MultiXTpm</strong> a list of addresses and ports (Communications
+						Links) of available <strong>Web Services</strong> servers.
+						When a request is received from an <strong>ISO 8583 FE</strong> process it
+						does the followings:<br />
+						<ol>
+							<li>If the request is the first one in the current session, it looks for a Communications
+								Link with <strong>Forwarding Message Code</strong> that matches the <strong>Message
+									Code</strong> of the request.
+								If it finds one, it uses its configured parameters for initiating the connection
+								to the <strong>Web Service</strong> server; otherwise it uses the default Communications Link configured
+								for this process.<ul><li>If the message received from <strong>MultiXTpm</strong> contains a fully qualified 
+									<strong>URL</strong>, its Host address and Port will be used.</li><li>If the message contains only the path of the <strong>Web Service</strong>, the
+									Communications Link configured Host address and Port will be used.</li></ul></li>
+							<li>If this is not the first request in the session, it
+						will use the already opened connection to the server and it will queue the request.</li>
+							<li>Once there is a connection, it will translate the first queued <strong>ISO 8583</strong>
+								message into a <strong>Web Service Method</strong> call and forward it to the <strong>
+									Web Service</strong>. </li>
+							<li>Once a
+						response is received, it translates the response back to <strong>ISO 8583</strong>
+								message and sends
+						it back to the originator of the <strong>ISO 8583</strong> message. the top message in
+								the queue is removed from the queue.</li>
+							<li>Steps 3 and 4 will occur
+						until the queue becomes empty or until one of the sides disconnects or until an
+						idle timer expires which will force disconnect.</li>
+						</ol>
+						<p>
+							This process use the following <a href="ISO8583WS.wsdl">
+						Web Service Description Language (WSDL) File</a> to communicate with the Web Service
+						server. The Web Service must be implemented using this <a href="ISO8583WS.wsdl">WSDL File</a>.</p>
+						<p>
+							This process uses <a href="http://www.cs.fsu.edu/~engelen/soap.html">gSoap</a> toolkit to call the <strong>Web Service Method</strong>.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" dir="ltr">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							<a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">MultiXTpm</a></h2>
+						This is the main process within this architecture. When it starts, it reads a preconfigured XML file where all configuration data is stored in. Among other things, it starts the first instances of the other processes. When the other processes are started, it provides them with some configuration data. It provides <strong>ISO 8583 FE</strong> the information about the TCP/IP ports to listen on for incoming <strong>ISO 8583</strong>
+						requests. It also provides the &nbsp;<strong>Web Service Client</strong> the information about the TCP/IP addresses and ports to connect to Remote Web Service Servers for sending outgoing SOAP/XML Web Service requests. <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">MultiXTpm</a>'s main responsibilities are:
+						<ul>
+							<li>Monitor the other processes for unexpected termination. When it realizes that one of the processes has terminated, it restarts it if it is configured to do so.</li>
+							<li>When a new request arrives from <strong>ISO 8583 FE</strong>, it routes the request to one or more <strong>
+								Web Service Client</strong> processes for handling the request.</li>
+							<li>Monitor the queues for the <strong>Web Service Client</strong> processes. Based on configuration data, <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">MultiXTpm</a> maintains a queue for each process. </li>
+							<li>Receiving a response from <strong>Web Service Client</strong> processes and forwarding
+								the responses back to <strong>
+									ISO 8583 FE</strong>.</li>
+						</ul>
+						<p>
+							&nbsp;</p>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Following is a description of the Data Flow in <strong>MultiXTpm ISO 8583 XML Bridge</strong>. Each <a href="http://www.iso.org/iso/en/StandardsQueryFormHandler.StandardsQueryFormHandler?languageCode=en&isoNumber=8583">ISO 8583</a> request passes thru few phases starting from connection establishment and ending with the connection closing. Between these two phases the Client is said to be "in a session". Following is a brief description of the various phases.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<ol>
+							<li>The client (Acquirer Gateway or POS terminal or ATM) establishes a connection.</li>
+							<li>The client send an <a href="http://www.iso.org/iso/en/StandardsQueryFormHandler.StandardsQueryFormHandler?languageCode=en&isoNumber=8583">ISO 8583</a> request.</li>
+							<li><strong>ISO 8583 FE</strong> Receives the request and validates its syntax. </li>
+							<li>The message is forwarded in its entirety using a preconfigured <strong>Forwarding
+								Message Code</strong> or a default of <strong>8583</strong> as the <strong>Message
+									Code</strong> for internal routing purposes. If the request is the first one in the session, it is forwarded to <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">MultiXTpm</a>, otherwise it is forwarded directly to the <strong>
+					Web Service Client</strong> process that was previously elected by <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">MultiXTpm</a> on the first call.</li>
+							<li><a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">MultiXTpm</a>, upon receiving the new request, searches its local configuration data for an entry matching the <strong>Message Code</strong> specified in the request, it does not scan the message AT ALL. If it finds such an entry, it elects the appropriate <strong>
+								Web Service Client</strong> process and queues the message for a later forwarding to that process.</li>
+							<li>If the queue for that process is empty or its size is below a preconfigured maximum, the message is forwarded immediately to the process. </li>
+							<li>Upon receiving the request, <strong>Web Service Client </strong>validates the entire request syntactically. When the message is validated it is converted to a
+								<strong>SOAP/XML Web Service Request</strong> and forwarded to the <strong>Web Service</strong>
+								Server. </li>
+							<li>When a response is received, it is converted to an <strong>ISO 8583</strong> response and it is
+								forwarded back to original <strong>ISO 8583 FE</strong> who forwarded the request.</li>
+							<li>When the response from <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">MultiXTpm</a> or <strong>
+								Web Service Client</strong> is received, <strong>ISO 8583 FE</strong> checks that the connection with the client is still valid and if so, it forwards the response.</li>
+							<li>The response is sent to the client. At that point the client may elect to close the connection and as a result, <strong>ISO 8583 FE</strong> will delete the session object. If the connection is not closed, <strong>ISO 8583 FE</strong> will use the same session object for handling future requests. </li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							MultiXTpm ISO 8583 XML Bridge Usage Scenarios</h2>
+						<strong>MultiXTpm ISO 8583 XML Bridge</strong> can be used in the following scenarios:<br />
+						<ol>
+							<li>As an <strong>ISO
+						8583 Switch/HUB</strong> in remote locations where there are many clients using <strong>ISO 8583</strong>
+						to access their back end servers. A good example is a big department store or a
+						supermarket. A good reason to use it in these cases is its ability to translate <strong>UNSECURED ISO 8583</strong> sessions to secured <strong>HTTPS/SOAP/XML Web Services</strong> based sessions.
+						This eliminates the need to install encryption devices at the remote site or some other
+						black box that just tunnels the <strong>ISO 8583</strong> messages. Another reason to
+								use this bridge is its ability to <strong>Authenticate</strong> itself to the <strong>
+									Web Service</strong> Server thru <strong>HTTP/HTTPS</strong> authentication without
+								the need to modify the <strong>ISO 8583</strong> implementation to support authentication.
+								This scenario enables systems
+						implementers to use <strong>Secured Web Service</strong> oriented back ends with <strong>UNSECURED ISO 8583</strong> clients.&nbsp;</li>
+							<li>As a front end system at the back end site that supports only <strong>SOAP/XML
+								Web Service</strong> calls. This way, legacy clients can continue connecting to the back
+						end using <strong>ISO 8583</strong> while the back end itself is implemented using SOAP/XML Web Services. </li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Download information</h2>
+						<strong>MultiXTpm Application Server</strong> is free software; you can redistribute
+						it and/or modify it under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">
+							GNU General Public License</a> as published by the Free Software Foundation; either
+						version 2 of the License, or (at your option) any later version.<br />
+						<br />
+						<strong>MultiXTpm Application Server</strong> is distributed in source code format
+						and it supports: Windows OS, Linux, Solaris and HP Nonstop Server OSS.<br />
+						<br />
+						The source code is packed in ZIP file and can be downloaded from SourceForge.net.<br />
+						<br />
+						To Access the <a href="http://sourceforge.net/project/showfiles.php?group_id=196021"
+							onclick="javascript:urchinTracker('/outgoing/DownloadPage');">Download Page</a>
+						at SourceForge.net you may click <a href="http://sourceforge.net/project/showfiles.php?group_id=196021"
+							onclick="javascript:urchinTracker('/outgoing/DownloadPage');">Here</a><br />
+						or
+						<br />
+						Navigate to <a href="http://sourceforge.net/projects/multixtpm" onclick="javascript:urchinTracker('/outgoing/ProjectPage');">
+							http://sourceforge.net/projects/multixtpm</a>
+						<br />
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Contact information</h2>
+						For more information, Bug Reports, Feature Requests, and Support Requests, please
+						use:
+						<br />
+						<a href="http://sourceforge.net/tracker/?group_id=196021" onclick="javascript:urchinTracker('/outgoing/TrackerPage');">
+							SourceForge.net tracker</a>
+						<br />
+						or
+						<br />
+						<a href="http://sourceforge.net/forum/?group_id=196021" onclick="javascript:urchinTracker('/outgoing/ForumPage');">
+							SourceForge.net Project Forums</a>
+						<br />
+						or
+						<br />
+						<a href="http://tech.groups.yahoo.com/group/multixtpm/" onclick="javascript:urchinTracker('/outgoing/YahooGroup');">
+							MultiXTpm group at Yahoo Groups.</a>
+						<br />
+						or
+						<br />
+						you may send an email to: <a href="mailto:multixtpm@mitug.co.il" onclick="javascript:urchinTracker('/outgoing/Email');">
+							Moshe Shitrit</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<a href="/">Home</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</font>
+
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+
+	<script type="text/javascript">
+	if(window.location.hostname	==	"www.mitug.co.il")
+		_uacct = "UA-2084378-1";
+	else
+		_uacct = "UA-2084437-1";
+urchinTracker();
+	</script>
+
+</body>
+</html>

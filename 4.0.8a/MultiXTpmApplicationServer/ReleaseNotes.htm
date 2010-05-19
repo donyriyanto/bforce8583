@@ -1,0 +1,263 @@
+<html>
+<head>
+	<meta content="text/html" http-equiv="Content-Type">
+	<meta content="Application Server, SOAP, XML, Message Oriented Middleware, MOM, Distributed Processing, Application Level Router, POS, 
+Point of Sale, Message Queue, Development, Developers, Projects, Downloads, OSTG, VA Software, SF.net, SourceForge, Web Services, ISO 8583, Transaction Processing Monitor, Open Source" name="keywords">
+	<title>MultiXTpm Application Server - Release Notes</title>
+	<style>
+a
+{
+ font-weight: bold; 
+}
+</style>
+</head>
+<body alink="blue" bgcolor="lightyellow" lang="EN-US" link="blue" vlink="purple">
+	<font face="Arial,Helvetica">
+		<div style="text-align: center;">
+			<table border="0" cellpadding="8" cellspacing="2" >
+				<tr>
+					<td align="center">
+						<h1 style="font-size: 30pt; color: orangered">
+							MultiXTpm Application Server - Release Notes</h1>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						MultiX Network Applications Development Toolkit.<br />
+						Copyright (C) 2007, Moshe Shitrit, Mitug Distributed Systems Ltd., All Rights Reserved.<br />
+						<br />
+						This file is part of MultiX.<br />
+						<br />
+						MultiX is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+						<br />
+						MultiX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href="gpl.txt">GNU General Public License</a> for more details.<br />
+						You should have received a copy of the GNU General Public License along with this program;<br />
+						if not, write to the:<br />
+						Free Software Foundation, Inc.,<br />
+						59 Temple Place,<br />
+						Suite 330,<br />
+						Boston,<br />
+						MA 02111-1307<br />
+						USA
+						<br />
+						<br />
+						Author contact information:<br />
+						<a href="mailto:msr@mitug.co.il">msr@mitug.co.il</a></td>
+				</tr>
+				<tr>
+					<td align="left">
+						MultiXTpm helps application developers to build large scalable systems that can span multiple processes and multiple hosts. This release contains the Application Server core components and application projects that demonstrate the use MultiXTpm Application Server and its capabilities.<br />
+						<br />
+						This distribution contains the following Visual Studio 2005 Solutions/Directories:<br />
+						<ul>
+							<li><a href="MultiXTpm Application Server.htm">MultiXTpm Application Server</a> -
+								Used to build the core component of the Application Server. </li>
+							<li><a href="MultiXTpmAdmin.htm">MultiXTpm Administration Server</a> - Microsoft .NET
+								Web Application to control and configure <strong><span style="color: #0000ff; text-decoration: underline">
+									MultiXTpm Application Server</span></strong>. For users that do not have Visual
+								Studio installed, and cannot build this solution, there a precompiled binary setup
+								file <strong>MultiXTpmAdminSetup.msi</strong> that can be <a href="http://sourceforge.net/project/showfiles.php?group_id=196021">
+									downloaded from SourceForge</a>. </li>
+							<li><a href="MultiXTpmSimpleSystem.htm">MultiXTpm Simple System</a> - Demonstrates
+								how
+								start developing a MultiXTpm based applications using <strong>MultiX Simplified API</strong>.
+							</li>
+							<li><a href="MultiXTpm gSoap Enhancer.htm">MultiXTpm gSoap Enhancer</a> - An implementation
+								that provides enhancements gSoap toolkit based application developers. </li>
+							<li><a href="MultiXTpm ISO 8583 Server.htm">MultiXTpm ISO 8583 Server</a> - Provides
+								a prototype application used to develop ISO 8583 based applications.</li>
+							<li><a href="MultiXTpmISO8583XMLBridge.htm">MultiXTpm ISO 8583 XML Bridge</a> - A
+								complete solution used to connect ISO 8583 based clients to SOAP/XML Web Services
+								based back end servers. </li>
+							<li><a href="MultiXTpm Generic Multiplexer.htm">MultiXTpm Generic Multiplexer</a>
+								- A complete solution used multiplex TCP/IP client sessions into one more Server
+								connections. </li>
+						</ul>
+						<p>
+							Each project in each solution contains make files in order to build the projects on <strong>Linux</strong> systems</p>
+					</td>
+				</tr>
+				<tr>
+					<td align="left"><h2 style="text-align: center; text-decoration: underline; color: green;">
+						MultiXTpm Application Server Projects</h2>
+						MultiXTpm Application Server solution contains the following projects:<br />
+						<ul>
+							<li>MultiX - This project builds the base DLL that enables all inter process communication, session management, communication handling, timers, queues etc. Some of the header files in the “include” directory under <strong><span style="text-decoration: underline">
+									MultiXTpm Application Server</span></strong> directory, contain documentation that can be produced using Doxygen. Every process that is incorporated in the Application Server environment, needs to link to the MultiX DLL.</li>
+							<li>MultiXTpm - MultiXTpm is the actual Application Server, queues manager and load balancer. As mentioned before, it links to the MultiX DLL. Almost all traffic in the system pass thru MultiXTpm (except when sending messages between processes that share the same session). MultiXTpm is responsible for starting and stopping all processes that are part of the Application Server. It monitors the state of the processes and if finds out that a process has terminated for no reason, it will restart it. MultiXTpm reads its configuration from an xml file.</li>
+							<li>MultiXTpmATL - It is like MultiXTpm only that it is wrapped in an ActiveX Control. This enable running an instance of MultiXTpm in a container application. As an ActiveX Control it exposes some COM interface so it can be activated from some COM or OLE client. MultiXTpmService uses that interface.</li>
+							<li>MultiXTpmService - A Windows service that be started and stopped using the service manager. It can be installed multiple times and can run multiple instances of MultiXTpm using a separate configuration file for each instance. It uses MultiXTpmATL to start and stop instances of MultiXTpm.</li>
+							<li>gSoapForMultiX - This DLL contains only the default gSoap functions required by some parts of the Application Server. It contains functions like: soap_init, soap_new and so on. It is used when some parts of the Application Server need to initialize a soap structure and there is no other DLL that exports the required functions. MultiXTpm itselft uses gSoap for handling Web Service calls for configuration and control.</li>
+							<li>MultiXgSoapSupport - This DLL encapsulates all the functionality of interfacing to the sockets and HTTP. It contains 2 main objects, one that buffers all http data on the input until a full request is received and then it forwards the whole message to the application. It also handles the sending of the response to the client. The other object serializes the SOAP data to and from buffer. MultiXTpm process uses this DLL.</li>
+							<li>MultiXTpm Application Wizard - A Visual Studio 2005 Application Wizard, it creates a skeleton application with all the required classes and files in order to start developing a MultiXTpm based application.</li>
+							<li>MultiXTpmAdmin - A Visual Studio 2005 Web Application, it used to control and configure MultiXTpm running instances.</li>
+						</ul>
+						
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							MultiXTpm Simple System Projects</h2>
+						MultiXTpm Simple System solution contains the following projects:<br />
+						<ul>
+							<li>MultiEchoClient - This project builds a client application that uses <strong>MultiX
+								Simplified API</strong>.</li>
+							<li>MultiEchoServer -This project builds a server application that uses <strong>MultiX
+								Simplified API</strong>.</li>
+						</ul>
+						<p>
+							A Description of this solution can be found <a href="MultiXTpmSimpleSystem.htm">
+								Here</a></p>
+					</td>
+				</tr>
+				<tr>
+				</tr>
+					<tr>
+						<td align="left">
+							<h2 style="text-align: center; text-decoration: underline; color: green;">
+								MultiXTpm gSoap Enhancer Projects</h2>
+							MultiXTpm gSoap Enhancer solution contains the following projects:<br />
+							<ul>
+								<li>MultiXWSFE - This project builds the front end application used to handle all HTTP/SOAP interactions with remote Web Service Clients.</li>
+								<li>MultiXWSServer - This project builds the backend application used to load the Web Services DLLs and execute the requests.</li>
+								<li>gSoapCalculator - This projects builds the sample calculator web service.</li>
+								<li>gSoapCalculatorClient - This is a <strong>.NET</strong> project written in <strong>C#</strong>. Its purpose is to test the Calculator Web Service.</li>
+								<li>gSoapDimeServer - A sample gSoap Dime Server implemented as DLL that can be used
+									by MultiXTpm gSoap Enhancer.</li>
+								<li>gSoapEchoClient - A Sample gSoap standalone client to communicate with the gSoapEchoServer.</li>
+								<li>gSoapEchoServer - A sample gSoap Echo Server implemented as DLL that can be used
+									by MultiXTpm gSoap Enhancer.</li>
+							</ul>
+								<p>
+									A Description of this solution can be found <a href="MultiXTpm gSoap Enhancer.htm">Here</a></p>
+						</td>
+					</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							ISO 8583 Server Projects</h2>
+						ISO 8583 Server solution contains the following projects:<br />
+						<ul>
+							<li>ISO8583AcquirerGatewayFE - This project builds the front end application used to handle all ISO 8583 interactions with remote Issuer Gateways. </li>
+							<li>ISO8583IssuerGatewayFE - This project builds the front end application used to handle all ISO 8583 interactions with remote Acquirer Gateways and POS Terminal/ATM Machines.</li>
+							<li>ISO8583IssuerGatewayWSFE - This project builds the front end application used
+								to handle all SOAP/XML Web Services calls from remote Acquirer Gateways and POS Terminal/ATM
+								Machines.</li>
+							<li>ISO8583BackEnd - This projects builds the Back End application that Authorizes/Route Requests received from ISO 8583 Issuer Gateway FE.</li>
+							<li>ISO8583Shared - This is a DLL that contains all the logic for handling ISO 8583 messages, including c <strong>.NET</strong> project written in <strong>C#</strong>. Its purpose is to test the Calculator Web Service.</li>
+							<li>ISO8583TestClient - This project builds an ISO 8583 Client that reads input from
+								an XML file using the following <a href="ISO8583WS.wsdl">format definition</a> and
+								sends the requests as ISO 8583 messages. When responses arrive, it saves them as
+								XML records in a file. </li>
+							<li>ISO8583Authorizer - A simple working ISO 8583 authorizer that uses MySQL database
+								to manage accounts.</li>
+						</ul>
+						<p>
+							A Description of this solution can be found <a href="MultiXTpm ISO 8583 Server.htm">Here</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							MultiXTpm ISO 8583 XML Bridge Projects</h2>
+						MultiXTpm ISO 8583 XML Bridge solution contains the following projects:<br />
+						<ul>
+							<li>ISO8583FE - This project builds the front end application used
+								to handle all ISO 8583 interactions with remote Issuer Gateways. </li>
+							<li>Web Service Client - This project builds the application used to handle all communications
+								with SOAP/XML Web Service Servers. </li>
+							<li>ISO8583Shared - This is a DLL that contains all the logic for handling ISO 8583
+								messages, including c <strong>.NET</strong> project written in <strong>C#</strong>.
+								Its purpose is to test the Calculator Web Service.</li>
+						</ul>
+						<p>
+							A Description of this solution can be found <a href="MultiXTpmISO8583XMLBridge.htm">
+								Here</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							MultiXTpm Generic Multiplexer Projects</h2>
+						MultiXTpm Generic Multiplexer solution contains the following projects:<br />
+						<ul>
+							<li>MultiplexerClientFE - This project builds the front end application used
+								to handle all interactions with remote client applications. </li>
+							<li>MultiplexerServerFE - This project builds the front end application used to
+								handle all interactions with remote servers thru predefined number of opened connections.</li>
+							<li>MultiplexerShared - This is a DLL that contains all the logic for handling protocol details and queues management.</li>
+						</ul>
+						<p>
+							A Description of this solution can be found <a href="MultiXTpm Generic Multiplexer.htm">
+								Here</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Download information</h2>
+						<strong>MultiXTpm Application Server</strong> is free software; you can redistribute
+						it and/or modify it under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">
+							GNU General Public License</a> as published by the Free Software Foundation; either
+						version 2 of the License, or (at your option) any later version.<br />
+						<br />
+						<strong>MultiXTpm Application Server</strong> is distributed in source code format
+						and it supports: Windows OS, Linux, Solaris and HP Nonstop Server OSS.<br />
+						<br />
+						The source code is packed in ZIP file and can be downloaded from SourceForge.net.<br />
+						<br />
+						To Access the <a href="http://sourceforge.net/project/showfiles.php?group_id=196021"
+							onclick="javascript:urchinTracker('/outgoing/DownloadPage');">Download Page</a>
+						at SourceForge.net you may click <a href="http://sourceforge.net/project/showfiles.php?group_id=196021"
+							onclick="javascript:urchinTracker('/outgoing/DownloadPage');">Here</a><br />
+						or
+						<br />
+						Navigate to <a href="http://sourceforge.net/projects/multixtpm" onclick="javascript:urchinTracker('/outgoing/ProjectPage');">
+							http://sourceforge.net/projects/multixtpm</a>
+						<br />
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Contact information</h2>
+						For more information, Bug Reports, Feature Requests, and Support Requests, please
+						use:
+						<br />
+						<a href="http://sourceforge.net/tracker/?group_id=196021" onclick="javascript:urchinTracker('/outgoing/TrackerPage');">
+							SourceForge.net tracker</a>
+						<br />
+						or
+						<br />
+						<a href="http://sourceforge.net/forum/?group_id=196021" onclick="javascript:urchinTracker('/outgoing/ForumPage');">
+							SourceForge.net Project Forums</a>
+						<br />
+						or
+						<br />
+						<a href="http://tech.groups.yahoo.com/group/multixtpm/" onclick="javascript:urchinTracker('/outgoing/YahooGroup');">
+							MultiXTpm group at Yahoo Groups.</a>
+						<br />
+						or
+						<br />
+						you may send an email to: <a href="mailto:multixtpm@mitug.co.il" onclick="javascript:urchinTracker('/outgoing/Email');">
+							Moshe Shitrit</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</font>
+
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+
+	<script type="text/javascript">
+	if(window.location.hostname	==	"www.mitug.co.il")
+		_uacct = "UA-2084378-1";
+	else
+		_uacct = "UA-2084437-1";
+urchinTracker();
+	</script>
+
+</body>
+</html>

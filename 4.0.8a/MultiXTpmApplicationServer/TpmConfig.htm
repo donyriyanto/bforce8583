@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta content="text/html" http-equiv="Content-Type" />
+	<title>MultiXTpm Application Server - Configuration</title>
+	<style type="text/css">
+a
+{
+ font-weight: bold; 
+}
+</style>
+</head>
+<body alink="blue" bgcolor="lightyellow" lang="EN-US" link="blue" vlink="purple">
+	<font face="Arial,Helvetica">
+		<div style="text-align: center;">
+			<table border="0" cellpadding="8" cellspacing="2">
+				<tr>
+					<td align="center">
+						<a href="/">Home</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<h1 style="font-size: 30pt; color: orangered">
+							MultiXTpm Application Server</h1>
+						<h1 style="font-size: 30pt; color: orangered">
+							TpmConfig.xml Configuration File</h1>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						To manage and control its runtime environment, <a href="MultiXTpm Application Server.htm">
+							MultiXTpm Application Server</a> manages several types of entities:<br />
+						<ul>
+							<li>Process Classes</li>
+							<li>Communication Links</li>
+							<li>Messages</li>
+							<li>Processes Groups</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						When <strong>MultiXTpm Process</strong> starts, it reads a configuration file and
+						performs some initial steps to kick start the entire system.<br />
+						<ol>
+							<li>Start all required instances of all defined process classes.</li>
+							<li>If there are definitions for communication links assigned to a class, <strong>
+								MultiXTpm Process</strong> forwards these definitions to each process instance it
+								starts.</li>
+							<li>Once all the required instances are up and running, <strong>MultiXTpm Process</strong>
+								monitors the processes state for routing and control purposes.</li>
+							<li><strong>MultiXTpm Process</strong> enters an endless loop, waiting for incoming
+								messages
+								<ul>
+									<li>When <strong>MultiXTpm Process</strong> receives a message, it scans its messages
+										table.</li>
+									<li>If a message with the same MessageCode does not exist in its table, it replies
+										with an error to the sender.</li>
+									<li>When a valid message is received, it checks which Process Groups should receive
+										the message.</li>
+									<li>For each group that it finds, it looks for the most available (smallest queue)
+										process, puts the message in its queue and tries to forward the message immediately
+										to the process.</li>
+									<li>When a response received from the process, <strong>MultiXTpm Process</strong>
+										forwards it back to the original sender.</li>
+								</ul>
+							</li>
+						</ol>
+						<p>
+							In order for this cycle to happen, we need to provide <a href="MultiXTpm Application Server.htm">
+								MultiXTpm Application Server</a> with configuration information. This information
+							is stored in an XML file that has a well known schema. You can find the schema definition
+							in the file <a href="TpmConfig.xsd">TpmConfig.xsd</a> located in <strong><span style="text-decoration: underline">
+								MultiXTpm Application Server</span></strong> directory.</p>
+						<p>
+							The schema defines 4 main data types:</p>
+						<ul>
+							<li>ProcessClass</li>
+							<li>Link</li>
+							<li>Group</li>
+							<li>Message</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<strong><span style="text-decoration: underline">ProcessClass</span></strong>
+						<br />
+						<br />
+						A process class defines the attributes of a process that <strong>MultiXTpm Process</strong>
+						controls and manages. The following table describes all attributes of a Process
+						Class.
+						<br />
+						<br />
+						<table style="width: 80%">
+							<tr>
+								<td>
+									ID
+								</td>
+								<td>
+									Each process class has an id which is a numeric value. When <strong>MultiXTpm Process</strong>
+									starts a new instance of that class, it creates an instance ID for that instance.
+									The ID of the instance is calculated as: ID of <strong>MultiXTpm Process</strong>
+									* 100000 + Class ID * 100 + instance number (which is incremented by one for each
+									instance). This instance ID has a meaning for the Inter Process Communication mechanism
+									used by MultiX</td>
+							</tr>
+							<tr>
+								<td>
+									Description
+								</td>
+								<td>
+									A free text field to describe the class</td>
+							</tr>
+							<tr>
+								<td>
+									PasswordToSend</td>
+								<td>
+									Tells <strong>MultiXTpm Process</strong> what to send to an instance of that class
+									in order to identify itself to that process. It is used by that instance to very
+									that it has a connection with the correct process. See CMultiXProcess::OnLoginReq
+									in MultiX API.</td>
+							</tr>
+							<tr>
+								<td>
+									ExpectedPassword</td>
+								<td>
+									Tells <strong>MultiXTpm Process</strong> what to expect when a connection is established
+									with an instance of this class. See CMultiXProcess::OnAccepted.</td>
+							</tr>
+							<tr>
+								<td>
+									ClassName</td>
+								<td>
+									Can be any string, it can be used by two peer applications to verify the class name
+									of each other. When <strong>MultiXTpm Process</strong> sends its information to
+									other processes, it always uses the class name “MultiXTpm”</td>
+							</tr>
+							<tr>
+								<td>
+									DebugLevel</td>
+								<td>
+									Any number &gt;= 0 to be used by an instance of the class. An instance can get the
+									value configured for the class. See CMultiXApp::DebugLevel().</td>
+							</tr>
+							<tr>
+								<td>
+									DefaultSendTimeout</td>
+								<td>
+									A value in milliseconds that specifies how long a send message operation should
+									be pending before a timeout occurs. The timeout can be specified on the send operation
+									itself, but if not specified, the default value is used.</td>
+							</tr>
+							<tr>
+								<td>
+									MaxQueueSize</td>
+								<td>
+									Specifies how many messages should <strong>MultiXTpm Process</strong> queue for
+									a specific instance of that class before it creates a new instance.</td>
+							</tr>
+							<tr>
+								<td>
+									MaxSessions</td>
+								<td>
+									Specifies how many concurrent sessions an instance of that class can have before
+									<strong>MultiXTpm Process</strong> creates a new instance of that class.</td>
+							</tr>
+							<tr>
+								<td>
+									MaxRecoveryQueueSize</td>
+								<td>
+									Not used.</td>
+							</tr>
+							<tr>
+								<td>
+									AutoStart</td>
+								<td>
+									Tells <strong>MultiXTpm Process</strong> whether to start instances from this class
+									automatically or something else is responsible for starting/restarting processes
+									from this class.</td>
+							</tr>
+							<tr>
+								<td>
+									ExecCmd</td>
+								<td>
+									Specifies the command to use in order to start an instance of this class. It is
+									usually the name of the executable but it can be any command or batch file name.
+									The function used by <strong>MultiXTpm Process</strong> is “system()”, so any value
+									that is valid for the system() call is valid here.</td>
+							</tr>
+							<tr>
+								<td>
+									ExecParams</td>
+								<td>
+									Parameters used on the command line when starting a new instance of that class.</td>
+							</tr>
+							<tr>
+								<td>
+									MinInstances</td>
+								<td>
+									Minimum number of instances that this class should have at any point in time. This
+									value has meaning only if AutoStart is true. In that case, when <strong>MultiXTpm
+										Process</strong> starts, it starts this number of instances, regardless of the
+									load on the system.</td>
+							</tr>
+							<tr>
+								<td>
+									MaxInstances</td>
+								<td>
+									The maximum number of instances that this class should have. It has meaning only
+									if AutoStart is true. When the load on a process class gets high (All Queue in all
+									instances reached their MaxQueueSize), <strong>MultiXTpm Process</strong> creates
+									instances as needed, until the number of instances gets to this number. As load
+									decreases, instances of this class will start to shutdown until the number of instances
+									gets to MinInstances.</td>
+							</tr>
+							<tr>
+								<td>
+									StartProcessDelay</td>
+								<td>
+									When <strong>MultiXTpm Process</strong> needs to restart a process that has crashed,
+									it will wait this number of milliseconds before restarting it.</td>
+							</tr>
+							<tr>
+								<td>
+									InactivityTimer</td>
+								<td>
+									The time <strong>MultiXTpm Process</strong> waits when an instance is idle before
+									it shuts down the instance.</td>
+							</tr>
+							<tr>
+								<td>
+									Params</td>
+								<td>
+									An array of ParamName/ParamValue pairs that is passed to each newly created instances.
+									This is used to pass application dependent parameters to each instance. For example
+									if the process class handles database activities, here is a good place to pass each
+									instance the information about the database name and user name and password and
+									so on.</td>
+							</tr>
+							<tr>
+								<td>
+									LinkIDs</td>
+								<td>
+									An array of IDs of Links that this process class should use. When <strong>MultiXTpm
+										Process</strong> starts a new instance, it provides the instance with information
+									on all links that the process should use. See CMultiXApp:: OnTpmConfiguredLink().</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<strong><span style="text-decoration: underline">Link</span></strong>
+						<br />
+						<br />
+						Link defines the attributes of a connection intended to be used by one or more processes
+						in a <a href="MultiXTpm Application Server.htm">MultiXTpm Application Server</a>
+						environment. Instead for each application to hold a private configuration file with
+						information on connections and other parameters, <a href="MultiXTpm Application Server.htm">
+							MultiXTpm Application Server</a> holds a repository for the communication parameters
+						for all process classes. The association between a Link definition and the process
+						classes that use it, is done thru the “LinkIDs” element in the ProcessClass element.<br />
+						The following table describes all attributes of a Link.
+						<br />
+						<br />
+						<table style="width: 80%">
+							<tr>
+								<td>
+									ID
+								</td>
+								<td>
+									Is used as key to the Links table, has no specific purpose besides identifying a
+									specific link when associating it with a process class.</td>
+							</tr>
+							<tr>
+								<td>
+									Description</td>
+								<td>
+									Free text describing the Link</td>
+							</tr>
+							<tr>
+								<td>
+									LinkType</td>
+								<td>
+									Can be only “MultiXLinkTypeTcp”, future releases may support more link types.</td>
+							</tr>
+							<tr>
+								<td>
+									OpenMode</td>
+								<td>
+									Can be one of:<br />
+									<ul>
+										<li>MultiXOpenModeServer – Implies a listener socket in TCP/IP</li>
+										<li>MultiXOpenModeClient – Implies a client socket.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Raw</td>
+								<td>
+									When set to <strong><span style="text-decoration: underline">True</span></strong>,
+									MultiX API provides only the interface to the transport infrastructure, the application
+									is responsible for all application layer protocol and data.<br />
+									When set to <strong><span style="text-decoration: underline">False</span></strong>,
+									MultiX API uses this link for it's inter process communication. The application is
+									never exposed to the underline protocol and data flow. Each process in a <a href="MultiXTpm Application Server.htm">
+										MultiXTpm Application Server</a> environment has at least one implicit link defined
+									for it for communicating with <strong>MultiXTpm Process</strong>.</td>
+							</tr>
+							<tr>
+								<td>
+									LocalAddress</td>
+								<td>
+									This address is used to bind to the local socket created by this Link. On a Client
+									Link, it enables binding to a specific adapter, on a Server Link it implies the
+									address the socket will listen on.</td>
+							</tr>
+							<tr>
+								<td>
+									LocalPort</td>
+								<td>
+									On a Server Link it implies the port to listen on, on a Client Link, it is the port
+									we use for the local socket.</td>
+							</tr>
+							<tr>
+								<td>
+									RemoteAddress</td>
+								<td>
+									Used on Client Links only and represents the address of the remote host.</td>
+							</tr>
+							<tr>
+								<td>
+									RemotePort</td>
+								<td>
+									Used on Client Links only and represents the remote port to call.</td>
+							</tr>
+							<tr>
+								<td>
+									Params</td>
+								<td>
+									An array of ParamName/ParamValue pairs that is associated with each Link. It's purpose
+									is to enable passing extra information to the application on behalf of the specific
+									Link. It is interpreted by the application only. <a href="MultiXTpm Application Server.htm">
+										MultiXTpm Application Server</a> implementation of <a href="http://wp.netscape.com/eng/ssl3/">
+											Secured Socket Layer (SSL)</a> is based on providing special parameters in this
+									collection when SSL support is required for the specific Link. More information
+									on these parameters can be found in the file <a href="SSL_Support.htm">SSL_Support.htm</a>
+									located in <strong><span style="text-decoration: underline">MultiXTpm Application
+										Server</span></strong> directory.</td>
+							</tr>
+							<tr>
+								<td style="height: 20px">
+								</td>
+								<td style="height: 20px">
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<strong><span style="text-decoration: underline">Message</span></strong>
+						<br />
+						<br />
+						Message attributes are used by <strong>MultiXTpm Process</strong> to decide what
+						to do with a message when it is received from other processes. Since <strong>MultiXTpm
+							Process</strong> is a router, it needs some rules on how and whom the received
+						message should be forwarded to. A message can be forwarded to one or more destinations
+						and it can have a response or no response at all.<br />
+						The following table describes all the attributes of a Message:<br />
+						<br />
+						<table style="width: 80%">
+							<tr>
+								<td>
+									ID</td>
+								<td>
+									This field is very important in the <a href="MultiXTpm Application Server.htm">MultiXTpm
+										Application Server</a> environment. When using the MultiX API, every Send(...)
+									operation has a MessageCode parameter. When <strong>MultiXTpm Process</strong> receives
+									a message for forwarding, the first thing it does is looking for a message definition
+									for the MessageCode it received. The MessageCode specified in the API is the ID
+									specified here. This ID must be unique for each message definition. It can be any
+									numeric value. Since <strong>MultiXTpm Process</strong> uses some reserved numbers
+									for it's use, it is advisable to always use POSITIVE numbers.</td>
+							</tr>
+							<tr>
+								<td>
+									Description</td>
+								<td>
+									Free text describing the message.</td>
+							</tr>
+							<tr>
+								<td>
+									Stateful</td>
+								<td>
+									When set to <strong><span style="text-decoration: underline">True</span></strong>
+									and the message is received in the context of existing MultiX Session, MultiXTpm
+									Process will always forward the message to the instance of a process class that
+									received the first message in the current session.<br />
+									When set to <strong><span style="text-decoration: underline">False</span></strong>,
+									<strong>MultiXTpm Process</strong> will elect the most available instance and will
+									forward the message to it. See CMultiXSession in MultiX API.</td>
+							</tr>
+							<tr>
+								<td>
+									&nbsp;Timeout</td>
+								<td>
+									The time in milliseconds that <strong>MultiXTpm Process</strong> will wait for a
+									response for that message before it decides that the forward operation failed.</td>
+							</tr>
+							<tr>
+								<td>
+									Priority</td>
+								<td>
+									This field is intended for the receiving process only and it is implementation dependent.
+									<strong>MultiXTpm Process</strong> forwards it's messages using FIFO; it does not
+									priorities it's messages.</td>
+							</tr>
+							<tr>
+								<td>
+									&nbsp;WSURL</td>
+								<td>
+									When <strong>MultiXTpm Process</strong> receives a message that is indicated as
+									a Web Service Request, it first looks for a message that has the WSURL field set
+									to the URL received in the request. If no such message is found, the message is
+									rejected.</td>
+							</tr>
+							<tr>
+								<td>
+									WSSoapAction</td>
+								<td>
+									If a Web Service Request is received and the SoapAction is specified, MultiXTpm
+									Process will look for a message definition with the same WSURL and WSSoapAction
+									that are the same as received in the request. If this field is not specified, MultiXTpm
+									Process will elect the message that has the WSURL the same as in the request.</td>
+							</tr>
+							<tr>
+								<td>
+									WSDllFile</td>
+								<td>
+									When <strong>MultiXTpm Process</strong> forwards the Web Service request to the
+									process instance that should handle the request, it notifies it about the DLL to
+									use in order to process the Web Service Request.</td>
+							</tr>
+							<tr>
+								<td>
+									WSDllFunction</td>
+								<td>
+									When <strong>MultiXTpm Process</strong> forwards the Web Service request to the
+									process instance that should handle the request, it notifies it about the DLL function
+									to use in order to process the Web Service Request.</td>
+							</tr>
+							<tr>
+								<td>
+									ForwardFlags</td>
+								<td>
+									An array of flags that tells <strong>MultiXTpm Process</strong> who should receive
+									the message and how, these are the flags:<br />
+									<ul>
+										<li><strong>GroupID</strong> – The ID of the group to receive the message. <strong>
+											MultiXTpm Process</strong> may forward the message to one or more groups. In each
+											group, one or more instances will receive the message depending on “ForwardToAll”
+											flag.</li>
+										<li><strong>ResponseRequired</strong> – If set to <strong><span style="text-decoration: underline">
+											True</span></strong>, <strong>MultiXTpm Process</strong> will wait for a response
+											from that group before sending a response to the sender. If more than one group
+											has this flag set to true, <strong>MultiXTpm Process</strong> will wait until all
+											groups have responded, only then it will respond to the sender. Based on the value
+											of the flag IgnoreResponse, <strong>MultiXTpm Process</strong> decides which specific
+											response should be sent back to the sender.</li>
+										<li><strong>IgnoreResponse</strong> – If set to <strong><span style="text-decoration: underline">
+											True</span></strong>, <strong>MultiXTpm Process</strong> waits for a response from
+											that group but when it is received, it is ignored. In case that more than one group
+											has the “IgnoreResponse” set to <strong><span style="text-decoration: underline">False</span></strong>,
+											<strong>MultiXTpm Process</strong> will forward the first response it received,
+											the later ones will be ignored. The assumption is that the client application is
+											not aware that more than one server application receives it's messages, so it is
+											not able to interpret more than one response.</li>
+										<li><strong>ForwardToAll</strong> – When set to <strong><span style="text-decoration: underline">
+											True</span></strong>, <strong>MultiXTpm Process</strong> will forward the message
+											to all running instances of that group. We use such a flag when we want to notify
+											all processes in a group about some special event, for example, we want all processes
+											to close all files because we want to do End of Day processing.</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<strong><span style="text-decoration: underline">Group</span></strong><br />
+						<br />
+						Group is a logical entity that exists only for the purpose of routing messages.
+						When <strong>MultiXTpm Process</strong> needs to forward a message, it will forward
+						it to one or more groups. <strong>MultiXTpm Process</strong> forwards it's messages
+						to a group and not to a process class.<br />
+						This is done in order to enable forwarding a Message (identified be a specific MessageCode)
+						to Process Classes that can equally process the message but still have different
+						Process Class attributes. An example for two process classes that are identical
+						in functionality but still not defined in one Process Class is when we want to distribute
+						the processes on more than one machine. In such a case we define two process classes,
+						one form processes on machine A and one for machine B. The only difference between
+						these two Process Classes is that the "ExeCmd" field is different. In one class
+						we specify a command to start a process locally and in the other class we specify
+						a command to start the process remotely. For all other purposes, the two Process
+						Classes are identical.<br />
+						<br />
+						For the purpose of Load Balancing we want <strong>MultiXTpm Process</strong> to
+						treat all Process Classes in a Group as if they where defined in one Process Class.
+						This way when <strong>MultiXTpm Process</strong> forwards a request to a group,
+						it will always balance the load between all processes in a group, regardless of
+						their physical location. This what makes <a href="MultiXTpm Application Server.htm">
+							MultiXTpm Application Server</a> environment very dynamic and scalable.<br />
+						<br />
+						The idea of forwarding a message to more than one group is to enable extra processing
+						for a request that does not force the application itself to know about. For example,
+						if a request arrives that requires us to update some information in the database
+						and also we need to notify someone else on the fact that this request has arrived.
+						We could implement the notification mechanism in the Database application, but this
+						would require the database application to know details about if and how to communicate
+						with the other party. By using the “Multicast” feature of <a href="MultiXTpm Application Server.htm">
+							MultiXTpm Application Server</a>, the forwarding of the message to another entity
+						is done without the database application knowing about it, so a full independence
+						between various parts of the system is achieved.<br />
+						<br />
+						The following table describes the Group attributes:<br />
+						<br />
+						<table style="width: 80%">
+							<tr>
+								<td>
+									ID</td>
+								<td>
+									Identifies the group and is used in the forwarding flags in the message definition.</td>
+							</tr>
+							<tr>
+								<td>
+									Description</td>
+								<td>
+									Free text describing the group.</td>
+							</tr>
+							<tr>
+								<td>
+									ProcessClassIDs</td>
+								<td>
+									An array of process class IDs that belong to this group.</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Download information</h2>
+						<strong>MultiXTpm Application Server</strong> is free software; you can redistribute
+						it and/or modify it under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">
+							GNU General Public License</a> as published by the Free Software Foundation; either
+						version 2 of the License, or (at your option) any later version.<br />
+						<br />
+						<strong>MultiXTpm Application Server</strong> is distributed in source code format
+						and it supports: Windows OS, Linux, Solaris and HP Nonstop Server OSS.<br />
+						<br />
+						The source code is packed in ZIP file and can be downloaded from SourceForge.net.<br />
+						<br />
+						To Access the <a href="http://sourceforge.net/project/showfiles.php?group_id=196021"
+							onclick="javascript:urchinTracker('/outgoing/DownloadPage');">Download Page</a>
+						at SourceForge.net you may click <a href="http://sourceforge.net/project/showfiles.php?group_id=196021"
+							onclick="javascript:urchinTracker('/outgoing/DownloadPage');">Here</a><br />
+						or
+						<br />
+						Navigate to <a href="http://sourceforge.net/projects/multixtpm" onclick="javascript:urchinTracker('/outgoing/ProjectPage');">
+							http://sourceforge.net/projects/multixtpm</a>
+						<br />
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Contact information</h2>
+						For more information, Bug Reports, Feature Requests, and Support Requests, please
+						use:
+						<br />
+						<a href="http://sourceforge.net/tracker/?group_id=196021" onclick="javascript:urchinTracker('/outgoing/TrackerPage');">
+							SourceForge.net tracker</a>
+						<br />
+						or
+						<br />
+						<a href="http://sourceforge.net/forum/?group_id=196021" onclick="javascript:urchinTracker('/outgoing/ForumPage');">
+							SourceForge.net Project Forums</a>
+						<br />
+						or
+						<br />
+						<a href="http://tech.groups.yahoo.com/group/multixtpm/" onclick="javascript:urchinTracker('/outgoing/YahooGroup');">
+							MultiXTpm group at Yahoo Groups.</a>
+						<br />
+						or
+						<br />
+						you may send an email to: <a href="mailto:multixtpm@mitug.co.il" onclick="javascript:urchinTracker('/outgoing/Email');">
+							Moshe Shitrit</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<a href="/">Home</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</font>
+
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+
+	<script type="text/javascript">
+	if(window.location.hostname	==	"www.mitug.co.il")
+		_uacct = "UA-2084378-1";
+	else
+		_uacct = "UA-2084437-1";
+urchinTracker();
+	</script>
+
+</body>
+</html>

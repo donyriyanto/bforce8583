@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'MultiXTpmATL'
+		'MultiXTpmATL.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://mitug.co.il/MultiXTpm/ISO8583WS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://mitug.co.il/MultiXTpm/ISO8583WS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://mitug.co.il/MultiXTpm/ISO8583WS">
+      <s:element name="ISO8583Request">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISO8583Msgs" type="tns:ArrayOfCISO8583Msg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCISO8583Msg">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CISO8583Msg" nillable="true" type="tns:CISO8583Msg" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CISO8583Msg">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MTI" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Error" type="tns:TValidationError" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlphaNumericElements" type="tns:ArrayOfAlNum" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumericElements" type="tns:ArrayOfNum" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinaryElements" type="tns:ArrayOfBin" />
+          <s:element minOccurs="0" maxOccurs="1" name="ISO8583Fields" type="tns:ArrayOfISO8583Field" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TValidationError">
+        <s:restriction base="s:string">
+          <s:enumeration value="NoError" />
+          <s:enumeration value="InvalidMsgLength" />
+          <s:enumeration value="InvalidMsgFormat" />
+          <s:enumeration value="InvalidMTIVersion" />
+          <s:enumeration value="InvalidMTIClass" />
+          <s:enumeration value="InvalidMTIFunction" />
+          <s:enumeration value="InvalidMTIOrigin" />
+          <s:enumeration value="InvalidElementID" />
+          <s:enumeration value="InvalidElementSize" />
+          <s:enumeration value="InvalidElementValue" />
+          <s:enumeration value="ElementIsMissing" />
+          <s:enumeration value="ExtraElementsFound" />
+          <s:enumeration value="VersionNotSupported" />
+          <s:enumeration value="MTINotSupported" />
+          <s:enumeration value="PANIsMissing" />
+          <s:enumeration value="ProcessingCodeIsMissing" />
+          <s:enumeration value="TransactionAmountIsMissing" />
+          <s:enumeration value="TransactionCurrencyIsMissing" />
+          <s:enumeration value="CardholderBillingAmountIsMissing" />
+          <s:enumeration value="CardholderBillingCurrencyIsNotEuro" />
+          <s:enumeration value="CardholderBillingConversionRateIsMissing" />
+          <s:enumeration value="CardholderBillingAmountWrong" />
+          <s:enumeration value="STANIsMissing" />
+          <s:enumeration value="DateTimeLocalIsMissing" />
+          <s:enumeration value="ExpirationDateIsMissing" />
+          <s:enumeration value="POSDataCodeIsMissing" />
+          <s:enumeration value="CardSequenceNumberIsMissing" />
+          <s:enumeration value="FunctionCodeIsMissing" />
+          <s:enumeration value="CardAcceptorBusinessCodeIsMissing" />
+          <s:enumeration value="AcquiringInstitutionIdentificationCodeIsMissing" />
+          <s:enumeration value="Track2DataIsMissing" />
+          <s:enumeration value="RRNIsMissing" />
+          <s:enumeration value="TerminalIDIsMissing" />
+          <s:enumeration value="CardAcceptorIdentificationCodeIsMissing" />
+          <s:enumeration value="CardAcceptorNameLocationIsMissing" />
+          <s:enumeration value="PINIsMissing" />
+          <s:enumeration value="SecurityRelatedControlInformationIsMissing" />
+          <s:enumeration value="AdditionalAmountsIsMissing" />
+          <s:enumeration value="ICCDataIsMissing" />
+          <s:enumeration value="AdditionalPrivateDataIsMissing" />
+          <s:enumeration value="MAC1IsMissing" />
+          <s:enumeration value="FunctionCodeIsInvalid" />
+          <s:enumeration value="MessageReasonCodeIsMissing" />
+          <s:enumeration value="TransactionDestinationInstitutionIdentificationCodeIsMissing" />
+          <s:enumeration value="TransactionOriginatorInstitutionIdentificationCodeIsMissing" />
+          <s:enumeration value="MAC2IsMissing" />
+          <s:enumeration value="InvalidRequest" />
+          <s:enumeration value="OriginalAmountsIsMissing" />
+          <s:enumeration value="ApprovalCodeIsMissing" />
+          <s:enumeration value="OriginalDataElementsIsMissing" />
+          <s:enumeration value="AuthorizingAgentInstitutionIdentificationCodeIsMissing" />
+          <s:enumeration value="ForwardToIssuerFailed" />
+          <s:enumeration value="TerminalIDUnknown" />
+          <s:enumeration value="InvalidProcessingCode" />
+          <s:enumeration value="TransactionAmountAboveMaximum" />
+          <s:enumeration value="GeneralSystemError" />
+          <s:enumeration value="NoDatabaseConnection" />
+          <s:enumeration value="RequestRejected" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfAlNum">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AlNum" nillable="true" type="tns:AlNum" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AlNum">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNum">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Num" nillable="true" type="tns:Num" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Num">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBin">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Bin" nillable="true" type="tns:Bin" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Bin">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:hexBinary" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfISO8583Field">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Field" nillable="true" type="tns:ISO8583Field" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ISO8583Field">
+        <s:attribute name="ID" type="s:int" use="required" />
+        <s:attribute name="Value" type="s:string" />
+        <s:attribute default="String" name="ValueType" type="tns:TValueType" />
+      </s:complexType>
+      <s:simpleType name="TValueType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Numeric" />
+          <s:enumeration value="AlphaNumeric" />
+          <s:enumeration value="HexBinary" />
+          <s:enumeration value="String" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ISO8583RequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ISO8583RequestResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ISO8583Msgs" type="tns:ArrayOfCISO8583Msg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ISO8583RequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ISO8583Request" />
+  </wsdl:message>
+  <wsdl:message name="ISO8583RequestSoapOut">
+    <wsdl:part name="parameters" element="tns:ISO8583RequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISO8583WSSoap">
+    <wsdl:operation name="ISO8583Request">
+      <wsdl:input message="tns:ISO8583RequestSoapIn" />
+      <wsdl:output message="tns:ISO8583RequestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ISO8583WSSoap" type="tns:ISO8583WSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ISO8583Request">
+      <soap:operation soapAction="http://mitug.co.il/MultiXTpm/ISO8583WS/ISO8583Request" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ISO8583WSSoap12" type="tns:ISO8583WSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ISO8583Request">
+      <soap12:operation soapAction="http://mitug.co.il/MultiXTpm/ISO8583WS/ISO8583Request" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ISO8583WS">
+    <wsdl:port name="ISO8583WSSoap" binding="tns:ISO8583WSSoap">
+      <soap:address location="http://localhost:1651/ISO8583WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ISO8583WSSoap12" binding="tns:ISO8583WSSoap12">
+      <soap12:address location="http://localhost:1651/ISO8583WS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

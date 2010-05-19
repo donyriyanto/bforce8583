@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Service"
+ targetNamespace="http://localhost:80/Service.wsdl"
+ xmlns:tns="http://localhost:80/Service.wsdl"
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:EchoServer="http://tempuri.org/EchoServer.xsd"
+ xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+ xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+ xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+ xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+ <schema targetNamespace="http://tempuri.org/EchoServer.xsd"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:EchoServer="http://tempuri.org/EchoServer.xsd"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <!-- operation request element -->
+  <element name="ToUpper">
+   <complexType>
+    <sequence>
+     <element name="S" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ToUpperResponse">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ToLower">
+   <complexType>
+    <sequence>
+     <element name="S" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ToLowerResponse">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="Echo">
+   <complexType>
+    <sequence>
+     <element name="S" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="EchoResponse">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="EchoWithSessionData">
+   <complexType>
+    <sequence>
+     <element name="S" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="EchoWithSessionDataResponse">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="EchoWithApplicationData">
+   <complexType>
+    <sequence>
+     <element name="S" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="EchoWithApplicationDataResponse">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+
+</types>
+
+<message name="ToUpperRequest">
+ <part name="parameters" element="EchoServer:ToUpper"/>
+</message>
+
+<message name="ToUpperResponse">
+ <part name="parameters" element="EchoServer:ToUpperResponse"/>
+</message>
+
+<message name="ToLowerRequest">
+ <part name="parameters" element="EchoServer:ToLower"/>
+</message>
+
+<message name="ToLowerResponse">
+ <part name="parameters" element="EchoServer:ToLowerResponse"/>
+</message>
+
+<message name="EchoRequest">
+ <part name="parameters" element="EchoServer:Echo"/>
+</message>
+
+<message name="EchoResponse">
+ <part name="parameters" element="EchoServer:EchoResponse"/>
+</message>
+
+<message name="EchoWithSessionDataRequest">
+ <part name="parameters" element="EchoServer:EchoWithSessionData"/>
+</message>
+
+<message name="EchoWithSessionDataResponse">
+ <part name="parameters" element="EchoServer:EchoWithSessionDataResponse"/>
+</message>
+
+<message name="EchoWithApplicationDataRequest">
+ <part name="parameters" element="EchoServer:EchoWithApplicationData"/>
+</message>
+
+<message name="EchoWithApplicationDataResponse">
+ <part name="parameters" element="EchoServer:EchoWithApplicationDataResponse"/>
+</message>
+
+<portType name="ServicePortType">
+ <operation name="ToUpper">
+  <documentation>Service definition of function EchoServer__ToUpper</documentation>
+  <input message="tns:ToUpperRequest"/>
+  <output message="tns:ToUpperResponse"/>
+ </operation>
+ <operation name="ToLower">
+  <documentation>Service definition of function EchoServer__ToLower</documentation>
+  <input message="tns:ToLowerRequest"/>
+  <output message="tns:ToLowerResponse"/>
+ </operation>
+ <operation name="Echo">
+  <documentation>Service definition of function EchoServer__Echo</documentation>
+  <input message="tns:EchoRequest"/>
+  <output message="tns:EchoResponse"/>
+ </operation>
+ <operation name="EchoWithSessionData">
+  <documentation>Service definition of function EchoServer__EchoWithSessionData</documentation>
+  <input message="tns:EchoWithSessionDataRequest"/>
+  <output message="tns:EchoWithSessionDataResponse"/>
+ </operation>
+ <operation name="EchoWithApplicationData">
+  <documentation>Service definition of function EchoServer__EchoWithApplicationData</documentation>
+  <input message="tns:EchoWithApplicationDataRequest"/>
+  <output message="tns:EchoWithApplicationDataResponse"/>
+ </operation>
+</portType>
+
+<binding name="Service" type="tns:ServicePortType">
+ <SOAP:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+ <operation name="ToUpper">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="ToLower">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="Echo">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="EchoWithSessionData">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="EchoWithApplicationData">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+</binding>
+
+<service name="Service">
+ <documentation>gSOAP 2.7.9l generated service definition</documentation>
+ <port name="Service" binding="tns:Service">
+  <SOAP:address location="http://localhost:80"/>
+ </port>
+</service>
+
+</definitions>

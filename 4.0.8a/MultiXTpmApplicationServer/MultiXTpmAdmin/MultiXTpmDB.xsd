@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MultiXTpmDB" targetNamespace="http://mitug.co.il/MultiXTpmDB.xsd" xmlns:mstns="http://mitug.co.il/MultiXTpmDB.xsd" xmlns="http://mitug.co.il/MultiXTpmDB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MultiXTpmDB" msdata:IsDataSet="true" msdata:Locale="en" msdata:EnforceConstraints="False" msprop:Generator_UserDSName="MultiXTpmDB" msprop:Generator_DataSetName="MultiXTpmDB">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProcessClass" msprop:Generator_UserTableName="ProcessClass" msprop:Generator_RowDeletedName="ProcessClassRowDeleted" msprop:Generator_RowChangedName="ProcessClassRowChanged" msprop:Generator_RowClassName="ProcessClassRow" msprop:Generator_RowChangingName="ProcessClassRowChanging" msprop:Generator_RowEvArgName="ProcessClassRowChangeEvent" msprop:Generator_RowEvHandlerName="ProcessClassRowChangeEventHandler" msprop:Generator_TableClassName="ProcessClassDataTable" msprop:Generator_TableVarName="tableProcessClass" msprop:Generator_RowDeletingName="ProcessClassRowDeleting" msprop:Generator_TablePropName="ProcessClass">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" default="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PasswordToSend" msprop:Generator_UserColumnName="PasswordToSend" msprop:Generator_ColumnPropNameInRow="PasswordToSend" msprop:Generator_ColumnVarNameInTable="columnPasswordToSend" msprop:Generator_ColumnPropNameInTable="PasswordToSendColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ExpectedPassword" msprop:Generator_UserColumnName="ExpectedPassword" msprop:Generator_ColumnPropNameInRow="ExpectedPassword" msprop:Generator_ColumnVarNameInTable="columnExpectedPassword" msprop:Generator_ColumnPropNameInTable="ExpectedPasswordColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ExecCmd" msprop:Generator_UserColumnName="ExecCmd" msprop:Generator_ColumnPropNameInRow="ExecCmd" msprop:Generator_ColumnVarNameInTable="columnExecCmd" msprop:Generator_ColumnPropNameInTable="ExecCmdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ClassName" msprop:Generator_UserColumnName="ClassName" msprop:Generator_ColumnPropNameInRow="ClassName" msprop:Generator_ColumnVarNameInTable="columnClassName" msprop:Generator_ColumnPropNameInTable="ClassNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DebugLevel" msprop:Generator_UserColumnName="DebugLevel" msprop:Generator_ColumnPropNameInRow="DebugLevel" msprop:Generator_ColumnVarNameInTable="columnDebugLevel" msprop:Generator_ColumnPropNameInTable="DebugLevelColumn" type="xs:int" default="0" />
+              <xs:element name="DefaultSendTimeout" msprop:Generator_UserColumnName="DefaultSendTimeout" msprop:Generator_ColumnPropNameInRow="DefaultSendTimeout" msprop:Generator_ColumnVarNameInTable="columnDefaultSendTimeout" msprop:Generator_ColumnPropNameInTable="DefaultSendTimeoutColumn" type="xs:int" default="0" />
+              <xs:element name="ExecParams" msprop:Generator_UserColumnName="ExecParams" msprop:Generator_ColumnPropNameInRow="ExecParams" msprop:Generator_ColumnVarNameInTable="columnExecParams" msprop:Generator_ColumnPropNameInTable="ExecParamsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxQueueSize" msprop:Generator_UserColumnName="MaxQueueSize" msprop:Generator_ColumnPropNameInRow="MaxQueueSize" msprop:Generator_ColumnVarNameInTable="columnMaxQueueSize" msprop:Generator_ColumnPropNameInTable="MaxQueueSizeColumn" type="xs:int" default="0" />
+              <xs:element name="MaxSessions" msprop:Generator_UserColumnName="MaxSessions" msprop:Generator_ColumnPropNameInRow="MaxSessions" msprop:Generator_ColumnVarNameInTable="columnMaxSessions" msprop:Generator_ColumnPropNameInTable="MaxSessionsColumn" type="xs:int" default="0" />
+              <xs:element name="MaxRecoveryQueueSize" msprop:Generator_UserColumnName="MaxRecoveryQueueSize" msprop:Generator_ColumnPropNameInRow="MaxRecoveryQueueSize" msprop:Generator_ColumnVarNameInTable="columnMaxRecoveryQueueSize" msprop:Generator_ColumnPropNameInTable="MaxRecoveryQueueSizeColumn" type="xs:int" default="0" />
+              <xs:element name="AutoStart" msprop:Generator_UserColumnName="AutoStart" msprop:Generator_ColumnPropNameInRow="AutoStart" msprop:Generator_ColumnVarNameInTable="columnAutoStart" msprop:Generator_ColumnPropNameInTable="AutoStartColumn" type="xs:boolean" default="false" />
+              <xs:element name="MinInstances" msprop:Generator_UserColumnName="MinInstances" msprop:Generator_ColumnPropNameInRow="MinInstances" msprop:Generator_ColumnVarNameInTable="columnMinInstances" msprop:Generator_ColumnPropNameInTable="MinInstancesColumn" type="xs:int" default="0" />
+              <xs:element name="MaxInstances" msprop:Generator_UserColumnName="MaxInstances" msprop:Generator_ColumnPropNameInRow="MaxInstances" msprop:Generator_ColumnVarNameInTable="columnMaxInstances" msprop:Generator_ColumnPropNameInTable="MaxInstancesColumn" type="xs:int" default="0" />
+              <xs:element name="StartProcessDelay" msprop:Generator_UserColumnName="StartProcessDelay" msprop:Generator_ColumnPropNameInRow="StartProcessDelay" msprop:Generator_ColumnVarNameInTable="columnStartProcessDelay" msprop:Generator_ColumnPropNameInTable="StartProcessDelayColumn" type="xs:int" default="0" />
+              <xs:element name="InactivityTimer" msprop:Generator_UserColumnName="InactivityTimer" msprop:Generator_ColumnPropNameInRow="InactivityTimer" msprop:Generator_ColumnVarNameInTable="columnInactivityTimer" msprop:Generator_ColumnPropNameInTable="InactivityTimerColumn" type="xs:int" default="0" />
+              <xs:element name="AdditionalConfigTextFile" msprop:Generator_UserColumnName="AdditionalConfigTextFile" msprop:Generator_ColumnVarNameInTable="columnAdditionalConfigTextFile" msprop:Generator_ColumnPropNameInRow="AdditionalConfigTextFile" msprop:Generator_ColumnPropNameInTable="AdditionalConfigTextFileColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Link" msprop:Generator_UserTableName="Link" msprop:Generator_RowDeletedName="LinkRowDeleted" msprop:Generator_RowChangedName="LinkRowChanged" msprop:Generator_RowClassName="LinkRow" msprop:Generator_RowChangingName="LinkRowChanging" msprop:Generator_RowEvArgName="LinkRowChangeEvent" msprop:Generator_RowEvHandlerName="LinkRowChangeEventHandler" msprop:Generator_TableClassName="LinkDataTable" msprop:Generator_TableVarName="tableLink" msprop:Generator_RowDeletingName="LinkRowDeleting" msprop:Generator_TablePropName="Link">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" default="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LinkType" msprop:Generator_UserColumnName="LinkType" msprop:Generator_ColumnPropNameInRow="LinkType" msprop:Generator_ColumnVarNameInTable="columnLinkType" msprop:Generator_ColumnPropNameInTable="LinkTypeColumn" type="xs:int" default="0" />
+              <xs:element name="OpenMode" msprop:Generator_UserColumnName="OpenMode" msprop:Generator_ColumnPropNameInRow="OpenMode" msprop:Generator_ColumnVarNameInTable="columnOpenMode" msprop:Generator_ColumnPropNameInTable="OpenModeColumn" type="xs:int" default="0" />
+              <xs:element name="Raw" msprop:Generator_UserColumnName="Raw" msprop:Generator_ColumnPropNameInRow="Raw" msprop:Generator_ColumnVarNameInTable="columnRaw" msprop:Generator_ColumnPropNameInTable="RawColumn" type="xs:boolean" default="false" />
+              <xs:element name="LocalAddress" msprop:Generator_UserColumnName="LocalAddress" msprop:Generator_ColumnPropNameInRow="LocalAddress" msprop:Generator_ColumnVarNameInTable="columnLocalAddress" msprop:Generator_ColumnPropNameInTable="LocalAddressColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalPort" msprop:Generator_UserColumnName="LocalPort" msprop:Generator_ColumnPropNameInRow="LocalPort" msprop:Generator_ColumnVarNameInTable="columnLocalPort" msprop:Generator_ColumnPropNameInTable="LocalPortColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RemoteAddress" msprop:Generator_UserColumnName="RemoteAddress" msprop:Generator_ColumnPropNameInRow="RemoteAddress" msprop:Generator_ColumnVarNameInTable="columnRemoteAddress" msprop:Generator_ColumnPropNameInTable="RemoteAddressColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RemotePort" msprop:Generator_UserColumnName="RemotePort" msprop:Generator_ColumnPropNameInRow="RemotePort" msprop:Generator_ColumnVarNameInTable="columnRemotePort" msprop:Generator_ColumnPropNameInTable="RemotePortColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SSLAPI" msprop:Generator_UserColumnName="SSLAPI" msprop:Generator_ColumnPropNameInRow="SSLAPI" msprop:Generator_ColumnVarNameInTable="columnSSLAPI" msprop:Generator_ColumnPropNameInTable="SSLAPIColumn" type="xs:string" default="NoSSLAPI" />
+              <xs:element name="SSLClientAuthenticationRequired" msprop:Generator_UserColumnName="SSLClientAuthenticationRequired" msprop:Generator_ColumnPropNameInRow="SSLClientAuthenticationRequired" msprop:Generator_ColumnVarNameInTable="columnSSLClientAuthenticationRequired" msprop:Generator_ColumnPropNameInTable="SSLClientAuthenticationRequiredColumn" type="xs:boolean" default="false" />
+              <xs:element name="SSLServerAuthenticationRequired" msprop:Generator_UserColumnName="SSLServerAuthenticationRequired" msprop:Generator_ColumnPropNameInRow="SSLServerAuthenticationRequired" msprop:Generator_ColumnVarNameInTable="columnSSLServerAuthenticationRequired" msprop:Generator_ColumnPropNameInTable="SSLServerAuthenticationRequiredColumn" type="xs:boolean" default="false" />
+              <xs:element name="SSLServerNameVerificationRequired" msprop:Generator_UserColumnName="SSLServerNameVerificationRequired" msprop:Generator_ColumnPropNameInRow="SSLServerNameVerificationRequired" msprop:Generator_ColumnVarNameInTable="columnSSLServerNameVerificationRequired" msprop:Generator_ColumnPropNameInTable="SSLServerNameVerificationRequiredColumn" type="xs:boolean" default="false" />
+              <xs:element name="SSLTrustStoreFile" msprop:Generator_UserColumnName="SSLTrustStoreFile" msprop:Generator_ColumnPropNameInRow="SSLTrustStoreFile" msprop:Generator_ColumnVarNameInTable="columnSSLTrustStoreFile" msprop:Generator_ColumnPropNameInTable="SSLTrustStoreFileColumn" type="xs:string" default="cacerts.pem" />
+              <xs:element name="SSLTrustStoreDirectory" msprop:Generator_UserColumnName="SSLTrustStoreDirectory" msprop:Generator_ColumnPropNameInRow="SSLTrustStoreDirectory" msprop:Generator_ColumnVarNameInTable="columnSSLTrustStoreDirectory" msprop:Generator_ColumnPropNameInTable="SSLTrustStoreDirectoryColumn" type="xs:string" default="" />
+              <xs:element name="SSLCertificateFile" msprop:Generator_UserColumnName="SSLCertificateFile" msprop:Generator_ColumnPropNameInRow="SSLCertificateFile" msprop:Generator_ColumnVarNameInTable="columnSSLCertificateFile" msprop:Generator_ColumnPropNameInTable="SSLCertificateFileColumn" type="xs:string" default="LocalMultiXTpmServer.pem" />
+              <xs:element name="SSLPrivateKeyFile" msprop:Generator_UserColumnName="SSLPrivateKeyFile" msprop:Generator_ColumnPropNameInRow="SSLPrivateKeyFile" msprop:Generator_ColumnVarNameInTable="columnSSLPrivateKeyFile" msprop:Generator_ColumnPropNameInTable="SSLPrivateKeyFileColumn" type="xs:string" default="LocalMultiXTpmServer.pem" />
+              <xs:element name="SSLPrivateKeyPassword" msprop:Generator_UserColumnName="SSLPrivateKeyPassword" msprop:Generator_ColumnPropNameInRow="SSLPrivateKeyPassword" msprop:Generator_ColumnVarNameInTable="columnSSLPrivateKeyPassword" msprop:Generator_ColumnPropNameInTable="SSLPrivateKeyPasswordColumn" type="xs:string" default="password" />
+              <xs:element name="SSLRSAPrivateKeyFile" msprop:Generator_UserColumnName="SSLRSAPrivateKeyFile" msprop:Generator_ColumnPropNameInRow="SSLRSAPrivateKeyFile" msprop:Generator_ColumnVarNameInTable="columnSSLRSAPrivateKeyFile" msprop:Generator_ColumnPropNameInTable="SSLRSAPrivateKeyFileColumn" type="xs:string" default="" />
+              <xs:element name="SSLDHFile" msprop:Generator_UserColumnName="SSLDHFile" msprop:Generator_ColumnPropNameInRow="SSLDHFile" msprop:Generator_ColumnVarNameInTable="columnSSLDHFile" msprop:Generator_ColumnPropNameInTable="SSLDHFileColumn" type="xs:string" default="" />
+              <xs:element name="SSLPrivateKeyPasswordFile" msprop:Generator_UserColumnName="SSLPrivateKeyPasswordFile" msprop:Generator_ColumnPropNameInRow="SSLPrivateKeyPasswordFile" msprop:Generator_ColumnVarNameInTable="columnSSLPrivateKeyPasswordFile" msprop:Generator_ColumnPropNameInTable="SSLPrivateKeyPasswordFileColumn" type="xs:string" default="" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Group" msprop:Generator_UserTableName="Group" msprop:Generator_RowDeletedName="GroupRowDeleted" msprop:Generator_RowChangedName="GroupRowChanged" msprop:Generator_RowClassName="GroupRow" msprop:Generator_RowChangingName="GroupRowChanging" msprop:Generator_RowEvArgName="GroupRowChangeEvent" msprop:Generator_RowEvHandlerName="GroupRowChangeEventHandler" msprop:Generator_TableClassName="GroupDataTable" msprop:Generator_TableVarName="tableGroup" msprop:Generator_RowDeletingName="GroupRowDeleting" msprop:Generator_TablePropName="Group">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" default="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Message" msprop:Generator_UserTableName="Message" msprop:Generator_RowDeletedName="MessageRowDeleted" msprop:Generator_RowChangedName="MessageRowChanged" msprop:Generator_RowClassName="MessageRow" msprop:Generator_RowChangingName="MessageRowChanging" msprop:Generator_RowEvArgName="MessageRowChangeEvent" msprop:Generator_RowEvHandlerName="MessageRowChangeEventHandler" msprop:Generator_TableClassName="MessageDataTable" msprop:Generator_TableVarName="tableMessage" msprop:Generator_RowDeletingName="MessageRowDeleting" msprop:Generator_TablePropName="Message">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" default="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Stateful" msprop:Generator_UserColumnName="Stateful" msprop:Generator_ColumnPropNameInRow="Stateful" msprop:Generator_ColumnVarNameInTable="columnStateful" msprop:Generator_ColumnPropNameInTable="StatefulColumn" type="xs:boolean" default="false" />
+              <xs:element name="DbProtected" msprop:Generator_UserColumnName="DbProtected" msprop:Generator_ColumnPropNameInRow="DbProtected" msprop:Generator_ColumnVarNameInTable="columnDbProtected" msprop:Generator_ColumnPropNameInTable="DbProtectedColumn" type="xs:boolean" default="false" />
+              <xs:element name="Timeout" msprop:Generator_UserColumnName="Timeout" msprop:Generator_ColumnPropNameInRow="Timeout" msprop:Generator_ColumnVarNameInTable="columnTimeout" msprop:Generator_ColumnPropNameInTable="TimeoutColumn" type="xs:int" default="0" />
+              <xs:element name="Priority" msprop:Generator_UserColumnName="Priority" msprop:Generator_ColumnPropNameInRow="Priority" msprop:Generator_ColumnVarNameInTable="columnPriority" msprop:Generator_ColumnPropNameInTable="PriorityColumn" type="xs:int" default="0" />
+              <xs:element name="WSSoapAction" msprop:Generator_UserColumnName="WSSoapAction" msprop:Generator_ColumnPropNameInRow="WSSoapAction" msprop:Generator_ColumnVarNameInTable="columnWSSoapAction" msprop:Generator_ColumnPropNameInTable="WSSoapActionColumn" type="xs:string" default="" />
+              <xs:element name="WSDllFile" msprop:Generator_UserColumnName="WSDllFile" msprop:Generator_ColumnPropNameInRow="WSDllFile" msprop:Generator_ColumnVarNameInTable="columnWSDllFile" msprop:Generator_ColumnPropNameInTable="WSDllFileColumn" type="xs:string" default="" />
+              <xs:element name="WSDllFunction" msprop:Generator_UserColumnName="WSDllFunction" msprop:Generator_ColumnPropNameInRow="WSDllFunction" msprop:Generator_ColumnVarNameInTable="columnWSDllFunction" msprop:Generator_ColumnPropNameInTable="WSDllFunctionColumn" type="xs:string" default="" />
+              <xs:element name="WSURL" msprop:Generator_UserColumnName="WSURL" msprop:Generator_ColumnPropNameInRow="WSURL" msprop:Generator_ColumnVarNameInTable="columnWSURL" msprop:Generator_ColumnPropNameInTable="WSURLColumn" type="xs:string" default="" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GroupForwardFlags" msprop:Generator_UserTableName="GroupForwardFlags" msprop:Generator_RowDeletedName="GroupForwardFlagsRowDeleted" msprop:Generator_RowChangedName="GroupForwardFlagsRowChanged" msprop:Generator_RowClassName="GroupForwardFlagsRow" msprop:Generator_RowChangingName="GroupForwardFlagsRowChanging" msprop:Generator_RowEvArgName="GroupForwardFlagsRowChangeEvent" msprop:Generator_RowEvHandlerName="GroupForwardFlagsRowChangeEventHandler" msprop:Generator_TableClassName="GroupForwardFlagsDataTable" msprop:Generator_TableVarName="tableGroupForwardFlags" msprop:Generator_RowDeletingName="GroupForwardFlagsRowDeleting" msprop:Generator_TablePropName="GroupForwardFlags">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="GroupID" msprop:Generator_UserColumnName="GroupID" msprop:Generator_ColumnPropNameInRow="GroupID" msprop:Generator_ColumnVarNameInTable="columnGroupID" msprop:Generator_ColumnPropNameInTable="GroupIDColumn" type="xs:int" default="0" />
+              <xs:element name="MessageID" msprop:Generator_UserColumnName="MessageID" msprop:Generator_ColumnPropNameInRow="MessageID" msprop:Generator_ColumnVarNameInTable="columnMessageID" msprop:Generator_ColumnPropNameInTable="MessageIDColumn" type="xs:int" default="0" />
+              <xs:element name="ResponseRequired" msprop:Generator_UserColumnName="ResponseRequired" msprop:Generator_ColumnPropNameInRow="ResponseRequired" msprop:Generator_ColumnVarNameInTable="columnResponseRequired" msprop:Generator_ColumnPropNameInTable="ResponseRequiredColumn" type="xs:boolean" default="false" />
+              <xs:element name="IgnoreResponse" msprop:Generator_UserColumnName="IgnoreResponse" msprop:Generator_ColumnPropNameInRow="IgnoreResponse" msprop:Generator_ColumnVarNameInTable="columnIgnoreResponse" msprop:Generator_ColumnPropNameInTable="IgnoreResponseColumn" type="xs:boolean" default="false" />
+              <xs:element name="ForwardToAll" msprop:Generator_UserColumnName="ForwardToAll" msprop:Generator_ColumnPropNameInRow="ForwardToAll" msprop:Generator_ColumnVarNameInTable="columnForwardToAll" msprop:Generator_ColumnPropNameInTable="ForwardToAllColumn" type="xs:boolean" default="false" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Param" msprop:Generator_UserTableName="Param" msprop:Generator_RowDeletedName="ParamRowDeleted" msprop:Generator_RowChangedName="ParamRowChanged" msprop:Generator_RowClassName="ParamRow" msprop:Generator_RowChangingName="ParamRowChanging" msprop:Generator_RowEvArgName="ParamRowChangeEvent" msprop:Generator_RowEvHandlerName="ParamRowChangeEventHandler" msprop:Generator_TableClassName="ParamDataTable" msprop:Generator_TableVarName="tableParam" msprop:Generator_RowDeletingName="ParamRowDeleting" msprop:Generator_TablePropName="Param">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="ParamName" msprop:Generator_UserColumnName="ParamName" msprop:Generator_ColumnPropNameInRow="ParamName" msprop:Generator_ColumnVarNameInTable="columnParamName" msprop:Generator_ColumnPropNameInTable="ParamNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ParamValue" msprop:Generator_UserColumnName="ParamValue" msprop:Generator_ColumnPropNameInRow="ParamValue" msprop:Generator_ColumnVarNameInTable="columnParamValue" msprop:Generator_ColumnPropNameInTable="ParamValueColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProcessClassLinks" msprop:Generator_UserTableName="ProcessClassLinks" msprop:Generator_RowDeletedName="ProcessClassLinksRowDeleted" msprop:Generator_RowChangedName="ProcessClassLinksRowChanged" msprop:Generator_RowClassName="ProcessClassLinksRow" msprop:Generator_RowChangingName="ProcessClassLinksRowChanging" msprop:Generator_RowEvArgName="ProcessClassLinksRowChangeEvent" msprop:Generator_RowEvHandlerName="ProcessClassLinksRowChangeEventHandler" msprop:Generator_TableClassName="ProcessClassLinksDataTable" msprop:Generator_TableVarName="tableProcessClassLinks" msprop:Generator_RowDeletingName="ProcessClassLinksRowDeleting" msprop:Generator_TablePropName="ProcessClassLinks">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="ProcessClassID" msprop:Generator_UserColumnName="ProcessClassID" msprop:Generator_ColumnPropNameInRow="ProcessClassID" msprop:Generator_ColumnVarNameInTable="columnProcessClassID" msprop:Generator_ColumnPropNameInTable="ProcessClassIDColumn" type="xs:int" default="0" />
+              <xs:element name="LinkID" msprop:Generator_UserColumnName="LinkID" msprop:Generator_ColumnPropNameInRow="LinkID" msprop:Generator_ColumnVarNameInTable="columnLinkID" msprop:Generator_ColumnPropNameInTable="LinkIDColumn" type="xs:int" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProcessClassParams" msprop:Generator_UserTableName="ProcessClassParams" msprop:Generator_RowDeletedName="ProcessClassParamsRowDeleted" msprop:Generator_RowChangedName="ProcessClassParamsRowChanged" msprop:Generator_RowClassName="ProcessClassParamsRow" msprop:Generator_RowChangingName="ProcessClassParamsRowChanging" msprop:Generator_RowEvArgName="ProcessClassParamsRowChangeEvent" msprop:Generator_RowEvHandlerName="ProcessClassParamsRowChangeEventHandler" msprop:Generator_TableClassName="ProcessClassParamsDataTable" msprop:Generator_TableVarName="tableProcessClassParams" msprop:Generator_RowDeletingName="ProcessClassParamsRowDeleting" msprop:Generator_TablePropName="ProcessClassParams">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="ProcessClassID" msprop:Generator_UserColumnName="ProcessClassID" msprop:Generator_ColumnPropNameInRow="ProcessClassID" msprop:Generator_ColumnVarNameInTable="columnProcessClassID" msprop:Generator_ColumnPropNameInTable="ProcessClassIDColumn" type="xs:int" default="0" />
+              <xs:element name="ParamID" msprop:Generator_UserColumnName="ParamID" msprop:Generator_ColumnPropNameInRow="ParamID" msprop:Generator_ColumnVarNameInTable="columnParamID" msprop:Generator_ColumnPropNameInTable="ParamIDColumn" type="xs:int" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LinkParams" msprop:Generator_UserTableName="LinkParams" msprop:Generator_RowDeletedName="LinkParamsRowDeleted" msprop:Generator_RowChangedName="LinkParamsRowChanged" msprop:Generator_RowClassName="LinkParamsRow" msprop:Generator_RowChangingName="LinkParamsRowChanging" msprop:Generator_RowEvArgName="LinkParamsRowChangeEvent" msprop:Generator_RowEvHandlerName="LinkParamsRowChangeEventHandler" msprop:Generator_TableClassName="LinkParamsDataTable" msprop:Generator_TableVarName="tableLinkParams" msprop:Generator_RowDeletingName="LinkParamsRowDeleting" msprop:Generator_TablePropName="LinkParams">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="LinkID" msprop:Generator_UserColumnName="LinkID" msprop:Generator_ColumnPropNameInRow="LinkID" msprop:Generator_ColumnVarNameInTable="columnLinkID" msprop:Generator_ColumnPropNameInTable="LinkIDColumn" type="xs:int" default="0" />
+              <xs:element name="ParamID" msprop:Generator_UserColumnName="ParamID" msprop:Generator_ColumnPropNameInRow="ParamID" msprop:Generator_ColumnVarNameInTable="columnParamID" msprop:Generator_ColumnPropNameInTable="ParamIDColumn" type="xs:int" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GroupProcessClasses" msprop:Generator_UserTableName="GroupProcessClasses" msprop:Generator_RowDeletedName="GroupProcessClassesRowDeleted" msprop:Generator_RowChangedName="GroupProcessClassesRowChanged" msprop:Generator_RowClassName="GroupProcessClassesRow" msprop:Generator_RowChangingName="GroupProcessClassesRowChanging" msprop:Generator_RowEvArgName="GroupProcessClassesRowChangeEvent" msprop:Generator_RowEvHandlerName="GroupProcessClassesRowChangeEventHandler" msprop:Generator_TableClassName="GroupProcessClassesDataTable" msprop:Generator_TableVarName="tableGroupProcessClasses" msprop:Generator_RowDeletingName="GroupProcessClassesRowDeleting" msprop:Generator_TablePropName="GroupProcessClasses">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="GroupID" msprop:Generator_UserColumnName="GroupID" msprop:Generator_ColumnPropNameInRow="GroupID" msprop:Generator_ColumnVarNameInTable="columnGroupID" msprop:Generator_ColumnPropNameInTable="GroupIDColumn" type="xs:int" default="0" />
+              <xs:element name="ProcessClassID" msprop:Generator_UserColumnName="ProcessClassID" msprop:Generator_ColumnPropNameInRow="ProcessClassID" msprop:Generator_ColumnVarNameInTable="columnProcessClassID" msprop:Generator_ColumnPropNameInTable="ProcessClassIDColumn" type="xs:int" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GroupStatusProcesses" msprop:Generator_UserTableName="GroupStatusProcesses" msprop:Generator_RowDeletedName="GroupStatusProcessesRowDeleted" msprop:Generator_RowChangedName="GroupStatusProcessesRowChanged" msprop:Generator_RowClassName="GroupStatusProcessesRow" msprop:Generator_RowChangingName="GroupStatusProcessesRowChanging" msprop:Generator_RowEvArgName="GroupStatusProcessesRowChangeEvent" msprop:Generator_RowEvHandlerName="GroupStatusProcessesRowChangeEventHandler" msprop:Generator_TableClassName="GroupStatusProcessesDataTable" msprop:Generator_TableVarName="tableGroupStatusProcesses" msprop:Generator_RowDeletingName="GroupStatusProcessesRowDeleting" msprop:Generator_TablePropName="GroupStatusProcesses">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
+              <xs:element name="GroupID" msprop:Generator_UserColumnName="GroupID" msprop:Generator_ColumnPropNameInRow="GroupID" msprop:Generator_ColumnVarNameInTable="columnGroupID" msprop:Generator_ColumnPropNameInTable="GroupIDColumn" type="xs:int" default="0" />
+              <xs:element name="ProcessID" msprop:Generator_UserColumnName="ProcessID" msprop:Generator_ColumnPropNameInRow="ProcessID" msprop:Generator_ColumnVarNameInTable="columnProcessID" msprop:Generator_ColumnPropNameInTable="ProcessIDColumn" type="xs:int" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GroupStatus" msprop:Generator_UserTableName="GroupStatus" msprop:Generator_RowDeletedName="GroupStatusRowDeleted" msprop:Generator_RowChangedName="GroupStatusRowChanged" msprop:Generator_RowClassName="GroupStatusRow" msprop:Generator_RowChangingName="GroupStatusRowChanging" msprop:Generator_RowEvArgName="GroupStatusRowChangeEvent" msprop:Generator_RowEvHandlerName="GroupStatusRowChangeEventHandler" msprop:Generator_TableClassName="GroupStatusDataTable" msprop:Generator_TableVarName="tableGroupStatus" msprop:Generator_RowDeletingName="GroupStatusRowDeleting" msprop:Generator_TablePropName="GroupStatus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GroupID" msprop:Generator_UserColumnName="GroupID" msprop:Generator_ColumnPropNameInRow="GroupID" msprop:Generator_ColumnVarNameInTable="columnGroupID" msprop:Generator_ColumnPropNameInTable="GroupIDColumn" type="xs:int" default="0" />
+              <xs:element name="SessionsCount" msprop:Generator_UserColumnName="SessionsCount" msprop:Generator_ColumnPropNameInRow="SessionsCount" msprop:Generator_ColumnVarNameInTable="columnSessionsCount" msprop:Generator_ColumnPropNameInTable="SessionsCountColumn" type="xs:int" default="0" />
+              <xs:element name="OutQueueSize" msprop:Generator_UserColumnName="OutQueueSize" msprop:Generator_ColumnPropNameInRow="OutQueueSize" msprop:Generator_ColumnVarNameInTable="columnOutQueueSize" msprop:Generator_ColumnPropNameInTable="OutQueueSizeColumn" type="xs:int" default="0" />
+              <xs:element name="QueuedItemsSize" msprop:Generator_UserColumnName="QueuedItemsSize" msprop:Generator_ColumnPropNameInRow="QueuedItemsSize" msprop:Generator_ColumnVarNameInTable="columnQueuedItemsSize" msprop:Generator_ColumnPropNameInTable="QueuedItemsSizeColumn" type="xs:int" default="0" />
+              <xs:element name="MaxProcessQueueEntries" msprop:Generator_UserColumnName="MaxProcessQueueEntries" msprop:Generator_ColumnPropNameInRow="MaxProcessQueueEntries" msprop:Generator_ColumnVarNameInTable="columnMaxProcessQueueEntries" msprop:Generator_ColumnPropNameInTable="MaxProcessQueueEntriesColumn" type="xs:int" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProcessStatus" msprop:Generator_UserTableName="ProcessStatus" msprop:Generator_RowDeletedName="ProcessStatusRowDeleted" msprop:Generator_RowChangedName="ProcessStatusRowChanged" msprop:Generator_RowClassName="ProcessStatusRow" msprop:Generator_RowChangingName="ProcessStatusRowChanging" msprop:Generator_RowEvArgName="ProcessStatusRowChangeEvent" msprop:Generator_RowEvHandlerName="ProcessStatusRowChangeEventHandler" msprop:Generator_TableClassName="ProcessStatusDataTable" msprop:Generator_TableVarName="tableProcessStatus" msprop:Generator_RowDeletingName="ProcessStatusRowDeleting" msprop:Generator_TablePropName="ProcessStatus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" default="0" />
+              <xs:element name="ProcessClassID" msprop:Generator_UserColumnName="ProcessClassID" msprop:Generator_ColumnPropNameInRow="ProcessClassID" msprop:Generator_ColumnVarNameInTable="columnProcessClassID" msprop:Generator_ColumnPropNameInTable="ProcessClassIDColumn" type="xs:int" default="0" />
+              <xs:element name="AppVersion" msprop:Generator_UserColumnName="AppVersion" msprop:Generator_ColumnPropNameInRow="AppVersion" msprop:Generator_ColumnVarNameInTable="columnAppVersion" msprop:Generator_ColumnPropNameInTable="AppVersionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MultiXVersion" msprop:Generator_UserColumnName="MultiXVersion" msprop:Generator_ColumnPropNameInRow="MultiXVersion" msprop:Generator_ColumnVarNameInTable="columnMultiXVersion" msprop:Generator_ColumnPropNameInTable="MultiXVersionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IsReady" msprop:Generator_UserColumnName="IsReady" msprop:Generator_ColumnPropNameInRow="IsReady" msprop:Generator_ColumnVarNameInTable="columnIsReady" msprop:Generator_ColumnPropNameInTable="IsReadyColumn" type="xs:boolean" default="false" />
+              <xs:element name="ControlStatus" msprop:Generator_UserColumnName="ControlStatus" msprop:Generator_ColumnPropNameInRow="ControlStatus" msprop:Generator_ColumnVarNameInTable="columnControlStatus" msprop:Generator_ColumnPropNameInTable="ControlStatusColumn" type="xs:int" default="0" />
+              <xs:element name="SessionsCount" msprop:Generator_UserColumnName="SessionsCount" msprop:Generator_ColumnPropNameInRow="SessionsCount" msprop:Generator_ColumnVarNameInTable="columnSessionsCount" msprop:Generator_ColumnPropNameInTable="SessionsCountColumn" type="xs:int" default="0" />
+              <xs:element name="OutQueueSize" msprop:Generator_UserColumnName="OutQueueSize" msprop:Generator_ColumnPropNameInRow="OutQueueSize" msprop:Generator_ColumnVarNameInTable="columnOutQueueSize" msprop:Generator_ColumnPropNameInTable="OutQueueSizeColumn" type="xs:int" default="0" />
+              <xs:element name="LastMsgTime" msprop:Generator_UserColumnName="LastMsgTime" msprop:Generator_ColumnPropNameInRow="LastMsgTime" msprop:Generator_ColumnVarNameInTable="columnLastMsgTime" msprop:Generator_ColumnPropNameInTable="LastMsgTimeColumn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UserPermissions" msprop:Generator_UserTableName="UserPermissions" msprop:Generator_RowDeletedName="UserPermissionsRowDeleted" msprop:Generator_RowChangedName="UserPermissionsRowChanged" msprop:Generator_RowClassName="UserPermissionsRow" msprop:Generator_RowChangingName="UserPermissionsRowChanging" msprop:Generator_RowEvArgName="UserPermissionsRowChangeEvent" msprop:Generator_RowEvHandlerName="UserPermissionsRowChangeEventHandler" msprop:Generator_TableClassName="UserPermissionsDataTable" msprop:Generator_TableVarName="tableUserPermissions" msprop:Generator_RowDeletingName="UserPermissionsRowDeleting" msprop:Generator_TablePropName="UserPermissions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserName" msprop:Generator_UserColumnName="UserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GetWSDL" msprop:Generator_UserColumnName="GetWSDL" msprop:Generator_ColumnPropNameInRow="GetWSDL" msprop:Generator_ColumnVarNameInTable="columnGetWSDL" msprop:Generator_ColumnPropNameInTable="GetWSDLColumn" type="xs:boolean" />
+              <xs:element name="GetConfig" msprop:Generator_UserColumnName="GetConfig" msprop:Generator_ColumnPropNameInRow="GetConfig" msprop:Generator_ColumnVarNameInTable="columnGetConfig" msprop:Generator_ColumnPropNameInTable="GetConfigColumn" type="xs:boolean" />
+              <xs:element name="UpdateConfig" msprop:Generator_UserColumnName="UpdateConfig" msprop:Generator_ColumnPropNameInRow="UpdateConfig" msprop:Generator_ColumnVarNameInTable="columnUpdateConfig" msprop:Generator_ColumnPropNameInTable="UpdateConfigColumn" type="xs:boolean" />
+              <xs:element name="GetSystemStatus" msprop:Generator_UserColumnName="GetSystemStatus" msprop:Generator_ColumnPropNameInRow="GetSystemStatus" msprop:Generator_ColumnVarNameInTable="columnGetSystemStatus" msprop:Generator_ColumnPropNameInTable="GetSystemStatusColumn" type="xs:boolean" />
+              <xs:element name="RestartProcess" msprop:Generator_UserColumnName="RestartProcess" msprop:Generator_ColumnPropNameInRow="RestartProcess" msprop:Generator_ColumnVarNameInTable="columnRestartProcess" msprop:Generator_ColumnPropNameInTable="RestartProcessColumn" type="xs:boolean" />
+              <xs:element name="RestartGroup" msprop:Generator_UserColumnName="RestartGroup" msprop:Generator_ColumnPropNameInRow="RestartGroup" msprop:Generator_ColumnVarNameInTable="columnRestartGroup" msprop:Generator_ColumnPropNameInTable="RestartGroupColumn" type="xs:boolean" />
+              <xs:element name="StartProcess" msprop:Generator_UserColumnName="StartProcess" msprop:Generator_ColumnPropNameInRow="StartProcess" msprop:Generator_ColumnVarNameInTable="columnStartProcess" msprop:Generator_ColumnPropNameInTable="StartProcessColumn" type="xs:boolean" />
+              <xs:element name="StartGroup" msprop:Generator_UserColumnName="StartGroup" msprop:Generator_ColumnPropNameInRow="StartGroup" msprop:Generator_ColumnVarNameInTable="columnStartGroup" msprop:Generator_ColumnPropNameInTable="StartGroupColumn" type="xs:boolean" />
+              <xs:element name="ShutdownProcess" msprop:Generator_UserColumnName="ShutdownProcess" msprop:Generator_ColumnPropNameInRow="ShutdownProcess" msprop:Generator_ColumnVarNameInTable="columnShutdownProcess" msprop:Generator_ColumnPropNameInTable="ShutdownProcessColumn" type="xs:boolean" />
+              <xs:element name="ShutdownGroup" msprop:Generator_UserColumnName="ShutdownGroup" msprop:Generator_ColumnPropNameInRow="ShutdownGroup" msprop:Generator_ColumnVarNameInTable="columnShutdownGroup" msprop:Generator_ColumnPropNameInTable="ShutdownGroupColumn" type="xs:boolean" />
+              <xs:element name="SuspendGroup" msprop:Generator_UserColumnName="SuspendGroup" msprop:Generator_ColumnPropNameInRow="SuspendGroup" msprop:Generator_ColumnVarNameInTable="columnSuspendGroup" msprop:Generator_ColumnPropNameInTable="SuspendGroupColumn" type="xs:boolean" />
+              <xs:element name="SuspendProcess" msprop:Generator_UserColumnName="SuspendProcess" msprop:Generator_ColumnPropNameInRow="SuspendProcess" msprop:Generator_ColumnVarNameInTable="columnSuspendProcess" msprop:Generator_ColumnPropNameInTable="SuspendProcessColumn" type="xs:boolean" />
+              <xs:element name="ResumeGroup" msprop:Generator_UserColumnName="ResumeGroup" msprop:Generator_ColumnPropNameInRow="ResumeGroup" msprop:Generator_ColumnVarNameInTable="columnResumeGroup" msprop:Generator_ColumnPropNameInTable="ResumeGroupColumn" type="xs:boolean" />
+              <xs:element name="ResumeProcess" msprop:Generator_UserColumnName="ResumeProcess" msprop:Generator_ColumnPropNameInRow="ResumeProcess" msprop:Generator_ColumnVarNameInTable="columnResumeProcess" msprop:Generator_ColumnPropNameInTable="ResumeProcessColumn" type="xs:boolean" />
+              <xs:element name="RestartAll" msprop:Generator_UserColumnName="RestartAll" msprop:Generator_ColumnPropNameInRow="RestartAll" msprop:Generator_ColumnVarNameInTable="columnRestartAll" msprop:Generator_ColumnPropNameInTable="RestartAllColumn" type="xs:boolean" />
+              <xs:element name="StartAll" msprop:Generator_UserColumnName="StartAll" msprop:Generator_ColumnPropNameInRow="StartAll" msprop:Generator_ColumnVarNameInTable="columnStartAll" msprop:Generator_ColumnPropNameInTable="StartAllColumn" type="xs:boolean" />
+              <xs:element name="ShutdownAll" msprop:Generator_UserColumnName="ShutdownAll" msprop:Generator_ColumnPropNameInRow="ShutdownAll" msprop:Generator_ColumnVarNameInTable="columnShutdownAll" msprop:Generator_ColumnPropNameInTable="ShutdownAllColumn" type="xs:boolean" />
+              <xs:element name="SuspendAll" msprop:Generator_UserColumnName="SuspendAll" msprop:Generator_ColumnPropNameInRow="SuspendAll" msprop:Generator_ColumnVarNameInTable="columnSuspendAll" msprop:Generator_ColumnPropNameInTable="SuspendAllColumn" type="xs:boolean" />
+              <xs:element name="ResumeAll" msprop:Generator_UserColumnName="ResumeAll" msprop:Generator_ColumnPropNameInRow="ResumeAll" msprop:Generator_ColumnVarNameInTable="columnResumeAll" msprop:Generator_ColumnPropNameInTable="ResumeAllColumn" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="MultiXTpmDBKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProcessClass" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Link" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Group" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey4" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Message" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey5">
+      <xs:selector xpath=".//mstns:GroupForwardFlags" />
+      <xs:field xpath="mstns:GroupID" />
+      <xs:field xpath="mstns:MessageID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey19" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GroupForwardFlags" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey6" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Param" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey7">
+      <xs:selector xpath=".//mstns:ProcessClassLinks" />
+      <xs:field xpath="mstns:ProcessClassID" />
+      <xs:field xpath="mstns:LinkID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey15" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProcessClassLinks" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey8">
+      <xs:selector xpath=".//mstns:ProcessClassParams" />
+      <xs:field xpath="mstns:ProcessClassID" />
+      <xs:field xpath="mstns:ParamID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey16" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProcessClassParams" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey9">
+      <xs:selector xpath=".//mstns:LinkParams" />
+      <xs:field xpath="mstns:LinkID" />
+      <xs:field xpath="mstns:ParamID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey14" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LinkParams" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey10">
+      <xs:selector xpath=".//mstns:GroupProcessClasses" />
+      <xs:field xpath="mstns:GroupID" />
+      <xs:field xpath="mstns:ProcessClassID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey17" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GroupProcessClasses" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey13">
+      <xs:selector xpath=".//mstns:GroupStatusProcesses" />
+      <xs:field xpath="mstns:GroupID" />
+      <xs:field xpath="mstns:ProcessID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey18" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GroupStatusProcesses" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey11" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GroupStatus" />
+      <xs:field xpath="mstns:GroupID" />
+    </xs:unique>
+    <xs:unique name="MultiXTpmDBKey12" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProcessStatus" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:keyref name="ProcessProcessStatus" refer="MultiXTpmDBKey1" msprop:rel_Generator_UserRelationName="ProcessProcessStatus" msprop:rel_Generator_RelationVarName="relationProcessProcessStatus" msprop:rel_Generator_UserChildTable="ProcessStatus" msprop:rel_Generator_UserParentTable="ProcessClass" msprop:rel_Generator_ParentPropName="ProcessClassRow" msprop:rel_Generator_ChildPropName="GetProcessStatusRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:ProcessStatus" />
+      <xs:field xpath="mstns:ProcessClassID" />
+    </xs:keyref>
+    <xs:keyref name="GroupGroupStatus" refer="MultiXTpmDBKey3" msprop:rel_Generator_UserRelationName="GroupGroupStatus" msprop:rel_Generator_RelationVarName="relationGroupGroupStatus" msprop:rel_Generator_UserChildTable="GroupStatus" msprop:rel_Generator_UserParentTable="Group" msprop:rel_Generator_ParentPropName="GroupRow" msprop:rel_Generator_ChildPropName="GetGroupStatusRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:GroupStatus" />
+      <xs:field xpath="mstns:GroupID" />
+    </xs:keyref>
+    <xs:keyref name="ProcessStatusGroupStatusProcesses" refer="MultiXTpmDBKey12" msprop:rel_Generator_UserRelationName="ProcessStatusGroupStatusProcesses" msprop:rel_Generator_RelationVarName="relationProcessStatusGroupStatusProcesses" msprop:rel_Generator_UserChildTable="GroupStatusProcesses" msprop:rel_Generator_UserParentTable="ProcessStatus" msprop:rel_Generator_ParentPropName="ProcessStatusRow" msprop:rel_Generator_ChildPropName="GetGroupStatusProcessesRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:GroupStatusProcesses" />
+      <xs:field xpath="mstns:ProcessID" />
+    </xs:keyref>
+    <xs:keyref name="GroupStatusGroupStatusProcesses" refer="MultiXTpmDBKey11" msprop:rel_Generator_UserRelationName="GroupStatusGroupStatusProcesses" msprop:rel_Generator_RelationVarName="relationGroupStatusGroupStatusProcesses" msprop:rel_Generator_UserChildTable="GroupStatusProcesses" msprop:rel_Generator_UserParentTable="GroupStatus" msprop:rel_Generator_ParentPropName="GroupStatusRow" msprop:rel_Generator_ChildPropName="GetGroupStatusProcessesRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:GroupStatusProcesses" />
+      <xs:field xpath="mstns:GroupID" />
+    </xs:keyref>
+    <xs:keyref name="GroupGroupProcessClasses" refer="MultiXTpmDBKey3" msprop:rel_Generator_UserRelationName="GroupGroupProcessClasses" msprop:rel_Generator_RelationVarName="relationGroupGroupProcessClasses" msprop:rel_Generator_UserChildTable="GroupProcessClasses" msprop:rel_Generator_UserParentTable="Group" msprop:rel_Generator_ParentPropName="GroupRow" msprop:rel_Generator_ChildPropName="GetGroupProcessClassesRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:GroupProcessClasses" />
+      <xs:field xpath="mstns:GroupID" />
+    </xs:keyref>
+    <xs:keyref name="ProcessClassGroupProcessClasses" refer="MultiXTpmDBKey1" msprop:rel_Generator_UserRelationName="ProcessClassGroupProcessClasses" msprop:rel_Generator_RelationVarName="relationProcessClassGroupProcessClasses" msprop:rel_Generator_UserChildTable="GroupProcessClasses" msprop:rel_Generator_UserParentTable="ProcessClass" msprop:rel_Generator_ParentPropName="ProcessClassRow" msprop:rel_Generator_ChildPropName="GetGroupProcessClassesRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:GroupProcessClasses" />
+      <xs:field xpath="mstns:ProcessClassID" />
+    </xs:keyref>
+    <xs:keyref name="ParamLinkParams" refer="MultiXTpmDBKey6" msprop:rel_Generator_UserRelationName="ParamLinkParams" msprop:rel_Generator_RelationVarName="relationParamLinkParams" msprop:rel_Generator_UserChildTable="LinkParams" msprop:rel_Generator_UserParentTable="Param" msprop:rel_Generator_ParentPropName="ParamRow" msprop:rel_Generator_ChildPropName="GetLinkParamsRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:LinkParams" />
+      <xs:field xpath="mstns:ParamID" />
+    </xs:keyref>
+    <xs:keyref name="LinkLinkParams" refer="MultiXTpmDBKey2" msprop:rel_Generator_UserRelationName="LinkLinkParams" msprop:rel_Generator_RelationVarName="relationLinkLinkParams" msprop:rel_Generator_UserChildTable="LinkParams" msprop:rel_Generator_UserParentTable="Link" msprop:rel_Generator_ParentPropName="LinkRow" msprop:rel_Generator_ChildPropName="GetLinkParamsRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:LinkParams" />
+      <xs:field xpath="mstns:LinkID" />
+    </xs:keyref>
+    <xs:keyref name="ParamProcessClassParams" refer="MultiXTpmDBKey6" msprop:rel_Generator_UserRelationName="ParamProcessClassParams" msprop:rel_Generator_RelationVarName="relationParamProcessClassParams" msprop:rel_Generator_UserChildTable="ProcessClassParams" msprop:rel_Generator_UserParentTable="Param" msprop:rel_Generator_ParentPropName="ParamRow" msprop:rel_Generator_ChildPropName="GetProcessClassParamsRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:ProcessClassParams" />
+      <xs:field xpath="mstns:ParamID" />
+    </xs:keyref>
+    <xs:keyref name="ProcessClassProcessClassParams" refer="MultiXTpmDBKey1" msprop:rel_Generator_UserRelationName="ProcessClassProcessClassParams" msprop:rel_Generator_RelationVarName="relationProcessClassProcessClassParams" msprop:rel_Generator_UserChildTable="ProcessClassParams" msprop:rel_Generator_UserParentTable="ProcessClass" msprop:rel_Generator_ParentPropName="ProcessClassRow" msprop:rel_Generator_ChildPropName="GetProcessClassParamsRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:ProcessClassParams" />
+      <xs:field xpath="mstns:ProcessClassID" />
+    </xs:keyref>
+    <xs:keyref name="LinkProcessClassLinks" refer="MultiXTpmDBKey2" msprop:rel_Generator_UserRelationName="LinkProcessClassLinks" msprop:rel_Generator_RelationVarName="relationLinkProcessClassLinks" msprop:rel_Generator_UserChildTable="ProcessClassLinks" msprop:rel_Generator_UserParentTable="Link" msprop:rel_Generator_ParentPropName="LinkRow" msprop:rel_Generator_ChildPropName="GetProcessClassLinksRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:ProcessClassLinks" />
+      <xs:field xpath="mstns:LinkID" />
+    </xs:keyref>
+    <xs:keyref name="ProcessClassProcessClassLinks" refer="MultiXTpmDBKey1" msprop:rel_Generator_UserRelationName="ProcessClassProcessClassLinks" msprop:rel_Generator_RelationVarName="relationProcessClassProcessClassLinks" msprop:rel_Generator_UserChildTable="ProcessClassLinks" msprop:rel_Generator_UserParentTable="ProcessClass" msprop:rel_Generator_ParentPropName="ProcessClassRow" msprop:rel_Generator_ChildPropName="GetProcessClassLinksRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:ProcessClassLinks" />
+      <xs:field xpath="mstns:ProcessClassID" />
+    </xs:keyref>
+    <xs:keyref name="MessageGroupForwardFlags" refer="MultiXTpmDBKey4" msprop:rel_Generator_UserRelationName="MessageGroupForwardFlags" msprop:rel_Generator_RelationVarName="relationMessageGroupForwardFlags" msprop:rel_Generator_UserChildTable="GroupForwardFlags" msprop:rel_Generator_UserParentTable="Message" msprop:rel_Generator_ParentPropName="MessageRow" msprop:rel_Generator_ChildPropName="GetGroupForwardFlagsRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:GroupForwardFlags" />
+      <xs:field xpath="mstns:MessageID" />
+    </xs:keyref>
+    <xs:keyref name="GroupGroupForwardFlags" refer="MultiXTpmDBKey3" msprop:rel_Generator_UserRelationName="GroupGroupForwardFlags" msprop:rel_Generator_RelationVarName="relationGroupGroupForwardFlags" msprop:rel_Generator_UserChildTable="GroupForwardFlags" msprop:rel_Generator_UserParentTable="Group" msprop:rel_Generator_ParentPropName="GroupRow" msprop:rel_Generator_ChildPropName="GetGroupForwardFlagsRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:GroupForwardFlags" />
+      <xs:field xpath="mstns:GroupID" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+		MultiX Network Applications Development Toolkit.
+		Copyright (C) 2007, Moshe Shitrit, Mitug Distributed Systems Ltd., All Rights Reserved.
+		
+		This file is part of MultiX.
+		
+		MultiX is free software; you can redistribute it and/or modify it under the terms of the 
+		GNU General Public License as published by the Free Software Foundation; 
+		either version 2 of the License, or (at your option) any later version. 
+		
+		MultiX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+		without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+		See the GNU General Public License for more details.
+		You should have received a copy of the GNU General Public License along with this program;
+		if not, write to the 
+		Free Software Foundation, Inc., 
+		59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+		
+		Author contact information: 
+		msr@mitug.co.il
+		
+-->
+<xs:schema id="ISO8583DataSet" targetNamespace="http://mitug.co.il/ISO8583DataSet" xmlns:mstns="http://mitug.co.il/ISO8583DataSet" xmlns="http://mitug.co.il/ISO8583DataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ISO8583DataSet" msdata:IsDataSet="true" msdata:Locale="" msprop:Generator_UserDSName="ISO8583DataSet" msprop:Generator_DataSetName="ISO8583DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ISO8583Fields" msprop:Generator_UserTableName="ISO8583Fields" msprop:Generator_RowDeletedName="ISO8583FieldsRowDeleted" msprop:Generator_RowChangedName="ISO8583FieldsRowChanged" msprop:Generator_RowClassName="ISO8583FieldsRow" msprop:Generator_RowChangingName="ISO8583FieldsRowChanging" msprop:Generator_RowEvArgName="ISO8583FieldsRowChangeEvent" msprop:Generator_RowEvHandlerName="ISO8583FieldsRowChangeEventHandler" msprop:Generator_TableClassName="ISO8583FieldsDataTable" msprop:Generator_TableVarName="tableISO8583Fields" msprop:Generator_RowDeletingName="ISO8583FieldsRowDeleting" msprop:Generator_TablePropName="ISO8583Fields">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ElementID" msprop:Generator_UserColumnName="ElementID" msprop:Generator_ColumnVarNameInTable="columnElementID" msprop:Generator_ColumnPropNameInRow="ElementID" msprop:Generator_ColumnPropNameInTable="ElementIDColumn" type="xs:int" />
+              <xs:element name="FieldValue" msprop:Generator_UserColumnName="FieldValue" msprop:nullValue="_null" msprop:Generator_ColumnVarNameInTable="columnFieldValue" msprop:Generator_ColumnPropNameInTable="FieldValueColumn" msprop:Generator_ColumnPropNameInRow="FieldValue" type="xs:string" minOccurs="0" />
+              <xs:element name="IsBinary" msprop:Generator_UserColumnName="IsBinary" msprop:Generator_ColumnVarNameInTable="columnIsBinary" msprop:Generator_ColumnPropNameInRow="IsBinary" msprop:Generator_ColumnPropNameInTable="IsBinaryColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ISO8583Fields" />
+      <xs:field xpath="mstns:ElementID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

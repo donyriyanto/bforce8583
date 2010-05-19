@@ -1,0 +1,320 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{BD30D394-26D5-4166-919E-C02E22C67A68}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		include\MultiX.h = include\MultiX.h
+		include\MultiXApp.h = include\MultiXApp.h
+		include\MultiXAppMsg.h = include\MultiXAppMsg.h
+		include\MultiXIDs.h = include\MultiXIDs.h
+		include\MultiXL1.h = include\MultiXL1.h
+		include\MultiXL2.h = include\MultiXL2.h
+		include\MultiXL2Link.h = include\MultiXL2Link.h
+		include\MultiXL3.h = include\MultiXL3.h
+		include\MultiXL3Link.h = include\MultiXL3Link.h
+		include\MultiXL3Msg.h = include\MultiXL3Msg.h
+		include\MultiXL3Process.h = include\MultiXL3Process.h
+		include\MultiXL5Msg.h = include\MultiXL5Msg.h
+		include\MultiXL7Msg.h = include\MultiXL7Msg.h
+		include\MultiXLayer.h = include\MultiXLayer.h
+		include\MultiXLib.h = include\MultiXLib.h
+		include\MultiXLink.h = include\MultiXLink.h
+		include\MultiXLogger.h = include\MultiXLogger.h
+		include\MultiXMsg.h = include\MultiXMsg.h
+		include\MultiXNPipe.h = include\MultiXNPipe.h
+		include\MultiXProcess.h = include\MultiXProcess.h
+		include\MultiXSession.h = include\MultiXSession.h
+		include\MultiXSimpleApplication.h = include\MultiXSimpleApplication.h
+		include\MultiXSocketsInterface.h = include\MultiXSocketsInterface.h
+		include\MultiXTcpIp.h = include\MultiXTcpIp.h
+		include\MultiXThreads.h = include\MultiXThreads.h
+		include\MultiXTimer.h = include\MultiXTimer.h
+		include\MultiXTpmCtrlMsg.h = include\MultiXTpmCtrlMsg.h
+		include\MultiXTpmLink.h = include\MultiXTpmLink.h
+		include\MultiXTransportInterface.h = include\MultiXTransportInterface.h
+		include\MultiXUtil.h = include\MultiXUtil.h
+		include\STLWrapper.h = include\STLWrapper.h
+		include\TandemOSS.h = include\TandemOSS.h
+		include\winsock.h = include\winsock.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2440C65-F5B4-4999-B91C-AF0854DD043B}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		cacerts.pem = cacerts.pem
+		ChangeLog.htm = ChangeLog.htm
+		contents.html = contents.html
+		CygwinBuildAll.sh = CygwinBuildAll.sh
+		doxygen.cfg = doxygen.cfg
+		gpl.txt = gpl.txt
+		image001.gif = image001.gif
+		index.html = index.html
+		ISO8583WS.wsdl = ISO8583WS.wsdl
+		LinuxBuild.sh = LinuxBuild.sh
+		LinuxBuildAll.sh = LinuxBuildAll.sh
+		LocalMultiXTpmServer.pem = LocalMultiXTpmServer.pem
+		main.html = main.html
+		MakeRuntime.cmd = MakeRuntime.cmd
+		MakeRuntime.sh = MakeRuntime.sh
+		MultiXEchoClient.cpp = MultiXEchoClient.cpp
+		MultiXEchoServer.cpp = MultiXEchoServer.cpp
+		MultiXTpm Application Server.htm = MultiXTpm Application Server.htm
+		MultiXTpm Generic Multiplexer.htm = MultiXTpm Generic Multiplexer.htm
+		MultiXTpm gSoap Enhancer.htm = MultiXTpm gSoap Enhancer.htm
+		MultiXTpm ISO 8583 Server.htm = MultiXTpm ISO 8583 Server.htm
+		MultiXTpm.wsdl = MultiXTpm.wsdl
+		MultiXTpmAdmin.htm = MultiXTpmAdmin.htm
+		MultiXTpmISO8583XMLBridge.htm = MultiXTpmISO8583XMLBridge.htm
+		MultiXTpmSimpleSystem.htm = MultiXTpmSimpleSystem.htm
+		ReadMe.htm = ReadMe.htm
+		ReleaseNotes.htm = ReleaseNotes.htm
+		SSL_Support.htm = SSL_Support.htm
+		TpmConfig.htm = TpmConfig.htm
+		TpmConfig.xml = TpmConfig.xml
+		TpmConfig.xsd = TpmConfig.xsd
+		TpmConfig.xsx = TpmConfig.xsx
+		UsersPermissions.xml = UsersPermissions.xml
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gSoapForMultiX", "gSoapForMultiX\gSoapForMultiX.vcproj", "{C8C92A57-C115-413F-A5D4-D5D3348AD203}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiXgSoapSupport", "MultiXgSoapSupport\MultiXgSoapSupport.vcproj", "{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1} = {54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiXTpm", "MultiXTpm\MultiXTpm.vcproj", "{AAD49BFC-2196-4621-9B77-CA2F531A5291}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203} = {C8C92A57-C115-413F-A5D4-D5D3348AD203}
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1} = {54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4} = {687DEC44-7671-4F50-8A66-1FA7DBBB00B4}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiXTpmService", "MultiXTpmService\MultiXTpmService.csproj", "{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C} = {BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiX", "MultiX\MultiX.vcproj", "{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiXTpm Application Wizard", "MultiXTpm Application Wizard\MultiXTpm Application Wizard.vcproj", "{A769AF1B-2D47-4455-A643-DFADAD61FE40}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiXTpmATL", "MultiXTpmATL\MultiXTpmATL.vcproj", "{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1} = {54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291} = {AAD49BFC-2196-4621-9B77-CA2F531A5291}
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4} = {687DEC44-7671-4F50-8A66-1FA7DBBB00B4}
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203} = {C8C92A57-C115-413F-A5D4-D5D3348AD203}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "runtime", "runtime", "{D387688B-3E4E-478B-B2DA-CB4D72A34203}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		runtime\MakeAll.cmd = runtime\MakeAll.cmd
+		runtime\MakeAll.sh = runtime\MakeAll.sh
+		runtime\RunRemote.sh = runtime\RunRemote.sh
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiXTpmAdmin", "MultiXTpmAdmin\MultiXTpmAdmin.csproj", "{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MultiXTpmAdminSetup", "MultiXTpmAdminSetup\MultiXTpmAdminSetup.vdproj", "{444AC778-F5F2-4BA9-BC20-FC58D3160492}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 10
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = gSoapForMultiX\\gSoapForMultiX.vcproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = gSoapForMultiX\\
+		SccProjectUniqueName2 = MultiXgSoapSupport\\MultiXgSoapSupport.vcproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = MultiXgSoapSupport\\
+		SccProjectUniqueName3 = MultiXTpm\\MultiXTpm.vcproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = MultiXTpm\\
+		SccProjectUniqueName4 = MultiX\\MultiX.vcproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = MultiX\\
+		SccProjectUniqueName5 = MultiXTpmService\\MultiXTpmService.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = MultiXTpmService\\
+		SccProjectUniqueName6 = MultiXTpm\u0020Application\u0020Wizard\\MultiXTpm\u0020Application\u0020Wizard.vcproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = MultiXTpm\u0020Application\u0020Wizard\\
+		SccProjectUniqueName7 = MultiXTpmATL\\MultiXTpmATL.vcproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = MultiXTpmATL\\
+		SccProjectUniqueName8 = MultiXTpmAdmin\\MultiXTpmAdmin.csproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = MultiXTpmAdmin\\
+		SccProjectUniqueName9 = MultiXTpmAdminSetup\\MultiXTpmAdminSetup.vdproj
+		SccLocalPath9 = .
+		SccProjectFilePathRelativizedFromConnection9 = MultiXTpmAdminSetup\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Debug|.NET.ActiveCfg = Debug|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Debug|Win32.Build.0 = Debug|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Release|.NET.ActiveCfg = Release|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Release|Any CPU.ActiveCfg = Release|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Release|Win32.ActiveCfg = Release|Win32
+		{C8C92A57-C115-413F-A5D4-D5D3348AD203}.Release|Win32.Build.0 = Release|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Debug|.NET.ActiveCfg = Debug|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Debug|Win32.Build.0 = Debug|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Release|.NET.ActiveCfg = Release|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Release|Any CPU.ActiveCfg = Release|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Release|Win32.ActiveCfg = Release|Win32
+		{687DEC44-7671-4F50-8A66-1FA7DBBB00B4}.Release|Win32.Build.0 = Release|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Debug|.NET.ActiveCfg = Debug|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Debug|Win32.Build.0 = Debug|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Release|.NET.ActiveCfg = Release|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Release|Any CPU.ActiveCfg = Release|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Release|Win32.ActiveCfg = Release|Win32
+		{AAD49BFC-2196-4621-9B77-CA2F531A5291}.Release|Win32.Build.0 = Release|Win32
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Release|.NET.ActiveCfg = Release|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AAE36FFF-FF45-43C6-AC5A-F96425B84CE7}.Release|Win32.ActiveCfg = Release|Any CPU
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Debug|.NET.ActiveCfg = Debug|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Debug|Win32.Build.0 = Debug|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Release|.NET.ActiveCfg = Release|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Release|Any CPU.ActiveCfg = Release|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Release|Win32.ActiveCfg = Release|Win32
+		{54A0E5A9-3F2C-4543-BFBF-F0BEE13B3CD1}.Release|Win32.Build.0 = Release|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Debug|.NET.ActiveCfg = Debug|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Debug|Win32.Build.0 = Debug|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Release|.NET.ActiveCfg = Release|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Release|Any CPU.ActiveCfg = Release|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Release|Win32.ActiveCfg = Release|Win32
+		{A769AF1B-2D47-4455-A643-DFADAD61FE40}.Release|Win32.Build.0 = Release|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Debug|.NET.ActiveCfg = Debug|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Debug|Win32.Build.0 = Debug|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Release|.NET.ActiveCfg = Release|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Release|Any CPU.ActiveCfg = Release|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Release|Win32.ActiveCfg = Release|Win32
+		{BCACB6A5-119C-4F2E-9AE9-4F1ECD736F0C}.Release|Win32.Build.0 = Release|Win32
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Release|.NET.ActiveCfg = Release|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B37B4633-D860-4ADC-80CA-AF6B1242CB7E}.Release|Win32.ActiveCfg = Release|Any CPU
+		{444AC778-F5F2-4BA9-BC20-FC58D3160492}.Debug|.NET.ActiveCfg = Debug
+		{444AC778-F5F2-4BA9-BC20-FC58D3160492}.Debug|Any CPU.ActiveCfg = Debug
+		{444AC778-F5F2-4BA9-BC20-FC58D3160492}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{444AC778-F5F2-4BA9-BC20-FC58D3160492}.Debug|Win32.ActiveCfg = Debug
+		{444AC778-F5F2-4BA9-BC20-FC58D3160492}.Release|.NET.ActiveCfg = Release
+		{444AC778-F5F2-4BA9-BC20-FC58D3160492}.Release|Any CPU.ActiveCfg = Release
+		{444AC778-F5F2-4BA9-BC20-FC58D3160492}.Release|Mixed Platforms.ActiveCfg = Release
+		{444AC778-F5F2-4BA9-BC20-FC58D3160492}.Release|Mixed Platforms.Build.0 = Release
+		{444AC778-F5F2-4BA9-BC20-FC58D3160492}.Release|Win32.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

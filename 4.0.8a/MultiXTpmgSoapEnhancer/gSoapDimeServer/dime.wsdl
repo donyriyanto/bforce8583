@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="dime"
+ targetNamespace="http://websrv.cs.fsu.edu/~engelen/dime.wsdl"
+ xmlns:tns="http://websrv.cs.fsu.edu/~engelen/dime.wsdl"
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:ns="urn:dime"
+ xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+ xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+ xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+ xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+ <schema targetNamespace="urn:dime"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="urn:dime"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <complexType name="Data">
+   <simpleContent>
+    <extension base="xsd:base64Binary">
+     <attribute name="href" type="xsd:anyURI" use="optional"/>
+    </extension>
+   </simpleContent>
+  </complexType>
+  <complexType name="ArrayOfData">
+   <complexContent>
+    <restriction base="SOAP-ENC:Array">
+     <sequence>
+      <element name="item" type="ns:Data" minOccurs="0" maxOccurs="unbounded"/>
+     </sequence>
+     <attribute ref="SOAP-ENC:arrayType" WSDL:arrayType="ns:Data[]"/>
+    </restriction>
+   </complexContent>
+  </complexType>
+  <complexType name="ArrayOfstring">
+   <complexContent>
+    <restriction base="SOAP-ENC:Array">
+     <sequence>
+      <element name="item" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+     </sequence>
+     <attribute ref="SOAP-ENC:arrayType" WSDL:arrayType="xsd:string[]"/>
+    </restriction>
+   </complexContent>
+  </complexType>
+ </schema>
+
+</types>
+
+<message name="putDataRequest">
+ <part name="data" type="ns:ArrayOfData"/>
+</message>
+
+<message name="putDataResponse">
+ <part name="names" type="ns:ArrayOfstring"/>
+</message>
+
+<message name="getDataRequest">
+ <part name="names" type="ns:ArrayOfstring"/>
+</message>
+
+<message name="getDataResponse">
+ <part name="data" type="ns:ArrayOfData"/>
+</message>
+
+<message name="getImageRequest">
+ <part name="name" type="xsd:string"/>
+</message>
+
+<message name="getImageResponse">
+ <part name="image" type="ns:Data"/>
+</message>
+
+<portType name="dimePortType">
+ <operation name="putData">
+  <documentation>Service definition of function ns__putData</documentation>
+  <input message="tns:putDataRequest"/>
+  <output message="tns:putDataResponse"/>
+ </operation>
+ <operation name="getData">
+  <documentation>Service definition of function ns__getData</documentation>
+  <input message="tns:getDataRequest"/>
+  <output message="tns:getDataResponse"/>
+ </operation>
+ <operation name="getImage">
+  <documentation>Service definition of function ns__getImage</documentation>
+  <input message="tns:getImageRequest"/>
+  <output message="tns:getImageResponse"/>
+ </operation>
+</portType>
+
+<binding name="dime" type="tns:dimePortType">
+ <SOAP:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+ <operation name="putData">
+  <SOAP:operation style="rpc" soapAction=""/>
+  <input>
+     <SOAP:body use="encoded" namespace="urn:dime" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </input>
+  <output>
+     <SOAP:body use="encoded" namespace="urn:dime" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </output>
+ </operation>
+ <operation name="getData">
+  <SOAP:operation style="rpc" soapAction=""/>
+  <input>
+     <SOAP:body use="encoded" namespace="urn:dime" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </input>
+  <output>
+     <SOAP:body use="encoded" namespace="urn:dime" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </output>
+ </operation>
+ <operation name="getImage">
+  <SOAP:operation style="rpc" soapAction=""/>
+  <input>
+     <SOAP:body use="encoded" namespace="urn:dime" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </input>
+  <output>
+     <SOAP:body use="encoded" namespace="urn:dime" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </output>
+ </operation>
+</binding>
+
+<service name="dime">
+ <documentation>gSOAP 2.7.9l generated service definition</documentation>
+ <port name="dime" binding="tns:dime">
+  <SOAP:address location="http://websrv.cs.fsu.edu/~engelen/dimesrv.cgi"/>
+ </port>
+</service>
+
+</definitions>

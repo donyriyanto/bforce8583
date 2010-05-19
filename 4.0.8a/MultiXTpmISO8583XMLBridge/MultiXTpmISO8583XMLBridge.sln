@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WebServiceClient", "WebServiceClient\WebServiceClient.vcproj", "{E060927A-BE1F-4AA8-9CD5-2A7A77295DDB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6A15B27D-0123-48AD-B053-914E3B4EF98F} = {6A15B27D-0123-48AD-B053-914E3B4EF98F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ISO8583Shared", "ISO8583Shared\ISO8583Shared.vcproj", "{6A15B27D-0123-48AD-B053-914E3B4EF98F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ISO8583FE", "ISO8583FE\ISO8583FE.vcproj", "{CCCC047B-436A-42B0-BEEA-403DE3E2AE9C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6A15B27D-0123-48AD-B053-914E3B4EF98F} = {6A15B27D-0123-48AD-B053-914E3B4EF98F}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{853330D6-532D-416E-9F87-F1608C70CA8D}"
+	ProjectSection(SolutionItems) = preProject
+		gSoapTypeMap.dat = gSoapTypeMap.dat
+		ISO8583WS.wsdl = ISO8583WS.wsdl
+		LinuxBuildAll.sh = LinuxBuildAll.sh
+		MakeRuntime.cmd = MakeRuntime.cmd
+		MakeRuntime.sh = MakeRuntime.sh
+		MultiXTpmISO8583XMLBridge.htm = MultiXTpmISO8583XMLBridge.htm
+		TpmConfig.xml = TpmConfig.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WebServiceClient\\WebServiceClient.vcproj
+		SccProjectName1 = \u0022$/Dev/MultiXTpmRelease/MultiXTpmISO8583XMLBridge/WebServiceClient\u0022,\u0020GCKAAAAA
+		SccLocalPath1 = WebServiceClient
+		SccProjectUniqueName2 = ISO8583Shared\\ISO8583Shared.vcproj
+		SccProjectName2 = \u0022$/Dev/MultiXTpmRelease/MultiXTpmISO8583XMLBridge/ISO8583Shared\u0022,\u0020FCKAAAAA
+		SccLocalPath2 = ISO8583Shared
+		SccProjectUniqueName3 = ISO8583FE\\ISO8583FE.vcproj
+		SccProjectName3 = \u0022$/Dev/MultiXTpmRelease/MultiXTpmISO8583XMLBridge/ISO8583FE\u0022,\u0020ECKAAAAA
+		SccLocalPath3 = ISO8583FE
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E060927A-BE1F-4AA8-9CD5-2A7A77295DDB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E060927A-BE1F-4AA8-9CD5-2A7A77295DDB}.Debug|Win32.Build.0 = Debug|Win32
+		{E060927A-BE1F-4AA8-9CD5-2A7A77295DDB}.Release|Win32.ActiveCfg = Release|Win32
+		{E060927A-BE1F-4AA8-9CD5-2A7A77295DDB}.Release|Win32.Build.0 = Release|Win32
+		{6A15B27D-0123-48AD-B053-914E3B4EF98F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6A15B27D-0123-48AD-B053-914E3B4EF98F}.Debug|Win32.Build.0 = Debug|Win32
+		{6A15B27D-0123-48AD-B053-914E3B4EF98F}.Release|Win32.ActiveCfg = Release|Win32
+		{6A15B27D-0123-48AD-B053-914E3B4EF98F}.Release|Win32.Build.0 = Release|Win32
+		{CCCC047B-436A-42B0-BEEA-403DE3E2AE9C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CCCC047B-436A-42B0-BEEA-403DE3E2AE9C}.Debug|Win32.Build.0 = Debug|Win32
+		{CCCC047B-436A-42B0-BEEA-403DE3E2AE9C}.Release|Win32.ActiveCfg = Release|Win32
+		{CCCC047B-436A-42B0-BEEA-403DE3E2AE9C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

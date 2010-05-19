@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1158623-F46F-48AE-A189-710849718498}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		LinuxBuildAll.sh = LinuxBuildAll.sh
+		MakeRuntime.cmd = MakeRuntime.cmd
+		MakeRuntime.sh = MakeRuntime.sh
+		MultiXEchoClient.cpp = MultiXEchoClient.cpp
+		MultiXEchoServer.cpp = MultiXEchoServer.cpp
+		MultiXTpmSimpleSystem.htm = MultiXTpmSimpleSystem.htm
+		TpmConfig.xml = TpmConfig.xml
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiXEchoServer", "MultiXEchoServer\MultiXEchoServer.vcproj", "{4EE909E8-CB0B-4B91-941E-161BD87C11FC}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiXEchoClient", "MultiXEchoClient\MultiXEchoClient.vcproj", "{D4DE5B8D-57A8-4B50-9DBF-90710BE6B3DC}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MultiXEchoClient\\MultiXEchoClient.vcproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = MultiXEchoClient\\
+		SccProjectUniqueName2 = MultiXEchoServer\\MultiXEchoServer.vcproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = MultiXEchoServer\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EE909E8-CB0B-4B91-941E-161BD87C11FC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4EE909E8-CB0B-4B91-941E-161BD87C11FC}.Debug|Win32.Build.0 = Debug|Win32
+		{4EE909E8-CB0B-4B91-941E-161BD87C11FC}.Release|Win32.ActiveCfg = Release|Win32
+		{4EE909E8-CB0B-4B91-941E-161BD87C11FC}.Release|Win32.Build.0 = Release|Win32
+		{D4DE5B8D-57A8-4B50-9DBF-90710BE6B3DC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D4DE5B8D-57A8-4B50-9DBF-90710BE6B3DC}.Debug|Win32.Build.0 = Debug|Win32
+		{D4DE5B8D-57A8-4B50-9DBF-90710BE6B3DC}.Release|Win32.ActiveCfg = Release|Win32
+		{D4DE5B8D-57A8-4B50-9DBF-90710BE6B3DC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

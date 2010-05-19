@@ -1,0 +1,229 @@
+/*
+
+MultiX Network Applications Development Toolkit.
+Copyright (C) 2007, Moshe Shitrit, Mitug Distributed Systems Ltd., All Rights Reserved.
+
+This file is part of MultiX.
+
+MultiX is free software; you can redistribute it and/or modify it under the terms of the 
+GNU General Public License as published by the Free Software Foundation; 
+either version 2 of the License, or (at your option) any later version. 
+
+MultiX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program;
+if not, write to the 
+Free Software Foundation, Inc., 
+59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+--------------------------------------------------------------------------------
+Author contact information: 
+msr@mitug.co.il
+--------------------------------------------------------------------------------
+
+*/
+#include "[!output PROJECT_NAME_NB].h"
+#include "[!output PROJECT_NAME_NB]Link.h"
+
+C[!output PROJECT_NAME_NB]Link::C[!output PROJECT_NAME_NB]Link(TTpmConfigParams	&Params,MultiXOpenMode	OpenMode)	:
+	CMultiXLink(&Params,MultiXLinkTypeTcp,OpenMode,true),
+	m_State(WaitConnection)
+{
+[!if	TCPProtocolSupport]
+	m_pProtocol	=	new	C[!output PROJECT_NAME_NB]TCPProtocol();
+[!endif]
+}
+
+
+C[!output PROJECT_NAME_NB]Link::~C[!output PROJECT_NAME_NB]Link(void)
+{
+	DebugPrint(2,"Deleted\n");
+[!if	TCPProtocolSupport]
+	delete	m_pProtocol;
+[!endif]
+}
+
+
+/*!
+	when the link is connected, we initialize the protocol
+*/
+void C[!output PROJECT_NAME_NB]Link::OnLinkConnected()
+{
+	DebugPrint(2,"Connected\n");
+[!if	TCPProtocolSupport]
+	m_pProtocol->Initialize();
+[!endif]
+[!if	ClientSessionSupport]
+	GetSession(true)->OnLinkConnected(this);
+[!endif]
+}
+
+
+/*!
+	this function is called when a frame fragment is received from the communication layer.
+	We use the m_Protocol to append the fragment and based on the return code we call the appropriate
+	function
+*/
+void C[!output PROJECT_NAME_NB]Link::OnDataReceived(CMultiXBuffer &Buf)
+{
+	DebugPrint(2,"Data Received\n");
+[!if	TCPProtocolSupport]
+	m_pProtocol->AppendInBuf(Buf);
+	while(true)
+	{
+		C[!output PROJECT_NAME_NB]Msg	*Msg;
+		C[!output PROJECT_NAME_NB]Protocol::TCompletionCodes	CompletionCode	=	m_pProtocol->GetMessage(&Msg);
+		switch(CompletionCode)
+		{
+			case	C[!output PROJECT_NAME_NB]Protocol::NewMessageReceived	:
+				DebugPrint(2,"New Message Received\n");
+				OnNewMessage(*Msg);
+				delete	Msg;
+				break;
+			case	C[!output PROJECT_NAME_NB]Protocol::InvalidMsg	:
+				DebugPrint(2,"Invalid Message Received\n");
+				OnInvalidMsg();
+				break;
+			default	:
+				return;
+		}
+	}
+[!endif]
+}
+
+[!if	TCPProtocolSupport]
+/*!
+	when we receive a badly formated msg we just close the link
+*/
+void C[!output PROJECT_NAME_NB]Link::OnInvalidMsg()
+{
+	Close();
+}
+
+void C[!output PROJECT_NAME_NB]Link::OnNewMessage(C[!output PROJECT_NAME_NB]Msg &Msg)
+{
+[!if	ClientSessionSupport]
+	GetSession()->OnNewPartnerMsg(Msg);
+[!endif]
+	//	TODO:	Add your own code to handle new full messages
+}
+
+[!endif]
+
+bool C[!output PROJECT_NAME_NB]Link::SendDataMsg(CMultiXBuffer &BufferToSend)
+{
+[!if	TCPProtocolSupport]
+	CMultiXBuffer	*Buf	=	BufferToSend.CreateNew();
+	// we build the frame to send into the new buffer
+	m_pProtocol->FormatBufferToSend(*Buf,BufferToSend);
+[!else]
+	CMultiXBuffer	*Buf	=	BufferToSend.Clone();
+[!endif]
+	bool	RetVal	=	this->Send(*Buf);
+	// return the buffer to the pool, we do not need it any more
+	Buf->ReturnBuffer();
+	DebugPrint(2,"Send data msg - RetVal=%d\n",RetVal);
+	return	RetVal;
+}
+
+
+/*!
+\return	always false
+	if a link open failed, we return false so the framework will delete the object
+*/
+bool C[!output PROJECT_NAME_NB]Link::OnOpenFailed(int IoError)
+{
+	if(OpenMode()	==	MultiXOpenModeServer)
+	{
+		Owner()->Logger()->ReportError(DebugPrint(0,"Open (Listen) Failed. Error=%d\n",IoError));
+	}	else
+	{
+		DebugPrint(1,"Open (Connect) Failed. Error=%d\n",IoError);
+	}
+	return	false;
+}
+
+
+/*!
+\return	always false, to enable the framework to close the link
+*/
+bool C[!output PROJECT_NAME_NB]Link::OnSendDataFailed(CMultiXBuffer &Buf)
+{
+	DebugPrint(2,"Send Data Failed\n");
+	return	false;
+}
+
+/*!
+	see CMultiXLink::OnSendDataCompleted
+*/
+void C[!output PROJECT_NAME_NB]Link::OnSendDataCompleted(CMultiXBuffer &Buf)
+{
+}
+
+
+/*!
+\return always false , so the framework deletes the link
+*/
+bool C[!output PROJECT_NAME_NB]Link::OnLinkClosed()
+{
+	DebugPrint(2,"Closed\n");
+[!if	ClientSessionSupport]
+	C[!output PROJECT_NAME_NB]ClientSession	*pSession	=	GetSession();
+	if(pSession)
+		pSession->OnLinkDisconnected();
+[!endif]
+	return	false;
+}
+
+[!if	ClientSessionSupport]
+/*!
+\param	bCreateNew	if set to true, create a new session object if there isn't one
+\return	a pointer to a C[!output PROJECT_NAME_NB]Session.
+
+	since sessions and links can be deleted independently, we hold the ID of the associated
+	session object, so if the session object is deleted, we do not fall on illegal access to
+	memory. the ID of the session is allways a valid memory item.
+*/
+
+C[!output PROJECT_NAME_NB]ClientSession * C[!output PROJECT_NAME_NB]Link::GetSession(bool bCreateNew)
+{
+	C[!output PROJECT_NAME_NB]ClientSession	*pSession	=	(C[!output PROJECT_NAME_NB]ClientSession	*)Owner()->FindSession(m_SessionID);
+	if(!pSession	&&	bCreateNew)
+	{
+		pSession	=	new	C[!output PROJECT_NAME_NB]ClientSession(*Owner());
+		if(pSession)
+			m_SessionID	=	pSession->ID();
+	}
+	return	pSession;
+}
+
+/*!
+	This notification is sent from the associated session object to indicate that a previously 
+	message forwarded to it, was processed succesfully by the Server application and it has replied
+	with some data. in this case we forward the data to the other peer.
+*/
+void C[!output PROJECT_NAME_NB]Link::OnSessionReply(CMultiXBuffer	&Buf,CMultiXAppMsg	&OriginalMsg)
+{
+	SendDataMsg(Buf);
+}
+
+/*!
+	This notification is sent from the associated session object to indicate that a previously 
+	message forwarded to it, was processed succesfully by the Server application and it has replied
+	with NO data.
+*/
+void	C[!output PROJECT_NAME_NB]Link::OnSessionSendCompleted(CMultiXAppMsg	&OriginalMsg)
+{
+	//	TODO:	Add your own code to handle message forwarding completions with no data
+}
+/*!
+	This notification is sent from the associated session object to indicate that a previously 
+	message forwarded to it, failed to deliver to its destination
+*/
+void	C[!output PROJECT_NAME_NB]Link::OnSessionSendFailed(CMultiXAppMsg	&OriginalMsg,int	Error)
+{
+	//	TODO:	Add your own code to handle message forwarding failures
+}
+
+[!endif]
+

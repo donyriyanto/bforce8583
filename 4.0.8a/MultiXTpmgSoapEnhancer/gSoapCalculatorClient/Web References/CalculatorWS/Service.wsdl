@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WSDL:definitions xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://localhost:80/Service.wsdl" xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/" xmlns:Calculator="http://tempuri.org/Calculator.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="Service" targetNamespace="http://localhost:80/Service.wsdl" xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/">
+  <WSDL:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://tempuri.org/Calculator.xsd">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:element name="Add">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="a" type="xsd:double" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="b" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Result" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Sub">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="a" type="xsd:double" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="b" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SubResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Result" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Mul">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="a" type="xsd:double" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="b" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MulResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Result" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Div">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="a" type="xsd:double" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="b" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DivResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Result" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </WSDL:types>
+  <WSDL:message name="AddRequest">
+    <WSDL:part name="parameters" element="Calculator:Add" />
+  </WSDL:message>
+  <WSDL:message name="AddResponse">
+    <WSDL:part name="parameters" element="Calculator:AddResponse" />
+  </WSDL:message>
+  <WSDL:message name="SubRequest">
+    <WSDL:part name="parameters" element="Calculator:Sub" />
+  </WSDL:message>
+  <WSDL:message name="SubResponse">
+    <WSDL:part name="parameters" element="Calculator:SubResponse" />
+  </WSDL:message>
+  <WSDL:message name="MulRequest">
+    <WSDL:part name="parameters" element="Calculator:Mul" />
+  </WSDL:message>
+  <WSDL:message name="MulResponse">
+    <WSDL:part name="parameters" element="Calculator:MulResponse" />
+  </WSDL:message>
+  <WSDL:message name="DivRequest">
+    <WSDL:part name="parameters" element="Calculator:Div" />
+  </WSDL:message>
+  <WSDL:message name="DivResponse">
+    <WSDL:part name="parameters" element="Calculator:DivResponse" />
+  </WSDL:message>
+  <WSDL:portType name="ServicePortType">
+    <WSDL:operation name="Add">
+      <documentation>Service definition of function Calculator__Add</documentation>
+      <WSDL:input message="tns:AddRequest" />
+      <WSDL:output message="tns:AddResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="Sub">
+      <documentation>Service definition of function Calculator__Sub</documentation>
+      <WSDL:input message="tns:SubRequest" />
+      <WSDL:output message="tns:SubResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="Mul">
+      <documentation>Service definition of function Calculator__Mul</documentation>
+      <WSDL:input message="tns:MulRequest" />
+      <WSDL:output message="tns:MulResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="Div">
+      <documentation>Service definition of function Calculator__Div</documentation>
+      <WSDL:input message="tns:DivRequest" />
+      <WSDL:output message="tns:DivResponse" />
+    </WSDL:operation>
+  </WSDL:portType>
+  <WSDL:binding name="Service" type="tns:ServicePortType">
+    <SOAP:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WSDL:operation name="Add">
+      <SOAP:operation soapAction="" />
+      <WSDL:input>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="Sub">
+      <SOAP:operation soapAction="" />
+      <WSDL:input>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="Mul">
+      <SOAP:operation soapAction="" />
+      <WSDL:input>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="Div">
+      <SOAP:operation soapAction="" />
+      <WSDL:input>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:output>
+    </WSDL:operation>
+  </WSDL:binding>
+  <WSDL:service name="Service">
+    <documentation>gSOAP 2.7.9e generated service definition</documentation>
+    <WSDL:port name="Service" binding="tns:Service">
+      <SOAP:address location="http://localhost:80" />
+    </WSDL:port>
+  </WSDL:service>
+</WSDL:definitions>
