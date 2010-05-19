@@ -1,0 +1,39 @@
+readme.txt
+[!if PlatformOSSApp || PlatformWin32App]
+	MainCpp.txt
+	MainH.txt
+	AppH.txt
+	AppCpp.txt
+	[!if !SimpleClient && !SimpleServer]
+		ProcessH.txt
+		ProcessCpp.txt
+		[!if	ClientSessionSupport]
+			ClientSessionH.txt
+			ClientSessionCpp.txt
+		[!endif]
+		[!if	ServerSessionSupport]
+			ServerSessionH.txt
+			ServerSessionCpp.txt
+		[!endif]
+		[!if	ServerLinkSupport]
+			ServerLinkH.txt
+			ServerLinkCpp.txt
+		[!endif]
+		[!if	ClientLinkSupport]
+			ClientLinkH.txt
+			ClientLinkCpp.txt
+		[!endif]
+		[!if	ClientLinkSupport ||	ServerLinkSupport]
+			LinkH.txt
+			LinkCpp.txt
+			[!if	TCPProtocolSupport]
+				ProtocolH.txt
+				ProtocolCpp.txt
+			[!endif]
+			[!if TCPProtocolSupport]
+				TCPProtocolH.txt
+				TCPProtocolCpp.txt
+			[!endif]
+		[!endif]
+	[!endif]
+[!endif]

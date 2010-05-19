@@ -1,0 +1,492 @@
+<html>
+<head>
+	<meta content="text/html" http-equiv="Content-Type">
+	<meta content="Application Server, SOAP, XML, Message Oriented Middleware, MOM, Distributed Processing, Application Level Router, POS, 
+Point of Sale, Message Queue, Development, Developers, Projects, Downloads, OSTG, VA Software, SF.net, SourceForge, Web Services, ISO 8583, Transaction Processing Monitor, Open Source"
+		name="keywords">
+	<title>MultiXTpm Generic Multiplexer</title>
+	<style>
+a
+{
+ font-weight: bold; 
+}
+</style>
+</head>
+<body alink="blue" bgcolor="lightyellow" lang="EN-US" link="blue" vlink="purple"><center>
+
+		<script type="text/javascript"><!--
+google_ad_client = "pub-4337232098909741";
+/* 728x90, created 11/2/08 */
+google_ad_slot = "6805685938";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+		</script>
+
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+
+	</center>
+	<font face="Arial,Helvetica">
+		<div style="text-align: center;">
+			<table border="0" cellpadding="8" cellspacing="2">
+				<tr>
+					<td align="center">
+						<a href="/">Home</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<h1 style="font-size: 30pt; color: orangered">
+							MultiXTpm Generic Multiplexer</h1>
+						<h1 style="font-size: 30pt; color: orangered">
+							Open Source/Free Software</h1>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+MultiXTpm Generic Multiplexer is an application built on top MultiXTpm Application
+						Server.<br />
+						Its purpose is to provide application level multiplexing of messages arriving
+						from multiple connections into one or more connections, using application data for
+						multiplexing rules.<br />
+						<br />
+						The main use of such multiplexer is when there is a server application, that for
+						various reasons, can handle a definite number of open connections, and on
+						the other hand the number of client applications and the connection type is not
+						known ahead.<br />
+						<br />
+						For example, an ISO 8583 Authorization Server is written to support
+						a limited number of connections to ISO 8583 Acquirer Gateways, and these connections
+						must be permanently opened. For this architecture to work, the ISO 8583 Acquirer
+						Gateways must handle hundreds of input connections which must be tunneled / multiplexed
+						in a well known number of output connections to the ISO 8583 Authorization Server.<br />
+						<br />
+						Another example is from the SMPP (Short Message Peer-to-Peer) world. Many existing
+						SMSC (Short Message Service Centre) servers are built to be connected to ESMEs (External
+						Short Message Entity) using permanently opened connections. This architecture is
+						fine when the number of ESMEs is small, but when the number of ESMEs grows and this
+						number is
+						unknown in advance, as in the case of internet users sending SMSs, there comes a
+						need to use some external system that will handle all the input connections and
+						route all messages thru a smaller number of opened connections.<br />
+						<br />
+						MultiXTpm Generic
+						Multiplexer is built to help solving such issues and it includes the following features:<br />
+						<ul>
+							<li>Can handle theoretically unlimited number of input connections.</li>
+							<li>Can maintain an open connection with clients or a one request connection.</li>
+							<li>Support for input connections arriving thru different TCP ports.</li>
+							<li>Multiplex all
+						requests into a single output connection or into multiple output connections.</li>
+							<li>When configured to support multiple output connections, it load balances all requests between
+						all connections.</li>
+							<li>Can multiplex various types of applications where each application has a different set of rules for multiplexing.</li>
+							<li>Support output queues to the servers
+						with configurable timeouts.</li>
+							<li>Can be customized to support any application level
+						protocol.</li>
+							<li>Support clients that send headerless messages.</li>
+						</ul>
+						<p>
+							In order for MultiXTpm Generic Multiplexer to do its job, the client applications
+						and the servers must adhere to some basic rules:</p>
+						<ul>
+							<li>Communications between the peers
+						must be message based, and there must be a field at the beginning of the message,
+						specifying the total length of message. The total length can be inclusive or exclusive
+						of the length field itself.</li>
+							<li>A message received from a client, may contain a header
+						field that the multiplexer may override when forwarding to the server. If configured
+						as so, the multiplexer may override the field but will not add any data to the message.</li>
+							<li>Every message forwarded to the server, must have a header field where the multiplexer
+						stores some data and expects it to be returned in the response exactly as it sent
+						it, it does not have to be at the same position.</li>
+							<li>If the message received from a client does not contain a header, the configuration must include information
+						of the size of the header that the multiplexer can add
+								to the message before the message data. This header must be sent and received back because this is how the multiplexer knows how to
+						route back responses to client applications. </li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Architecture</h2>
+						<strong>MultiXTpm Generic Multiplexer</strong> runtime environment comprises of 3 processes
+						at the minimum:
+						<ul>
+							<li><a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+								MultiXTpm</a> - Application Server, Router, load balancer.</li>
+							<li><strong>Multiplexer Client FE</strong> - Listener and communications handler,
+								receivng requests from client applications and forwards them to the Server FE. </li>
+							<li><strong>Multiplexer Server FE</strong> - Connection initiator and communications
+								handler. This is the actual multiplexer that tunnels all requests to a definite
+								number of connections.&nbsp;</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Multiplexer Client FE</h2>
+						This process acts as a Listener/Transport handler. It is responsible for the actual
+						communication with all client applications. This process always
+						acts as Listener, it never initiates calls. When a new connection is established,
+						it creates a new session object, it waits for incoming messages and when a full message is received, it is forwarded to
+						<a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+							MultiXTpm</a> process (in the context of the session created earlier) with a special
+						indication of the a Message Code configured for the input connection. This Message
+						Cdoe is used by the Server FE when selecting the server to forward the message to.
+						<a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+							MultiXTpm</a> in turn forwards the request to the appropriate <strong>Multiplexer
+								Server FE</strong> process for the actual tunneling of the message to the remote
+						server. When a response
+						comes from the <strong>Multiplexer Server FE</strong> process, it is forwarded back
+						to the originator of the request. The connection is kept open, waiting for the next
+						request, or disconnect from the client or an idle timer expires in which case the
+						connection is aborted. This process is multithreaded and all communication activities
+						are in NOWAIT manner, so it does not block on any call, so it can theoretically
+						process unlimited number of connections simultaneously. This process can have more
+						then one instance where each instance can manage a different range of ports. All
+						instances can run on a single machine or can be divided between multiple machines.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Multiplexer Server FE</h2>
+						This process is responsible to all communications and the tunneling of messages
+						to the remote servers. When
+						it starts, it receives from <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+							MultiXTpm</a> a list of addresses and ports of remote servers and it tries to connect to each one of them in order to establish a permanent connection.
+						When such a connection is established, it marks the connection as Active. From that point
+						on, every message that it receives from <strong>Client Server FE</strong>, and that
+						message has a Message Code as configured for the connection, is tunneled to the
+						server through that
+						connection. To enable the association of a response to a request, this process
+						sets (or adds) some value in the header of the message and the server has to send
+						that value back in the response. So when a response is received, using that specific value, the
+						process finds the request, and using the information saved in the request, the response
+						is routed back to the client. It is possible to configure more than one connection
+						to a single server or service. This is done by configuring the same “ForwardingMsgCode”
+						to a set of connections. When this process finds that more than one connection is
+						configured this way, it will always forward new messages to the connection with
+						lowest queue size, this way it load balances all the messages between all the connections. This process forwards
+						the requests as soon as it receives them, it does not wait for responses before
+						forwarding the next requests. When a connection is disconnected for some reason,
+						it waits for a pre configured timeout interval and tries to reconnect for a maximum
+						of preconfigured number of retries.</td>
+				</tr>
+				<tr>
+					<td align="left" dir="ltr">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							<a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+								MultiXTpm</a></h2>
+						This is the main process within this architecture. When it starts, it reads a preconfigured
+						XML file where all configuration data is stored in. Among other things, it starts
+						the first instances of the other processes. When the other processes are started,
+						it provides them with some configuration data. It provides <strong>Multiplexer Client
+							FE</strong> the information about the TCP/IP ports to listen on for incoming
+						requests. It also provides <strong>Multiplexer Server FE</strong>
+						the information about the TCP/IP addresses and ports to connect to remote servers for multiplexing
+						outgoing requests. <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+								MultiXTpm</a>'s main responsibilities are:
+						<ul>
+							<li>Monitor the other processes for unexpected termination. When it realizes that
+								one of the processes has terminated, it restarts it if it is configured to do so.</li>
+							<li>When a new request arrives from <strong>Multiplexer Client FE</strong>, it
+								routes the request to one or more <strong>Multiplexer Server FE</strong> processes for
+								handling the request.</li>
+							<li>Monitor the queues for the <strong>Multiplexer Server FE</strong> processes. Based on configuration
+								data, <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+									MultiXTpm</a> maintains a queue for each process. </li>
+							<li>Receiving a response from <strong>Multiplexer Server FE</strong> processes
+								and forward the responses back to <strong>Multiplexer Client FE</strong>. </li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Following is a description of the Data Flow in <strong>MultiXTpm Generic Multiplexer</strong>.<br />
+						Each request passes thru few phases starting from connection establishment
+						and ending with the connection closing. Between these two phases the Client is said
+						to be "in a session".<br />
+						Following is a brief description of the various phases.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<ol>
+							<li>The client establishes a connection.</li>
+							<li>The client sends a request.</li>
+							<li><strong>Multiplexer Client FE</strong> Receives the request and validates
+								its syntax. </li>
+							<li>The message is forwarded in its entirety using the Message Code configured for
+								the input connection for
+								internal routing purposes. If the request is the first one in the session, it is
+								forwarded to <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+									MultiXTpm</a>, otherwise it is forwarded directly to the <strong>Multiplexer Server
+										FE</strong>
+								process that was previously elected by <a href="MultiXTpm%20Application%20Server.htm"
+									title="Click here for a description of MultiXTpm Application Server">MultiXTpm</a>
+								on the first call.</li>
+							<li><a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+								MultiXTpm</a>, upon receiving the new request, searches its local configuration
+								data for an entry matching the Message Code specified in the request, it does not
+								scan the message AT ALL. If it finds such an entry, it elects the appropriate <strong>
+									Multiplexer Server FE</strong> process and queues the message for a later forwarding
+								to that process.</li>
+							<li>If the queue for that process is empty or its size is below a preconfigured maximum,
+								the message is forwarded immediately to the process. </li>
+							<li>Upon receiving the request, <strong>Multiplexer Server FE</strong> searches an opened connection
+								that configured to support the given Message Code and has the lowest queue size
+								among all connections that support the given Message Code. When it finds such a
+								connection, it tunnels the message through that connection. </li>
+							<li>When a response is received, it is forwarded back to original <strong>Multiplexer
+								Client FE</strong> who forwarded the request.</li>
+							<li>When the response from <a href="MultiXTpm%20Application%20Server.htm" title="Click here for a description of MultiXTpm Application Server">
+								MultiXTpm</a> or <strong>Multiplexer Server FE</strong> is received, <strong>Multiplexer
+									Client FE</strong> checks that the connection with the client is still
+								valid and if so, it forwards the response.</li>
+							<li>The response is sent to the client. At that point the client may elect to close
+								the connection and as a result, <strong>Multiplexer Client FE</strong> will
+								delete the session object. If the connection is not closed, <strong>Multiplexer Client
+									FE</strong> will use the same session object for handling future requests.
+							</li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Multiplexer Configuration</h2>
+							Multiplexer configuration is done thru the xml file located in the runtime directory.
+						Its default name is "TpmConfig.xml".<br />
+						A description of this file and how to configure
+						it can be found <a href="TpmConfig.htm" title="Click here for a description of MultiXTpm Application Server configuration file">
+							here</a>.<br />
+						In addition to the standard fields that need to be configured,
+						there are few parameters that are required in order to configure the Multiplexer Links specifically.<br />
+						The following Link parameters control the multiplexing rules used by the Link (Connection):<br />
+						<br />
+						
+						<table border="1" bordercolor="black" cellpadding="4">
+							<tr>
+								<td align="center" style="font-weight: bold">
+									<strong>Parameter Name</strong></td>
+								<td align="center">
+									<strong>Description</strong></td>
+								<td align="center" nowrap="nowrap" style="font-weight: bold">
+									<strong>Default Value</strong></td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									ForwardingMsgCode
+								</td>
+								<td>
+									When configured for <strong>Multiplexer Client FE</strong> Links, it controls the
+									<strong>Message Code</strong> to use when forwarding a message to <strong>Multiplexer
+										Server FE</strong>. When configured for the <strong>Multiplexer Server FE</strong>
+									&nbsp;Links, it is used to decide which Link to use when a message with the specified
+									<strong>Message Code</strong> arrives.</td>
+								<td style="font-weight: bold" align="center">
+									1000</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									MsgSizeIndicatorLength</td>
+								<td>
+									Each message to be multiplexed must begin with a binary field that specifies the
+									total length of a message. It is only after an entire message is received, that
+									the message is processed. This field specifies the size of this field.<br />
+									Possible values are:<br />
+									<ul>
+										<li>1 - one byte. This implies that the total message size cannot exceed 255 bytes.</li>
+										<li>2 - two bytes. This implies that the total message size cannot exceed 64K bytes.</li>
+										<li>4 - Four bytes. This implies that the total message size cannot exceed 4G bytes.</li>
+									</ul>
+									<p>
+										Any other value specified will cause the Multiplexer throw an exception.</p>
+								</td>
+								<td style="font-weight: bold" align="center">
+									2</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									MsgSizeIndicatorIncluded</td>
+								<td >
+									This parameter specifies whether the message size specified in the size field, includes
+									the size field itself.<br />
+									A value of 1 means that the message size includes the size field.</td>
+								<td style="font-weight: bold" align="center">
+									0</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									MsgSizeIndicatorIsBigEndian
+								</td>
+								<td >
+									Since the size field is binary, this parameter specifies if it is stored in network
+									format (<strong>Big Endian</strong>).<br />
+									A value of 1 specifies that the size field is stored in network format (<strong>Big
+										Endian</strong>)</td>
+								<td style="font-weight: bold" align="center">
+									1</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									SenderContextOffset</td>
+								<td >
+									When <strong>Multiplexer Server FE</strong> tunnels a message, it needs to save
+									some information in the message. The server that receives that message must return
+									that information in the response. This is used to associate th response with the
+									request. The value in this parameter specifies where in the message <strong>Multiplexer
+										Server FE</strong> can save that information and where it should retrieve it from
+									when it receives the response.</td>
+								<td style="font-weight: bold" align="center">
+									5</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									SenderContextSize</td>
+								<td >
+									This parameter tells <strong>Multiplexer Server FE</strong> how many bytes in the
+									message are reserved for its context to be saved.</td>
+								<td style="font-weight: bold" align="center">
+									2</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									ReceiverContextOffset</td>
+								<td >
+									This parameter has meaning in <strong>Multiplexer Server FE</strong> only if <strong>
+										SwapContextOnResponse</strong> is specified. In this, before sending a response
+									to the client, <strong>Multiplexer Server FE</strong> swaps the values in the Sender
+									and Receiver Contexts.<br />
+									This value specifies where in the message, the Receiver Context is located.&nbsp;</td>
+								<td style="font-weight: bold" align="center">
+									3</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									ReceiverContextSize
+								</td>
+								<td >
+									This value specifies the size for the Receiver Context when <strong>SwapContextOnResponse</strong>
+									is specified. It must be identical to the SenderContextSize value.</td>
+								<td style="font-weight: bold" align="center">
+									2</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									SwapContextOnResponse
+								</td>
+								<td >
+									Tells <strong>Multiplexer Server FE</strong> that the Sender Context and the Receiver
+									Context values should be swapped on response.</td>
+								<td style="font-weight: bold" align="center">
+									1</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									HeaderIncluded
+								</td>
+								<td >
+									When a client application sends a message that includes a header with space for
+									<strong>Multiplexer Server FE</strong> to store its context, this value should be
+									set to 1. When there is no such space in the message, <strong>Multiplexer Server FE</strong>
+									create such a space in front of the message data and its size is specified by <strong>
+										HeaderSize</strong>. The server that receives the message must be prepared to
+									receive such a message. When a response is received, these extra header bytes are
+									removed before forwarding the response to the client application.</td>
+								<td style="font-weight: bold" align="center">
+									1</td>
+							</tr>
+							<tr>
+								<td style="font-weight: bold">
+									HeaderSize
+								</td>
+								<td >
+									This parameter tells <strong>Multiplexer Server FE</strong> how many bytes to insert
+									in front of the message when the original message does not contain any header to
+									be used it in order to save its Sender Context.</td>
+								<td style="font-weight: bold" align="center">
+									0</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Download information</h2>
+						<strong>MultiXTpm Application Server</strong> is free software; you can redistribute
+						it and/or modify it under the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">
+							GNU General Public License</a> as published by the Free Software Foundation; either
+						version 2 of the License, or (at your option) any later version.<br />
+						<br />
+						<strong>MultiXTpm Application Server</strong> is distributed in source code format
+						and it supports: Windows OS, Linux, Solaris and HP Nonstop Server OSS.<br />
+						<br />
+						The source code is packed in ZIP file and can be downloaded from SourceForge.net.<br />
+						<br />
+						To Access the <a href="http://sourceforge.net/project/showfiles.php?group_id=196021"
+							onclick="javascript:urchinTracker('/outgoing/DownloadPage');">Download Page</a>
+						at SourceForge.net you may click <a href="http://sourceforge.net/project/showfiles.php?group_id=196021"
+							onclick="javascript:urchinTracker('/outgoing/DownloadPage');">Here</a><br />
+						or
+						<br />
+						Navigate to <a href="http://sourceforge.net/projects/multixtpm" onclick="javascript:urchinTracker('/outgoing/ProjectPage');">
+							http://sourceforge.net/projects/multixtpm</a>
+						<br />
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h2 style="text-align: center; text-decoration: underline; color: green;">
+							Contact information</h2>
+						For more information, Bug Reports, Feature Requests, and Support Requests, please
+						use:
+						<br />
+						<a href="http://sourceforge.net/tracker/?group_id=196021" onclick="javascript:urchinTracker('/outgoing/TrackerPage');">
+							SourceForge.net tracker</a>
+						<br />
+						or
+						<br />
+						<a href="http://sourceforge.net/forum/?group_id=196021" onclick="javascript:urchinTracker('/outgoing/ForumPage');">
+							SourceForge.net Project Forums</a>
+						<br />
+						or
+						<br />
+						<a href="http://tech.groups.yahoo.com/group/multixtpm/" onclick="javascript:urchinTracker('/outgoing/YahooGroup');">
+							MultiXTpm group at Yahoo Groups.</a>
+						<br />
+						or
+						<br />
+						you may send an email to: <a href="mailto:multixtpm@mitug.co.il" onclick="javascript:urchinTracker('/outgoing/Email');">
+							Moshe Shitrit</a>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<a href="/">Home</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</font>
+
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+
+	<script type="text/javascript">
+	if(window.location.hostname	==	"www.mitug.co.il")
+		_uacct = "UA-2084378-1";
+	else
+		_uacct = "UA-2084437-1";
+urchinTracker();
+	</script>
+
+</body>
+</html>

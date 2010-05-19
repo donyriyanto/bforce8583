@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigData xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope" xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:MultiXTpm11="http://mitug.co.il/MultiXTpm/MultiXTpmSoap" xmlns:MultiXTpm="http://mitug.co.il/MultiXTpm" xmlns:MultiXTpm12="http://mitug.co.il/MultiXTpm/MultiXTpmSoap12" SOAP-ENV:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+	<MultiXTpm:LastUpdate>2007-07-18T11:19:40+03:00</MultiXTpm:LastUpdate>
+	<MultiXTpm:ProcessClasses>
+		<MultiXTpm:ProcessClass>
+			<MultiXTpm:ID>0</MultiXTpm:ID>
+			<MultiXTpm:Description>MultiX Tp Monitor</MultiXTpm:Description>
+			<MultiXTpm:PasswordToSend>MultiXTpm</MultiXTpm:PasswordToSend>
+			<MultiXTpm:ExpectedPassword>MultiXTpm</MultiXTpm:ExpectedPassword>
+			<MultiXTpm:ExecCmd></MultiXTpm:ExecCmd>
+			<MultiXTpm:ClassName>MultiXTpm</MultiXTpm:ClassName>
+			<MultiXTpm:DebugLevel>0</MultiXTpm:DebugLevel>
+			<MultiXTpm:DefaultSendTimeout>60000</MultiXTpm:DefaultSendTimeout>
+			<MultiXTpm:ExecParams></MultiXTpm:ExecParams>
+			<MultiXTpm:MaxQueueSize>2</MultiXTpm:MaxQueueSize>
+			<MultiXTpm:MaxSessions>2</MultiXTpm:MaxSessions>
+			<MultiXTpm:MaxRecoveryQueueSize>2</MultiXTpm:MaxRecoveryQueueSize>
+			<MultiXTpm:AutoStart>false</MultiXTpm:AutoStart>
+			<MultiXTpm:MinInstances>1</MultiXTpm:MinInstances>
+			<MultiXTpm:MaxInstances>1</MultiXTpm:MaxInstances>
+			<MultiXTpm:StartProcessDelay>0</MultiXTpm:StartProcessDelay>
+			<MultiXTpm:InactivityTimer>0</MultiXTpm:InactivityTimer>
+			<MultiXTpm:LinkIDs>
+				<MultiXTpm:ID>999998</MultiXTpm:ID>
+				<MultiXTpm:ID>999999</MultiXTpm:ID>
+			</MultiXTpm:LinkIDs>
+		</MultiXTpm:ProcessClass>
+		<MultiXTpm:ProcessClass>
+			<MultiXTpm:ID>1</MultiXTpm:ID>
+			<MultiXTpm:Description>MultiX Echo Client</MultiXTpm:Description>
+			<MultiXTpm:PasswordToSend>MultiXTpm</MultiXTpm:PasswordToSend>
+			<MultiXTpm:ExpectedPassword>MultiXSimpleApplication</MultiXTpm:ExpectedPassword>
+			<MultiXTpm:ExecCmd></MultiXTpm:ExecCmd>
+			<MultiXTpm:ClassName>MultiXTpm Simple Application Client</MultiXTpm:ClassName>
+			<MultiXTpm:DebugLevel>5</MultiXTpm:DebugLevel>
+			<MultiXTpm:DefaultSendTimeout>0</MultiXTpm:DefaultSendTimeout>
+			<MultiXTpm:ExecParams></MultiXTpm:ExecParams>
+			<MultiXTpm:MaxQueueSize>2</MultiXTpm:MaxQueueSize>
+			<MultiXTpm:MaxSessions>2</MultiXTpm:MaxSessions>
+			<MultiXTpm:MaxRecoveryQueueSize>2</MultiXTpm:MaxRecoveryQueueSize>
+			<MultiXTpm:AutoStart>false</MultiXTpm:AutoStart>
+			<MultiXTpm:MinInstances>10</MultiXTpm:MinInstances>
+			<MultiXTpm:MaxInstances>99</MultiXTpm:MaxInstances>
+			<MultiXTpm:StartProcessDelay>2000</MultiXTpm:StartProcessDelay>
+			<MultiXTpm:InactivityTimer>0</MultiXTpm:InactivityTimer>
+		</MultiXTpm:ProcessClass>
+		<MultiXTpm:ProcessClass>
+			<MultiXTpm:ID>2</MultiXTpm:ID>
+			<MultiXTpm:Description>MultiX Echo Server</MultiXTpm:Description>
+			<MultiXTpm:PasswordToSend>MultiXTpm</MultiXTpm:PasswordToSend>
+			<MultiXTpm:ExpectedPassword>MultiXSimpleApplication</MultiXTpm:ExpectedPassword>
+			<MultiXTpm:ExecCmd>MultiXEchoServer</MultiXTpm:ExecCmd>
+			<MultiXTpm:ClassName>MultiXTpm Simple Application Server</MultiXTpm:ClassName>
+			<MultiXTpm:DebugLevel>5</MultiXTpm:DebugLevel>
+			<MultiXTpm:DefaultSendTimeout>0</MultiXTpm:DefaultSendTimeout>
+			<MultiXTpm:ExecParams></MultiXTpm:ExecParams>
+			<MultiXTpm:MaxQueueSize>20</MultiXTpm:MaxQueueSize>
+			<MultiXTpm:MaxSessions>5</MultiXTpm:MaxSessions>
+			<MultiXTpm:MaxRecoveryQueueSize>2</MultiXTpm:MaxRecoveryQueueSize>
+			<MultiXTpm:AutoStart>true</MultiXTpm:AutoStart>
+			<MultiXTpm:MinInstances>1</MultiXTpm:MinInstances>
+			<MultiXTpm:MaxInstances>99</MultiXTpm:MaxInstances>
+			<MultiXTpm:StartProcessDelay>2000</MultiXTpm:StartProcessDelay>
+			<MultiXTpm:InactivityTimer>30000</MultiXTpm:InactivityTimer>
+		</MultiXTpm:ProcessClass>
+	</MultiXTpm:ProcessClasses>
+	<MultiXTpm:Links>
+		<MultiXTpm:Link>
+			<MultiXTpm:ID>999998</MultiXTpm:ID>
+			<MultiXTpm:Description>MultiXTpm Server Link</MultiXTpm:Description>
+			<MultiXTpm:LinkType>MultiXLinkTypeTcp</MultiXTpm:LinkType>
+			<MultiXTpm:OpenMode>MultiXOpenModeServer</MultiXTpm:OpenMode>
+			<MultiXTpm:Raw>false</MultiXTpm:Raw>
+			<MultiXTpm:LocalAddress></MultiXTpm:LocalAddress>
+			<MultiXTpm:LocalPort>12345</MultiXTpm:LocalPort>
+			<MultiXTpm:RemoteAddress></MultiXTpm:RemoteAddress>
+			<MultiXTpm:RemotePort></MultiXTpm:RemotePort>
+		</MultiXTpm:Link>
+		<MultiXTpm:Link>
+			<MultiXTpm:ID>999999</MultiXTpm:ID>
+			<MultiXTpm:Description>MultiXTpm WS Control Link</MultiXTpm:Description>
+			<MultiXTpm:LinkType>MultiXLinkTypeTcp</MultiXTpm:LinkType>
+			<MultiXTpm:OpenMode>MultiXOpenModeServer</MultiXTpm:OpenMode>
+			<MultiXTpm:Raw>true</MultiXTpm:Raw>
+			<MultiXTpm:LocalAddress></MultiXTpm:LocalAddress>
+			<MultiXTpm:LocalPort>18089</MultiXTpm:LocalPort>
+			<MultiXTpm:RemoteAddress></MultiXTpm:RemoteAddress>
+			<MultiXTpm:RemotePort></MultiXTpm:RemotePort>
+			<MultiXTpm:Params>
+				<MultiXTpm:Param>
+					<MultiXTpm:ParamName>WebServiceName</MultiXTpm:ParamName>
+					<MultiXTpm:ParamValue>MultiXTpm</MultiXTpm:ParamValue>
+				</MultiXTpm:Param>
+			</MultiXTpm:Params>
+		</MultiXTpm:Link>
+	</MultiXTpm:Links>
+	<MultiXTpm:Groups>
+		<MultiXTpm:Group>
+			<MultiXTpm:ID>0</MultiXTpm:ID>
+			<MultiXTpm:Description>MultiX Tp Monitor group</MultiXTpm:Description>
+			<MultiXTpm:ProcessClassIDs>
+				<MultiXTpm:ID>0</MultiXTpm:ID>
+			</MultiXTpm:ProcessClassIDs>
+		</MultiXTpm:Group>
+		<MultiXTpm:Group>
+			<MultiXTpm:ID></MultiXTpm:ID>
+			<MultiXTpm:Description>MultiXTpm Simple Application Client Processes</MultiXTpm:Description>
+			<MultiXTpm:ProcessClassIDs>
+				<MultiXTpm:ID>1</MultiXTpm:ID>
+			</MultiXTpm:ProcessClassIDs>
+		</MultiXTpm:Group>
+		<MultiXTpm:Group>
+			<MultiXTpm:ID>2</MultiXTpm:ID>
+			<MultiXTpm:Description>MultiXTpm Simple Application Server Processes</MultiXTpm:Description>
+			<MultiXTpm:ProcessClassIDs>
+				<MultiXTpm:ID>2</MultiXTpm:ID>
+			</MultiXTpm:ProcessClassIDs>
+		</MultiXTpm:Group>
+	</MultiXTpm:Groups>
+	<MultiXTpm:Messages>
+		<MultiXTpm:Message>
+			<MultiXTpm:ID>1000</MultiXTpm:ID>
+			<MultiXTpm:Description>Simple message to simple server</MultiXTpm:Description>
+			<MultiXTpm:Stateful>true</MultiXTpm:Stateful>
+			<MultiXTpm:DbProtected>false</MultiXTpm:DbProtected>
+			<MultiXTpm:Timeout>30000</MultiXTpm:Timeout>
+			<MultiXTpm:Priority>0</MultiXTpm:Priority>
+			<MultiXTpm:WSURL></MultiXTpm:WSURL>
+			<MultiXTpm:WSSoapAction></MultiXTpm:WSSoapAction>
+			<MultiXTpm:WSDllFile></MultiXTpm:WSDllFile>
+			<MultiXTpm:WSDllFunction></MultiXTpm:WSDllFunction>
+			<MultiXTpm:ForwardFlags>
+				<MultiXTpm:Flags>
+					<MultiXTpm:GroupID>2</MultiXTpm:GroupID>
+					<MultiXTpm:ResponseRequired>true</MultiXTpm:ResponseRequired>
+					<MultiXTpm:IgnoreResponse>false</MultiXTpm:IgnoreResponse>
+					<MultiXTpm:ForwardToAll>false</MultiXTpm:ForwardToAll>
+				</MultiXTpm:Flags>
+			</MultiXTpm:ForwardFlags>
+		</MultiXTpm:Message>
+	</MultiXTpm:Messages>
+</ConfigData>

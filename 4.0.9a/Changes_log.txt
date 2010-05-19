@@ -1,0 +1,97 @@
+version 4.0.0
+Initial Release
+version 4.0.1(May 21 2007)
+Package renamed from MultiX Soap Router to MultiX Application Server
+Fixed build issues related to case of file names.
+Fixed compile issues regarding STL usae with gcc 4.1
+Added general description - "MultiX Application Server.htm"
+Added Doxygen generated documentation for MultiX API - under the Doc directory
+version 4.0.1 (May 31 2007)
+Package renamed from MultiX Application Server to MultiXTpm Application Server
+Renamed the file "MultiX Application Server.htm" to "MultiXTpm Application Server.htm"
+version 4.0.1 (Jun 3 2007)
+Added MultiXTpm Application Wizard for Visual Studio 2005
+version 4.0.1 (Jun 4 2007)
+MultiXTpm gSoap Enahncer.htm was added. It describes the enhancements to gSoap provided by MultiXTpm.
+Readme.txt, ReleaseNotes.txt, TpmConfig.txt and ChangeLog.txt changed *.htm
+version 4.0.1a (July 5 2007)
+Fixed some erros in MultiXTpm Application Wizard.
+Fixed an error in MakeRuntime.cmd that prevented a successful installation of the runtime environment.
+version 4.0.1b(July 26 2007)
+Added support for 2 bytes header TCP/IP link in MultiXTpm Application Wizard.
+Add solution "MultiXTpm gSoap Enhancer" and moved projects from "MultiXTpm Application Server" to the new solution.
+Add Solution "ISO 8583 Server" to support ISO 8583 based applications.
+Changed MultiXTpmATL from Application project to ActiveX Control DLL so it can be embeded in any application.
+Changed MultiXTpmServer to support multiple instances and multiple registrations as different services.
+version 4.0.2(Sep 07 2007)
+Add SSL support using OpenSSL.
+Add HTTP Basic Authentication to MultiXTpm gSoap Enhancer. 
+version 4.0.2b(Sep 12 2007)
+Modified ReadMe.htm.
+Fixed version numbers in MakeRuntime.sh under "MultiXTpm Application Server" directory
+Changed the layout of the files in the zip file to match the settings in the makefiles
+Bug fixed in HTTP Basic Authentication processing
+version 4.0.2c(Sep 15 2007)
+Bug fixed in SSL Support processing
+version 4.0.2d(Oct 19 2007)
+Fixed Buffer overflow issues when using DebugPrint(...).
+Added support for HTTP "chunked" Transfer Encoding. (MultiXTpm gSoap Enhancer)
+Added support to provide "WSDL" file when request in HTTP GET. (MultiXTpm gSoap Enhancer)
+Added gSoapDimeServer sample to MultiXTpm gSoap Enhancer.
+version 4.0.2f(Nov 26 2007)
+Fixed ISO 8583 Parser - ISO 8583 Message creator - incorrect processing of "ans" fields.
+version 4.0.2g(Dec 2 2007)
+Fixed MultiXTpm bug that prevented it from forwarding messages when Max Sessions reached on a process class.
+Add a new application - MultiXTpm Generic Multiplexer.
+version 4.0.2h(Dec 11 2007)
+Minor additions to the MultiX DLL. 
+Bug fixed in the ISO 8583 message creator - generated incorrect information for variable length binary data.
+Added to ISO 8583 Server support for SOAP/XML Web Services Clients.
+Added to ISO 8583 Server a test client that converts XML to ISO 8583 messages and sends them to an ISO 8583 based server.
+version 4.0.3a(Dec 25 2007)
+Disabled default STL Wrapping in non-Windows platforms
+Fixed bug in STL Wrapping code that caused memory leak
+Fixed bugs in ISO 8583 Parser
+Added to ISO 8583 Server a sample Authorizer that uses a sample MySql database.
+version 4.0.4a(Jan 13 2008)
+Added MultiX Simplified API - for easier development of Client/Server applications.
+Modified Visual Studio 2005 Application Wizard to support creation of Simple Client/Server applications.
+version 4.0.4b(Jan 19 2008)
+Bug fixed in threading class that caused segmentation fault on program termination.
+Bug fixed in ISO8583 utilities in numeric to string conversion.
+Bug fixed in ISO8583 Authorizer and Back End to return Local Date and Time from the original requests.
+MultiXTpm can be started from the command line with -C=<xml configuaration file name>.
+version 4.0.5a(Jan 24 2008)
+Bug fixed in socket interface that caused unintentional close of the connection to MultiXTpm.
+Bug fixed in CMultiXBufferPool - Mutex now intialized in the constructor.
+Bug fixed in GetMilliClock() to always return the time elapsed in milliseconds from the start of the process.
+MultiXTpm gSoap Enhancer - CMultiXWSStream was modified to support direct connection between MultiXWSFE and MultiXWSServer.
+MultiXTpm gSoap Enhancer - gSoapEchoClient modified to send multiple requests in one invocation, in one session, mainly for stress testing.
+MultiXTpm gSoap Enhancer - MultiXWSFE modified to connect directly to MultiXWSServer when in session and when MultiXWSServer enables direct connection.
+MultiXTpm gSoap Enhancer - MultiXWSServer modified to accept direct connections from MultiXWSFE to enhance performance when there are lots of messages in a single session.
+version 4.0.6a(Feb 25 2008)
+MultiXTpm Administration Server added - a new .NET Web Application project to support online realtime control and configuration of MultiXTpm Application Server instances.
+MultiXTpm - added support for Authentication and Authorization in Control and Configuration activities.
+In ISO8583Server - changed Element ID 54 from Fixed to variable length
+SSL Support - Default build for MultiX Project changed to support OpenSSL
+SSL Support - Configuration information added to the default configuration schema
+MultiXTpm gSoap Enhancer - MultiXWSServer modified to enable access from a gSoap based DLL to Session and Global Application level data.
+version 4.0.6b(Feb 27 2008)
+MultiXTpm Administration Server - A Missing page Error.aspx was added.
+version 4.0.7a(Mar 25 2008)
+MultiX API - GetMilliClock() changed to return a 64 bits counter of milliseconds passed since the process was started.
+MultiX API - SSL support was modified to support Private Key Password to be read from a file for better protection.
+ISO 8583 Server - Fixed error in processing the 2 bytes message length prefix for ISO 8583 messages
+ISO 8583 Server - The shared library was added features to better support Web Services interface.
+MultiXTp ISO 8583 XML Bridge - This solution was added to enable access from ISO 8583 based clients to non-ISO 8583 based back end servers.
+version 4.0.7b(Mar 31 2008)
+ISO 8583 Server - A new project added - ISO8583ATL - provides COM interface to the ISO 8583 Message handling. For Windows .NET based applications
+ISO 8583 Server - A new project added - ISO8583EncoderDecoder - provides a tool for analyzing ISO 8583 Messages
+version 4.0.7c(Sep 9 2008)
+Changed DebugPrint to support buffers with unlimited size.
+In CMultiXProcess, Added support to send and array of CMultiXBuffer in a single operation.
+In CMultiXL2Link, fixed bug with handling of SSL client connections.
+In CMultiXLogger, Added support for logging messages of unlimited size and for forwarding emails when logging errors.
+In CMultiXL3Link, disabled support for multiple connections between two processes, this caused messages to arrive out of sequence to the other side.
+version 4.0.9(Dec 1 2009)
+ISO 8583 code removed from the package.
