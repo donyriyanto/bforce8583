@@ -1,0 +1,5 @@
+set INCLUDE=C:\Archivos de programa\Microsoft SDKs\Windows\v7.0A\Include;F:\MultiXTpmRelease\mysql++-3.1.0\lib;F:\MultiXTpmRelease\gsoap-2.7\gsoap\src;F:\MultiXTpmRelease\openssl-0.9.8n\include%INCLUDE%
+set LIB=C:\Archivos de programa\Microsoft SDKs\Windows\v7.0A\Lib;%LIB%
+set PATH=F:\MultiXTpmRelease\gsoap-2.7\gsoap\bin;%PATH%
+
+
