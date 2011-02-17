@@ -12,6 +12,7 @@ export CPLUS_INCLUDE_PATH="/opt/MultiXTpm/mysql++-3.1.0/lib/":"/usr/include/mysq
 
 rem Windows Settting
 rem ================
+rem Se tiene que instalar el binario y el buente de openssl desde http://www.slproweb.com/products/Win32OpenSSL.html
 rem 1) Se tienen que convertir las Solution "*.sln" a la version de compilador correspondiente
 
 rem Se tiene que ejecutar el archivos C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\Tools\vsvars32.bat
@@ -35,3 +36,11 @@ rem MultiXTpmATL
 rem MultiXTpmAdminSetup
 rem MultiXTpmService
 rem MultiXTpm Aplipplication Wizard
+
+
+call C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\Tools\vsvars32.bat
+set MultiXTpm=D:\MultiXTpmRelease\MultiXTpmApplicationServer
+set GSOAP=D:\MultiXTpmRelease\gsoap-2.7
+set INCLUDE=C:\Archivos de programa\Microsoft SDKs\Windows\v6.0A\Include;%MULTIXTPM%\mysql++-3.1.0\lib;%GSOAP%;%GSOAP%\gsoap;%GSOAP%\gsoap\extras;%INCLUDE%
+set LIB=C:\Archivos de programa\Microsoft SDKs\Windows\v6.0A\Lib;%LIB%
+set PATH=%MULTIXTPM%;%GSOAP%;%GSOAP%\gsoap\bin;%GSOAP%\gsoap\extras;%GSOAP%\gsoap;%PATH%
