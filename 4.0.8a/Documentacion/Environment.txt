@@ -20,10 +20,10 @@ rem para crear las variables de entorno del compilador de Microsoft
 
 call C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\Tools\vsvars32.bat
 set MultiXTpm=D:\MultiXTpmRelease\MultiXTpmApplicationServer
-set GSOAP=D:\MultiXTpmRelease\gsoap-2.7
-set INCLUDE=C:\Archivos de programa\Microsoft SDKs\Windows\v6.0A\Include;%MULTIXTPM%\mysql++-3.1.0\lib;%GSOAP%;%GSOAP%\gsoap;%GSOAP%\gsoap\extras;%MULTIXTPM%\openssl-0.9.8n\include;%INCLUDE%
+set gSOAP=D:\MultiXTpmRelease\gsoap-2.7\gsoap
+set INCLUDE=C:\Archivos de programa\Microsoft SDKs\Windows\v6.0A\Include;%MULTIXTPM%\mysql++-3.1.0\lib;%GSOAP%;%GSOAP%\gsoap;%GSOAP%\extras;%MULTIXTPM%\openssl-0.9.8n\include;%INCLUDE%
 set LIB=C:\Archivos de programa\Microsoft SDKs\Windows\v6.0A\Lib;%LIB%
-set PATH=%MULTIXTPM%;%GSOAP%;%GSOAP%\gsoap\bin;%GSOAP%\gsoap\extras;%GSOAP%\gsoap;%MULTIXTPM%\openssl-0.9.8n\include;%PATH%
+set PATH=%MULTIXTPM%;%GSOAP%;%GSOAP%\bin;%GSOAP%\extras;%MULTIXTPM%\openssl-0.9.8n\include;%PATH%
 
 rem Orden de compilacions de los proyectos
 rem ======================================
@@ -34,13 +34,8 @@ rem MultiXTpm
 rem MultiXTpmAdmin
 rem MultiXTpmATL
 rem MultiXTpmAdminSetup
-rem MultiXTpmService
+rem MultiXTpmService (http://localhost/MultiXTpmService/)
 rem MultiXTpm Aplipplication Wizard
 
 
-call C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\Tools\vsvars32.bat
-set MultiXTpm=D:\MultiXTpmRelease\MultiXTpmApplicationServer
-set GSOAP=D:\MultiXTpmRelease\gsoap-2.7
-set INCLUDE=C:\Archivos de programa\Microsoft SDKs\Windows\v6.0A\Include;%MULTIXTPM%\mysql++-3.1.0\lib;%GSOAP%;%GSOAP%\gsoap;%GSOAP%\gsoap\extras;%INCLUDE%
-set LIB=C:\Archivos de programa\Microsoft SDKs\Windows\v6.0A\Lib;%LIB%
-set PATH=%MULTIXTPM%;%GSOAP%;%GSOAP%\gsoap\bin;%GSOAP%\gsoap\extras;%GSOAP%\gsoap;%PATH%
+2820883
