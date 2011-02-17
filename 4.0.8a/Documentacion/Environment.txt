@@ -1,5 +1,37 @@
-set INCLUDE=C:\Archivos de programa\Microsoft SDKs\Windows\v7.0A\Include;F:\MultiXTpmRelease\mysql++-3.1.0\lib;F:\MultiXTpmRelease\gsoap-2.7\gsoap\src;F:\MultiXTpmRelease\openssl-0.9.8n\include%INCLUDE%
-set LIB=C:\Archivos de programa\Microsoft SDKs\Windows\v7.0A\Lib;%LIB%
-set PATH=F:\MultiXTpmRelease\gsoap-2.7\gsoap\bin;%PATH%
+
+# Linux Setting
+# =============
+export MultiXTpm="/opt/MultiXTpm/MultiXTpmApplicationServer"
+export PATH=.:$PATH:"${MultiXTpm}"/runtime
+export TMAKEPATH="/opt/MultiXTpm/bin/tmake/lib/linux-g++"
+export LD_LIBRARY_PATH=.:"${LD_LIBRARY_PATH}":"${MultiXTpm}"/runtime
+export CPATH="/opt/MultiXTpm/gsoap-2.7/gsoap:/opt/MultiXTpm/gsoap-2.7/gsoap/extras"
+export CPLUS_INCLUDE_PATH="/opt/MultiXTpm/mysql++-3.1.0/lib/":"/usr/include/mysql/:/opt/MultiXTpm/openssl-0.9.8n/include/"
 
 
+
+rem Windows Settting
+rem ================
+rem 1) Se tienen que convertir las Solution "*.sln" a la version de compilador correspondiente
+
+rem Se tiene que ejecutar el archivos C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\Tools\vsvars32.bat
+rem para crear las variables de entorno del compilador de Microsoft
+
+call C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\Tools\vsvars32.bat
+set MultiXTpm=D:\MultiXTpmRelease\MultiXTpmApplicationServer
+set GSOAP=D:\MultiXTpmRelease\gsoap-2.7
+set INCLUDE=C:\Archivos de programa\Microsoft SDKs\Windows\v6.0A\Include;%MULTIXTPM%\mysql++-3.1.0\lib;%GSOAP%;%GSOAP%\gsoap;%GSOAP%\gsoap\extras;%MULTIXTPM%\openssl-0.9.8n\include;%INCLUDE%
+set LIB=C:\Archivos de programa\Microsoft SDKs\Windows\v6.0A\Lib;%LIB%
+set PATH=%MULTIXTPM%;%GSOAP%;%GSOAP%\gsoap\bin;%GSOAP%\gsoap\extras;%GSOAP%\gsoap;%MULTIXTPM%\openssl-0.9.8n\include;%PATH%
+
+rem Orden de compilacions de los proyectos
+rem ======================================
+rem MultiX
+rem MultiXSoapSupport
+rem gSoapForMultiX
+rem MultiXTpm
+rem MultiXTpmAdmin
+rem MultiXTpmATL
+rem MultiXTpmAdminSetup
+rem MultiXTpmService
+rem MultiXTpm Aplipplication Wizard
